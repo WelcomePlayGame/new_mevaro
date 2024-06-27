@@ -1,0 +1,38 @@
+.head_top {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-height: 50px;
+}
+.head_top li {
+  padding: 10px;
+}
+
+.head_sub {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba(9, 118, 101, 0.8);
+  max-height: 100px;
+}
+.head_sub h1 {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container_logo {
+  position: relative;
+  width: 70px;
+  height: auto;
+}
+.container_logo_h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
