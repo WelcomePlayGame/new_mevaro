@@ -16,13 +16,15 @@ const SubHead = () => {
       </div>
       <div className={`${clasess.container_logo_h1}`}>
         <span>Телефонуйте:</span>
-        <a href="tel:+380957162677">📱{` `}095 71 62 677</a>
+        <a href="tel:+380957162677?utm_source=website&utm_medium=link&utm_campaign=contact">
+          📱{` `}095 71 62 677
+        </a>
       </div>
       <div className={`${clasess.container_app}`}>
-        <a href="https://t.me/romaniv21">
+        <a href="https://t.me/romaniv21?utm_source=website&utm_medium=button&utm_campaign=contact">
           <TelegramSVG />
         </a>
-        <a href="viber://chat?number=%2B380957162677/">
+        <a href="viber://chat?number=%2B380957162677&utm_source=website&utm_medium=button&utm_campaign=contact">
           <ViberSVG />
         </a>
       </div>

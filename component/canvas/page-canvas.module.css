@@ -71,3 +71,27 @@
     font-weight: bolder;
   }
 }
+/* with max 360 */
+@media (min-width: 360px) {
+  .tooltip {
+    width: 350px;
+    left: -175px;
+    top: 150px;
+  }
+  .tooltip ul li {
+    font-size: 1.1rem;
+  }
+  .tooltip h3 {
+    font-size: 1.5rem;
+  }
+  .canvas_h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .canvas_h2 {
+    font-size: 1.3rem;
+  }
+  .sofa_canvas {
+    height: 200px;
+  }
+}

@@ -13,7 +13,7 @@ const CanvasSofaModel = () => {
   let fov = 15;
   const isMobile = window.innerWidth <= 600;
   const LargeScren = window.innerWidth >= 1201;
-  if (isMobile) fov = 35;
+  if (isMobile) fov = 25;
   if (LargeScren) fov = 10;
   return (
     <>

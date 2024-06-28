@@ -80,3 +80,16 @@
     height: 64px;
   }
 }
+@media (max-width: 360px) {
+  .head_top {
+    display: none;
+  }
+  .head_sub {
+    flex-direction: column;
+    align-items: center;
+    max-height: 190px;
+  }
+  .video_block {
+    padding-top: 185px;
+  }
+}

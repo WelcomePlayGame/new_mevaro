@@ -8,6 +8,8 @@ import ReplaceBlock from '@/component/replace_block/page-raplace-block';
 import Footer from '@/component/footer/page-footer';
 import classes from '../component/head/page-head.module.css';
 import Reviews from '@/component/reviews/page-reviews';
+import { Suspense } from 'react';
+
 const CanvasSofaModel = dynamic(
   () => import('@/component/canvas/CanvasSofaModel'),
   {
@@ -24,7 +26,9 @@ export default function Home() {
       </div>
       <VideoHead />
       <Tringle />
-      <CanvasSofaModel />
+      <Suspense fallback="loading">
+        <CanvasSofaModel />
+      </Suspense>
       <ReverseTringle />
       <ReplaceBlock />
       <Reviews />
