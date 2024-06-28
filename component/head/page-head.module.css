@@ -92,4 +92,7 @@
   .video_block {
     padding-top: 185px;
   }
+  .hidden_canvas {
+    display: none;
+  }
 }

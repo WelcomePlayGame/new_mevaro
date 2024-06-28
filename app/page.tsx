@@ -26,9 +26,11 @@ export default function Home() {
       </div>
       <VideoHead />
       <Tringle />
-      <Suspense fallback="loading">
-        <CanvasSofaModel />
-      </Suspense>
+      <div className={`${classes.hidden_canvas}`}>
+        <Suspense fallback="loading">
+          <CanvasSofaModel />
+        </Suspense>
+      </div>
       <ReverseTringle />
       <ReplaceBlock />
       <Reviews />
