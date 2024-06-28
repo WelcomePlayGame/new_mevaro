@@ -22,8 +22,8 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 430px) {
   .reviews_container {
-    height: 550px;
+    height: 650px;
   }
 }

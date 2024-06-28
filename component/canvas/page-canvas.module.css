@@ -72,7 +72,7 @@
   }
 }
 /* with max 360 */
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 430px) {
   .tooltip {
     width: 350px;
     left: -175px;
