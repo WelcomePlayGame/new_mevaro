@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import clasess from './page-head.module.css';
+import TelegramSVG from '../svg/page-telegram';
+import ViberSVG from '../svg/page-viber';
 
 const SubHead = () => {
   return (
@@ -12,8 +14,18 @@ const SubHead = () => {
           <h1>Перетяжка меблів Київ</h1>
         </div>
       </div>
-      <div>Call us</div>
-      <div>Write us</div>
+      <div className={`${clasess.container_logo_h1}`}>
+        <span>Телефонуйте:</span>
+        <a href="tel:+380957162677">📱{` `}095 71 62 677</a>
+      </div>
+      <div className={`${clasess.container_app}`}>
+        <a href="https://t.me/romaniv21">
+          <TelegramSVG />
+        </a>
+        <a href="viber://chat?number=%2B380957162677/">
+          <ViberSVG />
+        </a>
+      </div>
     </main>
   );
 };

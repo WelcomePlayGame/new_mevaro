@@ -5,12 +5,16 @@ import React, { useState } from 'react';
 import { Environment, Center, OrbitControls } from '@react-three/drei';
 
 import { materials_for_sofa } from '@/config/constants';
-import Image from 'next/image';
+
 const SofaModel = dynamic(() => import('./SofaModel'), { ssr: false });
 import classes from './page-canvas.module.css';
 const CanvasSofaModel = () => {
   const [textureUrl, setTextureUrl] = useState(materials_for_sofa[0].url);
-
+  let fov = 15;
+  const isMobile = window.innerWidth <= 600;
+  const LargeScren = window.innerWidth >= 1201;
+  if (isMobile) fov = 35;
+  if (LargeScren) fov = 10;
   return (
     <>
       <div className={`${classes.canvas_block_sofa}`}>
@@ -31,16 +35,18 @@ const CanvasSofaModel = () => {
             </button>
           ))}
         </div>
-        <div className={`${classes.tooltip}`}>
-          <h3>Додаткові роботи:</h3>
-          <ul>
-            <li>Заміна поролона</li>
-            <li>Заміна пружинного блока</li>
-            <li>Заміна або Ремонт Механізму</li>
-          </ul>
+        <div className={`${classes.container_tooltip}`}>
+          <div className={`${classes.tooltip}`}>
+            <h3>Додаткові роботи:</h3>
+            <ul>
+              <li>Заміна поролона</li>
+              <li>Заміна пружинного блока</li>
+              <li>Заміна або Ремонт Механізму</li>
+            </ul>
+          </div>
         </div>
         <div className={`${classes.sofa_canvas}`}>
-          <Canvas camera={{ position: [0, 2, 5], fov: 15 }}>
+          <Canvas camera={{ position: [0, 2, 5], fov: fov }}>
             <ambientLight intensity={0.1} /> {/* Уменьшите интенсивность */}
             <pointLight position={[10, 10, 10]} intensity={0.1} />{' '}
             {/* Уменьшите интенсивность */}

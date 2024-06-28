@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
 }
 .input_img {
   width: 24x !important;
@@ -17,13 +16,17 @@
 .canvas_h2 {
   font-size: 1.5rem;
 }
+
 /* tooltip */
+.container_tooltip {
+  position: relative;
+}
 .tooltip {
   z-index: 10;
   display: block;
   position: absolute;
-  top: 190px;
-  right: 70px;
+  top: 30px;
+  left: 30px;
   background-color: rgba(0, 0, 0, 0.5); /* Прозрачный темный фон */
   width: 300px;
   padding: 20px; /* Добавление внутреннего отступа */
@@ -51,4 +54,20 @@
 
 .tooltip ul li {
   margin-bottom: 10px; /* Увеличение отступа между элементами списка */
+}
+/* with more 1201 px */
+@media (min-width: 1201px) {
+  .tooltip {
+    width: 500px;
+  }
+  .tooltip ul li {
+    font-size: 1.5rem;
+  }
+  .tooltip h3 {
+    font-size: 1.5rem;
+  }
+  .canvas_h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
 }
