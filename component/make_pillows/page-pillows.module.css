@@ -1,0 +1,32 @@
+.main_pillow {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.container_pillows {
+  position: relative;
+
+  margin: 50px;
+  object-fit: contain;
+}
+.container_pillows_img {
+  width: 900px;
+  border-radius: 23px;
+  object-fit: contain;
+}
+.main_pillow_h3 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.container_pillows_ul li {
+  list-style-type: circle;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+@media (min-width: 360px) and (max-width: 430px) {
+  .main_pillow {
+    flex-direction: column;
+    align-items: center;
+  }
+}

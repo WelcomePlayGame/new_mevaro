@@ -9,6 +9,7 @@ import Footer from '@/component/footer/page-footer';
 import classes from '../component/head/page-head.module.css';
 import Reviews from '@/component/reviews/page-reviews';
 import { Suspense } from 'react';
+import MakePillow from '@/component/make_pillows/page-make-pillows';
 
 const CanvasSofaModel = dynamic(
   () => import('@/component/canvas/CanvasSofaModel'),
@@ -33,6 +34,8 @@ export default function Home() {
       </div>
       <ReverseTringle />
       <ReplaceBlock />
+      <ReverseTringle />
+      <MakePillow />
       <Reviews />
       <Footer />
     </main>

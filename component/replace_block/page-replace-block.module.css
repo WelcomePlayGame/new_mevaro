@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .container_block h2 {
   font-size: 1.3rem;
   font-weight: bolder;
@@ -11,6 +12,7 @@
 .container_price_block {
   display: flex;
   justify-content: space-evenly;
+  z-index: 100;
 }
 .container_one_block {
   min-height: 200px;
@@ -85,6 +87,12 @@
   }
   .container_block h2 {
     font-size: 2.5rem;
+  }
+  .container_block img {
+    transform: translateY(50px);
+  }
+  .container_price_block {
+    z-index: 100;
   }
 }
 @media (min-width: 360px) and (max-width: 430px) {

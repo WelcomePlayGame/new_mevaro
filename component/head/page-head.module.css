@@ -79,6 +79,9 @@
     width: 64px;
     height: 64px;
   }
+  .video_block {
+    padding-top: 160px;
+  }
 }
 @media (min-width: 360px) and (max-width: 430px) {
   .head_top {
