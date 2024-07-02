@@ -10,6 +10,9 @@ const Head = () => {
           <a href="#block">Заміна пружинного блока</a>
         </li>
         <li>
+          <a href="#pillow">Пошити подушки</a>
+        </li>
+        <li>
           <a href="#reviews">Відгуки</a>
         </li>
       </ul>

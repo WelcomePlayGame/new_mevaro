@@ -4,6 +4,7 @@ import TelegramSVG from '../svg/page-telegram';
 import ViberSVG from '../svg/page-viber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { slideAnimation } from '@/lib/motion';
+import DeliverySVG from '../svg/pgae-delivery';
 const SubHead = () => {
   return (
     <main className={`${clasess.head_sub}`}>
@@ -48,6 +49,14 @@ const SubHead = () => {
           >
             <ViberSVG />
           </a>
+          <div className={`${clasess.container_delivery}`}>
+            <div className={`${clasess.svg_size}`}>
+              <DeliverySVG />
+            </div>
+            <span className={`${clasess.container_span_delivery}`}>
+              Безкоштовна Доставка
+            </span>
+          </div>
         </motion.div>
       </AnimatePresence>
     </main>

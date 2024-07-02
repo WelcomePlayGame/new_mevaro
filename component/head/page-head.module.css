@@ -64,6 +64,15 @@
   width: 100%;
   z-index: 200;
 }
+.container_delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container_span_delivery {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
 @media (min-width: 1201px) {
   .head_sub h1 {
     font-size: 1.5rem;
@@ -90,12 +99,15 @@
   .head_sub {
     flex-direction: column;
     align-items: center;
-    max-height: 190px;
+    max-height: 200px;
   }
   .video_block {
-    padding-top: 185px;
+    padding-top: 195px;
   }
   .hidden_canvas {
     display: none;
+  }
+  .container_span_delivery {
+    font-size: 0.8rem;
   }
 }

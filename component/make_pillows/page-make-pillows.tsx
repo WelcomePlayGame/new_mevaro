@@ -12,7 +12,7 @@ const MakePillow = () => {
       </div>
       <div>
         <h3 className={`${clasees.main_pillow_h3}`}>
-          Пошив подушек для Меблів
+          Пошив подушок для Меблів
         </h3>
         <div className={`${clasees.container_pillows_ul}`}>
           <ul>
