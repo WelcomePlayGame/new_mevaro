@@ -27,6 +27,9 @@
   font-size: 20px;
 }
 @media (min-width: 360px) and (max-width: 430px) {
+  .container_office_armchair {
+    padding-top: 250px;
+  }
   .container_office_armchair_des {
     flex-direction: column;
   }
