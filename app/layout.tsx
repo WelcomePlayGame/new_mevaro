@@ -8,6 +8,51 @@ export const metadata: Metadata = {
   title: '🛠 Перетяжка Меблів місто Київ Меваро | Безкоштовна Доставка',
   description:
     '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
+  keywords: ['перетяжка меблів', 'ремонт меблів Київ', 'оббивка меблів'],
+  creator: 'Ukraine Boy',
+  publisher: 'Ukraine Boy',
+  formatDetection: {
+    email: true,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: '🛠 Перетяжка Меблів місто Київ Меваро | Безкоштовна Доставка',
+    description:
+      '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
+    url: 'process.env.BASE_URL/image/armchair.jpg',
+    siteName: 'sitemap.ts',
+    images: [
+      {
+        url: 'process.env.BASE_URL/image/armchair.jpg', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: `process.env.BASE_URL/image/armchair.jpg`,
+        width: 1800,
+        height: 1600,
+        alt: 'перетяжка меблів',
+      },
+    ],
+    locale: 'ua_UA',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  category: 'Меблі Україна',
 };
 
 export default function RootLayout({
