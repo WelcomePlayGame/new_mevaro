@@ -21,15 +21,15 @@ export const metadata: Metadata = {
     description:
       '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
     url: 'process.env.BASE_URL/image/armchair.jpg',
-    siteName: 'sitemap.ts',
+    siteName: 'sitemap.xml',
     images: [
       {
-        url: 'process.env.BASE_URL/image/armchair.jpg', // Must be an absolute URL
+        url: 'https://www.mevaro.kiev.ua/image/armchair.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: `process.env.BASE_URL/image/armchair.jpg`,
+        url: `https://www.mevaro.kiev.ua/image/armchair.jpg`,
         width: 1800,
         height: 1600,
         alt: 'перетяжка меблів',
