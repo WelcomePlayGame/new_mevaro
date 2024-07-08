@@ -4,7 +4,7 @@ import SubHead from '@/component/head/page-sub-head';
 import classes from '@/component/head/page-head.module.css';
 import ArmchairPage from '@/component/armchair/page-armchair';
 import type { Metadata } from 'next';
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: '🛠 Перетяжка Крісла місто Київ Меваро | Безкоштовна Доставка',
   description:
     '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
