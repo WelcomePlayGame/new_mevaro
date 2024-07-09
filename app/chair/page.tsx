@@ -7,14 +7,18 @@ import classes from '@/component/head/page-head.module.css';
 import type { Metadata } from 'next';
 import Chair from '@/component/chair/page-chair';
 export const metadata: Metadata = {
-  title: '🛠 Перетяжка дивану місто Київ Меваро | Безкоштовна Доставка',
+  title: '🛠 Перетяжка стільчика місто Київ Меваро | Безкоштовна Доставка',
   description:
     '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
-  keywords: ['перетяжка дивана', 'ремонт дивана Київ', 'оббивка диванна'],
+  keywords: [
+    'перетяжка стільчика',
+    'ремонт стільчика Київ',
+    'оббивка стільчика',
+  ],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: '🛠 Перетяжка дивану місто Київ Меваро | Безкоштовна Доставка',
+    title: '🛠 Перетяжка стільчика місто Київ Меваро | Безкоштовна Доставка',
     description:
       '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
     url: 'https://www.mevaro.kiev.ua/image/armchair.jpg',
