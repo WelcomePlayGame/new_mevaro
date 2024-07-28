@@ -5,7 +5,7 @@ import xss from 'xss';
 import { S3 } from '@aws-sdk/client-s3';
 
 const s3 = new S3({
-  region: 'eu-central-1',
+  region: 'us-east-1',
   credentials: {
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -24,8 +24,26 @@ export const addFabric = async (formData: FormData) => {
     const seo_title = formData.get('seo_title') as string;
     const seo_des = formData.get('seo_des') as string;
     const content = formData.get('content') as string;
-    const JSONImages = formData.get('images') as string;
-    const images = JSON.parse(JSONImages) as Image[];
+    const images: Image[] = [];
+
+    formData.forEach((value, key) => {
+      const match = key.match(/images\[(\d+)]\[(\w+)]/);
+      if (match) {
+        const index = parseInt(match[1], 10);
+        const property = match[2];
+
+        if (!images[index]) {
+          images[index] = {} as Image;
+        }
+
+        if (property === 'file') {
+          images[index][property] = value as File;
+        } else {
+          images[index][property] = value as string;
+        }
+      }
+    });
+
     const updateImages: string[] = [];
 
     const slug = slugify(title, { lower: true }).replace(/[:.?!"+\s]+/g, '');
@@ -35,17 +53,19 @@ export const addFabric = async (formData: FormData) => {
       const extension = img.originalName.split('.').pop();
       const fileName = `${slugify(img.fileName, { lower: true })}.${extension}`;
 
-      // Конвертируем файл в буфер
-      const bufferImage = await img.file.arrayBuffer();
-
-      const params = {
-        Bucket: 'next-file-news-ua',
-        Key: fileName,
-        Body: Buffer.from(bufferImage),
-        ContentType: `image/${extension}`,
-      };
-      await s3.putObject(params);
-      updateImages.push(fileName);
+      if (img.file instanceof File) {
+        const bufferImage = await img.file.arrayBuffer();
+        const params = {
+          Bucket: 'mevaro',
+          Key: fileName,
+          Body: Buffer.from(bufferImage),
+          ContentType: `image/${extension}`,
+        };
+        await s3.putObject(params);
+        updateImages.push(fileName);
+      } else {
+        console.error('img.file is not a File');
+      }
     });
 
     await Promise.all(uploadPromises);
@@ -66,4 +86,26 @@ export const addFabric = async (formData: FormData) => {
     await closeConnection();
     throw error;
   }
+};
+
+export const getAllFabrics = async () => {
+  try {
+    await connectDB();
+    const fabrics = getCollection('fabrics');
+    return await fabrics.find({}).toArray();
+  } catch (error) {
+    throw error;
+  }
+  await closeConnection();
+};
+
+export const getFabricBySlug = async (slug) => {
+  try {
+    await connectDB();
+    const fabric = getCollection('fabrics');
+    return await fabric.findOne({ slug: slug });
+  } catch (error) {
+    throw error;
+  }
+  await closeConnection();
 };

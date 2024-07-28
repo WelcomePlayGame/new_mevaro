@@ -15,6 +15,7 @@ interface Image {
 const AddFabric = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [content, setContent] = useState<string>('');
+
   const quillModules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, false] }],
@@ -54,12 +55,19 @@ const AddFabric = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     formData.append('content', content);
-    formData.append('images', JSON.stringify(images));
+
+    images.forEach((image, index) => {
+      formData.append(`images[${index}][fileName]`, image.fileName);
+      formData.append(`images[${index}][file]`, image.file);
+      formData.append(`images[${index}][originalName]`, image.originalName);
+    });
+
     await addFabric(formData);
   };
 
   const handleImagesChange = (newImages: Image[]) => {
     setImages(newImages);
+    window.location.reload();
   };
 
   return (
