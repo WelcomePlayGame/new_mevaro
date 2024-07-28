@@ -4,25 +4,15 @@ const QuillEditor = dynamic(() => import('react-quill'), { ssr: false });
 import 'react-quill/dist/quill.snow.css';
 import PickerImage from '@/component/PickerImages/page-picker-image';
 import React, { useState } from 'react';
-interface Image {
-  title: string;
-  image: string | ArrayBuffer | null;
-}
-const addFabricToServer = async (formData: FormData) => {
-  const res = await fetch('/api/fabric/add', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  });
-  if (!res.ok) {
-    throw new Error('Failed to create comment');
-  }
+import { addFabric } from '@/lib/fabric';
 
-  return res.json();
-};
-function AddFabric() {
+interface Image {
+  fileName: string;
+  file: File;
+  originalName: string;
+}
+
+const AddFabric = () => {
   const [images, setImages] = useState<Image[]>([]);
   const [content, setContent] = useState<string>('');
   const quillModules = {
@@ -65,7 +55,11 @@ function AddFabric() {
     const formData = new FormData(event.currentTarget);
     formData.append('content', content);
     formData.append('images', JSON.stringify(images));
-    await addFabricToServer(formData);
+    await addFabric(formData);
+  };
+
+  const handleImagesChange = (newImages: Image[]) => {
+    setImages(newImages);
   };
 
   return (
@@ -81,6 +75,7 @@ function AddFabric() {
               type="text"
               placeholder="Назва тканини"
               className="w-[250px] text-center border rounded"
+              name="title"
               required
             />
             <input
@@ -88,19 +83,20 @@ function AddFabric() {
               placeholder="seo назва"
               className="w-[250px] text-center border  rounded"
               required
+              name="seo_title"
             />
             <input
               type="text"
               placeholder="seo опис"
               className="w-[250px] text-center border  rounded"
               maxLength={70}
-              minLength={50}
+              name="seo_des"
               required
             />
           </div>
 
           <div className="mt-[20px] bg-[red] rounded">
-            <button type="submit" className="text-[#fff] w-[200px] ">
+            <button type="submit" className="text-[#fff] w-[200px] h-[40px] ">
               Зберегти
             </button>
           </div>
@@ -112,10 +108,10 @@ function AddFabric() {
             className="w-full max-w-[900px] mt-10 bg-white"
           />
         </form>
-        <PickerImage onImagesChange={() => setImages(images)} />
+        <PickerImage onImagesChange={handleImagesChange} />
       </div>
     </div>
   );
-}
+};
 
 export default AddFabric;

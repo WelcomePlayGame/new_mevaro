@@ -5,11 +5,12 @@ import ViberSVG from '../svg/page-viber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { slideAnimation } from '@/lib/motion';
 import DeliverySVG from '../svg/pgae-delivery';
+
 const SubHead = () => {
   return (
     <main className={`${clasess.head_sub}`}>
       <AnimatePresence>
-        <div className={`${clasess.container_logo_h1}`}>
+        <div className={`${clasess.container_logo_h1}`} key="logo-h1">
           <motion.header
             className={`${clasess.container_logo}`}
             {...slideAnimation('left')}
@@ -24,6 +25,7 @@ const SubHead = () => {
         <motion.div
           className={`${clasess.container_logo_h1}`}
           {...slideAnimation('right')}
+          key="phone-number"
         >
           <span>Телефонуйте:</span>
           <a
@@ -36,6 +38,7 @@ const SubHead = () => {
         <motion.div
           className={`${clasess.container_app}`}
           {...slideAnimation('right')}
+          key="app-links"
         >
           <a
             href="https://t.me/romaniv21?utm_source=website&utm_medium=button&utm_campaign=contact"
@@ -62,4 +65,5 @@ const SubHead = () => {
     </main>
   );
 };
+
 export default SubHead;

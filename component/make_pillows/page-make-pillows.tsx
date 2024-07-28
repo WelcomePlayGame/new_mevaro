@@ -4,11 +4,18 @@ const MakePillow = () => {
   return (
     <main id="pillow" className={`${clasees.main_pillow}`}>
       <div className={`${clasees.container_pillows}`}>
-        <img
+        <Image
           src={'/image/pillows.png'}
+          width={600}
+          height={600}
           alt="пошити подушки"
           className={`${clasees.container_pillows_img}`}
         />
+        {/* <img
+          src={'/image/pillows.png'}
+          alt="пошити подушки"
+          className={`${clasees.container_pillows_img}`}
+        /> */}
       </div>
       <div>
         <h3 className={`${clasees.main_pillow_h3}`}>

@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
+.container_div {
+  position: relative;
+}
 
 .container_block h2 {
   font-size: 1.3rem;

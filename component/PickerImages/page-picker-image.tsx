@@ -1,8 +1,9 @@
 import React, { useState, ChangeEvent } from 'react';
 
 interface Image {
-  title: string;
-  image: string | ArrayBuffer | null;
+  fileName: string;
+  file: File;
+  originalName: string;
 }
 
 interface PickerImageProps {
@@ -12,8 +13,8 @@ interface PickerImageProps {
 const PickerImage: React.FC<PickerImageProps> = ({ onImagesChange }) => {
   const [images, setImages] = useState<Image[]>([]);
   const [newImages, setNewImages] = useState<
-    Array<{ file: File | null; title: string }>
-  >([{ file: null, title: '' }]);
+    Array<{ file: File | null; fileName: string }>
+  >([{ file: null, fileName: '' }]);
 
   const handleAddImage = (
     index: number,
@@ -28,35 +29,33 @@ const PickerImage: React.FC<PickerImageProps> = ({ onImagesChange }) => {
   };
 
   const handleAddNewInput = () => {
-    setNewImages([...newImages, { file: null, title: '' }]);
+    setNewImages([...newImages, { file: null, fileName: '' }]);
   };
 
   const handleTitleChange = (index: number, title: string) => {
     const updatedNewImages = [...newImages];
-    updatedNewImages[index].title = title;
+    updatedNewImages[index].fileName = title;
     setNewImages(updatedNewImages);
   };
 
   const handleUploadImages = () => {
     const uploadedImages: Image[] = [];
 
-    newImages.forEach(({ file, title }) => {
-      if (file && title) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          const newImage = { title, image: e.target?.result };
-          uploadedImages.push(newImage);
-
-          if (uploadedImages.length === newImages.length) {
-            const updatedImages = [...images, ...uploadedImages];
-            setImages(updatedImages);
-            onImagesChange(updatedImages); // Callback with the new images
-            setNewImages([{ file: null, title: '' }]); // Reset the inputs
-          }
+    newImages.forEach(({ file, fileName }) => {
+      if (file && fileName) {
+        const newImage = {
+          fileName,
+          file,
+          originalName: file.name,
         };
-        reader.readAsDataURL(file);
+        uploadedImages.push(newImage);
       }
     });
+
+    const updatedImages = [...images, ...uploadedImages];
+    setImages(updatedImages);
+    onImagesChange(updatedImages);
+    setNewImages([{ file: null, fileName: '' }]);
   };
 
   return (
@@ -72,8 +71,8 @@ const PickerImage: React.FC<PickerImageProps> = ({ onImagesChange }) => {
             />
             <input
               type="text"
-              placeholder="Image Title"
-              value={newImage.title}
+              placeholder="Image fileName"
+              value={newImage.fileName}
               onChange={(e) => handleTitleChange(index, e.target.value)}
             />
           </div>
@@ -83,13 +82,19 @@ const PickerImage: React.FC<PickerImageProps> = ({ onImagesChange }) => {
       </div>
       <div>
         {images.map((image, index) => (
-          <div key={index}>
+          <div key={index} className="flex justify-evenly items-center">
             <img
-              src={image.image as string}
-              alt={image.title}
-              style={{ width: '100px', height: '100px' }}
+              src={URL.createObjectURL(image.file)}
+              alt={image.fileName}
+              style={{
+                width: '300px',
+                height: '150px',
+                objectFit: 'contain',
+                padding: '10px',
+                borderRadius: '10px',
+              }}
             />
-            <p>{image.title}</p>
+            <p>{image.fileName}</p>
           </div>
         ))}
       </div>

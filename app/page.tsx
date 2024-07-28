@@ -10,6 +10,7 @@ import classes from '../component/head/page-head.module.css';
 import Reviews from '@/component/reviews/page-reviews';
 import { Suspense } from 'react';
 import MakePillow from '@/component/make_pillows/page-make-pillows';
+import Slider from '@/component/slider_main_page/page-slider-main';
 
 const CanvasSofaModel = dynamic(
   () => import('@/component/canvas/CanvasSofaModel'),
@@ -26,12 +27,14 @@ export default function Home() {
         <SubHead />
       </div>
       <VideoHead />
-      <Tringle />
       <div className={`${classes.hidden_canvas}`}>
+        <Tringle />
         <Suspense fallback="loading">
           <CanvasSofaModel />
         </Suspense>
       </div>
+      <Tringle />
+      <Slider />
       <ReverseTringle />
       <ReplaceBlock />
       <ReverseTringle />
