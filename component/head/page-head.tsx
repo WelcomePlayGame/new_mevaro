@@ -24,6 +24,9 @@ const Head = () => {
         <li>
           <a href="/#reviews">Відгуки</a>
         </li>
+        <li>
+          <a href="/#map">Наша адреса</a>
+        </li>
       </ul>
     </menu>
   );

@@ -111,3 +111,8 @@
     font-size: 0.8rem;
   }
 }
+.hr_style {
+  size: 1px;
+  margin-top: 10px;
+  width: 70%;
+}

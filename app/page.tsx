@@ -11,6 +11,7 @@ import Reviews from '@/component/reviews/page-reviews';
 import { Suspense } from 'react';
 import MakePillow from '@/component/make_pillows/page-make-pillows';
 import Slider from '@/component/slider_main_page/page-slider-main';
+import MapGoogle from '@/component/map_google/page-map-google';
 
 const CanvasSofaModel = dynamic(
   () => import('@/component/canvas/CanvasSofaModel'),
@@ -40,6 +41,7 @@ export default function Home() {
       <ReverseTringle />
       <MakePillow />
       <Reviews />
+      <MapGoogle />
       <Footer />
     </main>
   );

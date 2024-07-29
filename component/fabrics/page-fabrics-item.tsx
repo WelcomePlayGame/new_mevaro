@@ -5,10 +5,12 @@ const Item = ({
   title,
   images,
   slug,
+  category,
 }: {
   title: string;
   images: any[];
   slug: string;
+  category: string;
 }) => {
   return (
     <main className={`${classes.container_item}`}>
@@ -21,7 +23,7 @@ const Item = ({
         />
       </div>
       <hr className={`${classes.hr_style}`} />
-      <h3 className={`${classes.h3_style}`}>рогожка</h3>
+      <h3 className={`${classes.h3_style}`}>{category}</h3>
       <h2 className={`${classes.h2_style}`}>{title}</h2>
       <Link href={`/fabrics/${slug}`} className={`${classes.container_dtn}`}>
         Детальніше

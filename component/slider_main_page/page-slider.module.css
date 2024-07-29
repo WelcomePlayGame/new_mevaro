@@ -10,3 +10,10 @@
   line-height: 2.5rem;
   font-weight: bolder;
 }
+.container_img {
+  width: 600px;
+  height: 300px;
+}
+.container_miniSlider {
+  margin-top: 20px;
+}
