@@ -70,7 +70,7 @@ const AddFabric = () => {
     });
 
     await addFabric(formData);
-    window.location.reload();
+    // window.location.reload();
   };
 
   const handleImagesChange = (newImages: Image[]) => {
@@ -173,7 +173,9 @@ const AddFabric = () => {
             className="w-full max-w-[900px] mt-10 bg-white"
           />
         </form>
-        <PickerImage onImagesChange={handleImagesChange} />
+        <div className="">
+          <PickerImage onImagesChange={handleImagesChange} />
+        </div>
       </div>
     </div>
   );

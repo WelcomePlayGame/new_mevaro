@@ -9,8 +9,10 @@
   padding: 10px;
 }
 .container_soc {
+  padding: 7px;
   display: flex;
   justify-content: baseline;
+  gap: 7px;
 }
 .container_adress {
   display: flex;

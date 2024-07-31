@@ -5,8 +5,10 @@ import Footer from '@/component/footer/page-footer';
 import Head from '@/component/head/page-head';
 import classes from '@/component/head/page-head.module.css';
 import SubHead from '@/component/head/page-sub-head';
+import ButtonCart from '@/component/modal_cart/button_cart';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import { getFabricBySlug as get } from '@/lib/fabric';
+
 export const generateMetadata = async ({
   params,
 }: {
@@ -20,13 +22,22 @@ export const generateMetadata = async ({
 };
 const Fabric = async ({ params }: { params: { slug: string } }) => {
   const fabric = await get(params.slug);
+  const embed_url = fabric.url_video.replace(
+    'youtube.com/shorts/',
+    'youtube.com/embed/'
+  );
+  const createMarkup = (html: any) => ({ __html: html });
+  const discount10 = fabric.price * 0.9 * Number(process.env.DOLLAR_RATE);
+  const discount5 = fabric.price * 0.95 * Number(process.env.DOLLAR_RATE);
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
-        <section className="flex flex-col p-[50px]">
-          <div className="flex  lg:justify-center p-[20px]   space-x-20">
+      </div>
+      <div className={`pt-[190px] lg:pt-[185px]`}>
+        <section className="flex flex-col ">
+          <div className="flex flex-col lg:flex-row lg:justify-center p-[20px] lg:space-x-20">
             <div className="flex flex-col items-start">
               <div>
                 <Crumbs
@@ -45,7 +56,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               </div>
             </div>
             <div
-              className="flex flex-col items-center mt-[30px] p-[15px]"
+              className="flex flex-col items-center mt-[50px] lg:p-[15px]"
               style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
               <div className={`${classes.container_div}`}>
@@ -70,36 +81,42 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               <hr className={`${classes.hr_style}`} />
               <div className="flex flex-col">
                 <span className="m-[5px]">
-                  від 10 пог.м - 105.49 грн./пог.м{' '}
+                  від 10 пог.м - {discount5.toFixed(2)} грн./пог.м{' '}
                   <span className="bg-[red] text-[#fff] p-[2px]">
                     знижка -5%
                   </span>
                 </span>
                 <span className="m-[5px]">
-                  від 20 пог.м - 78.14 грн./пог.м{' '}
+                  від 20 пог.м - {discount10.toFixed(2)} грн./пог.м{' '}
                   <span className="bg-[red] text-[#fff] p-[2px]">
                     знижка -10%
                   </span>{' '}
                 </span>
               </div>
               <div className="">
-                <span className="text-[2.5rem] text-[red] font-bold">600</span>{' '}
+                <span className="text-[2.5rem] text-[red] font-bold">
+                  {fabric.price * Number(process.env.DOLLAR_RATE)}
+                </span>{' '}
                 грн./пог.м
               </div>
               <hr className={`${classes.hr_style}`} />
               <div>
-                <a className="bg-[#000] text-[#fff] p-[10px] rounded w-[200px] h-[50px] block text-center text-[1.5rem] mt-[10px]">
-                  Купити
-                </a>
+                <ButtonCart
+                  price={fabric.price}
+                  title={fabric.title}
+                  discount10={discount10}
+                  discount5={discount5}
+                  url={fabric.images[0]}
+                />
               </div>
             </div>
-            <div className="flex flex-col  items-start">
+            <div className="flex flex-col  items-start mt-[30px]">
               <div className="flex flex-col">
                 <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10">
                   <Delivery />
                   Швидка доставка
                 </h3>
-                <ul className="list-disc">
+                <ul className="list-disc list-inside p-[10px]">
                   <li className="text-[1.2rem]">Нова Пошта</li>
                   <li className="text-[1.2rem]">Делівері</li>
                 </ul>
@@ -108,8 +125,8 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                 <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10">
                   <AboutUs /> Чому ми?
                 </h3>
-                <ul className="list-disc">
-                  <li className="text-[1.2rem]">
+                <ul className="list-disc list-inside p-[10xp]">
+                  <li className="text-[1.2rem] ">
                     10 років працюємо з тканинами
                   </li>
                   <li className="text-[1.2rem]">
@@ -117,8 +134,25 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                   </li>
                 </ul>
               </div>
+              <hr className={`${classes.hr_style}`} />
+              <div className="mt-[15px]">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={embed_url}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
+        </section>
+        <section className="p-[30px]">
+          <div
+            dangerouslySetInnerHTML={createMarkup(fabric.content)}
+            className="break-words text-[1.1rem] leading-6 "
+          />
         </section>
         <Footer />
       </div>

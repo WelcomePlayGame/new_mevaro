@@ -80,14 +80,14 @@ const PickerImage: React.FC<PickerImageProps> = ({ onImagesChange }) => {
         <button onClick={handleAddNewInput}>+</button>
         <button onClick={handleUploadImages}>Upload Images</button>
       </div>
-      <div>
+      <div className="flex flex-col flex-wrap w-[400px]">
         {images.map((image, index) => (
-          <div key={index} className="flex justify-evenly items-center">
+          <div key={index} className="flex justify-center items-center">
             <img
               src={URL.createObjectURL(image.file)}
               alt={image.fileName}
               style={{
-                width: '300px',
+                width: '150px',
                 height: '150px',
                 objectFit: 'contain',
                 padding: '10px',

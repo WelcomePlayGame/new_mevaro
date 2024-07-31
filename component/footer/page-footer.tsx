@@ -2,6 +2,7 @@ import Link from 'next/link';
 import FacebookSVG from '../svg/page-facebook';
 import InstagramSVG from '../svg/page-instagram';
 import classes from './page-footer.module.css';
+import YoutubeSVG from '../svg/page-yuotube';
 
 const Footer = () => {
   return (
@@ -21,6 +22,14 @@ const Footer = () => {
             target="_blank"
           >
             <InstagramSVG />
+          </Link>
+        </div>
+        <div>
+          <Link
+            href={'https://www.youtube.com/@WelcometoMeVARO'}
+            target="_blank"
+          >
+            <YoutubeSVG />
           </Link>
         </div>
       </div>

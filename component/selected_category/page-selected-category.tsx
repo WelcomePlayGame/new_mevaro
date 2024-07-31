@@ -19,7 +19,7 @@ const SelectedCategory: React.FC<SelectedCategoryProps> = ({ onSelected }) => {
 
   return (
     <main className={`w-[200px] mt-[50px]`}>
-      <select onChange={onSelected} className={``}>
+      <select onChange={onSelected} className={``} required>
         {categories.map((category, index) => (
           <option key={index} value={category.title}>
             {category.title}
