@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import classes from './page-button.module.css';
 
 const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
   const [count, setCount] = useState(1);
+  const colorRef = useRef(null);
   const handleMinusCount = () => {
-    setCount((prevCount) => Math.max(prevCount - 1, 1)); // Ensure count does not go below 1
+    setCount((prevCount) => Math.max(prevCount - 1, 1));
   };
 
   const handlePlusCount = () => {
@@ -22,6 +23,13 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
   };
   const sum = handleSum();
   const beginSum = price * Number(process.env.DOLLAR_RATE) * count;
+  const handleSubmit = () => {
+    sessionStorage.setItem('sum', sum.toString());
+    sessionStorage.setItem('url', url);
+    sessionStorage.setItem('count', count.toString());
+    sessionStorage.setItem('title', title);
+    sessionStorage.setItem('colorName', colorRef.current.value);
+  };
   return (
     <main className="relative">
       <div
@@ -68,7 +76,15 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
               </button>
             </div>
           </div>
-
+          <div>
+            <input
+              type="text"
+              placeholder="Уточніть колір тканини"
+              name="color"
+              className={`${classes.container_input}`}
+              ref={colorRef}
+            />
+          </div>
           <div className={`${classes.container_price_general}`}>
             <div>
               <div>Загальна вартість:</div>
@@ -91,7 +107,11 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
             </div>
           </div>
           <div className={`${classes.container_send_next_step}`}>
-            <a href="/order" className={`${classes.send_step_order}`}>
+            <a
+              href="/order"
+              className={`${classes.send_step_order}`}
+              onClick={handleSubmit}
+            >
               Оформити замовлення
             </a>
           </div>

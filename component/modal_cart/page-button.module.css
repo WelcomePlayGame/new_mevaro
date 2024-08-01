@@ -40,3 +40,13 @@
   display: flex;
   justify-content: space-between;
 }
+.container_input {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
