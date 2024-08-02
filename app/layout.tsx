@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -93,6 +94,7 @@ export default function RootLayout({
           fbq('track', 'PageView');`}
         </Script>
         {/* End Meta Pixel Code */}
+        <Analytics />
       </head>
       <body className={inter.className}>
         {/* Google Tag Manager (noscript) */}
@@ -114,7 +116,6 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=398949992559159&ev=PageView&noscript=1"
           />
         </noscript>
-        {/* End Meta Pixel (noscript) */}
 
         {children}
       </body>
