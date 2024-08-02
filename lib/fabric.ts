@@ -85,7 +85,7 @@ export const addFabric = async (formData: FormData) => {
     const fabric = getCollection('fabrics');
     await fabric.insertOne({
       title: title.trim(),
-      slug: slug.trim(),
+      slug: slug.trim().toLocaleLowerCase,
       seo_title: seo_title.trim(),
       seo_content: seo_des.trim(),
       compound: compound,
