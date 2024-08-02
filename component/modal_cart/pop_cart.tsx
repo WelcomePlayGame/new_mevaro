@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 import classes from './page-button.module.css';
-
 const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
   const [count, setCount] = useState(1);
   const colorRef = useRef(null);
