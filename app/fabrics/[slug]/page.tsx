@@ -16,8 +16,8 @@ export const generateMetadata = async ({
 }) => {
   const fabric = await get(params?.slug);
   return {
-    title: fabric.seo_title,
-    description: fabric.seo_description,
+    title: fabric?.seo_title,
+    description: fabric?.seo_description,
   };
 };
 const Fabric = async ({ params }: { params: { slug: string } }) => {
