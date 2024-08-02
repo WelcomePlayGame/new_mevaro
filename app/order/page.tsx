@@ -6,6 +6,7 @@ import classes from '@/component/head/page-head.module.css';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
 import { sendOrderToTelegram } from '@/component/telegram/telegram';
+import { addOrder } from '@/lib/order';
 
 const Order = () => {
   const [warehouses, setWarehouses] = useState([]);
@@ -81,7 +82,7 @@ const Order = () => {
     setSelectPoshta(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     formData.append('title', imageAlt);
@@ -89,6 +90,9 @@ const Order = () => {
     formData.append('count', countMaterial);
     formData.append('poshta', selectPoshta);
     formData.append('url', imageUrl);
+    formData.append('sum', sumOrder);
+    formData.append('name', pibRef.current.value);
+    formData.append('phone', phoneRef.current.value);
     sessionStorage.setItem('name', pibRef.current.value);
     const order = {
       title: imageAlt,
@@ -101,106 +105,106 @@ const Order = () => {
     };
 
     sendOrderToTelegram(order);
+    await addOrder(formData);
     window.location.href = '/success';
   };
 
   return (
     <main>
-      <div className={classes.container_head_block}>
+      <div className={`${classes.container_head_block} `}>
         <Head />
         <SubHead />
-
-        <div className="flex flex-col mt-[50px] mb-[400px]">
-          <form onSubmit={handleSubmit}>
-            <div className="flex justify-around items-center mb-[30px]">
-              <div className="flex flex-col">
-                <input
-                  type="text"
-                  placeholder="П.І.Б"
-                  className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
-                  name="p.i.b"
-                  ref={pibRef}
-                  required
-                  title="Напишіть будь-ласка П.І.Б"
-                />
-                <input
-                  type="text"
-                  placeholder="+380*********"
-                  className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
-                  name="phone"
-                  ref={phoneRef}
-                  pattern="+380\\d{2}\\d{7}"
-                  title="Будь ласка, введіть номер телефону у форматі: 380(**)*******"
-                  required
-                />
-              </div>
-              <div className="flex justify-around gap-10">
-                <Image
-                  src={imageUrl}
-                  width={200}
-                  height={200}
-                  alt={imageAlt}
-                  className="rounded"
-                />
-                <div className="flex justify-between gap-10">
-                  <div className="flex flex-col text-[20px]">
-                    <div>Кіль-сть: </div>
-                    <div>Назва: </div>
-                  </div>
-                  <div className="flex flex-col text-[20px]">
-                    <div>{countMaterial} пог.м</div>
-                    <div>{colorName}</div>
-                  </div>
+      </div>
+      <div className="flex flex-col   pt-[220px] lg:pt-[185px] mb-[50px]">
+        <form onSubmit={handleSubmit}>
+          <div className="flex flex-col  lg:flex-row lg:justify-around items-center mb-[30px]">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                placeholder="П.І.Б"
+                className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
+                name="p.i.b"
+                ref={pibRef}
+                required
+                title="Напишіть будь-ласка П.І.Б"
+              />
+              <input
+                type="text"
+                placeholder="+380*********"
+                className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
+                name="phone"
+                ref={phoneRef}
+                pattern="+380\\d{2}\\d{7}"
+                title="Будь ласка, введіть номер телефону у форматі: 380(**)*******"
+                required
+              />
+            </div>
+            <div className="flex flex-col  lg:flex-row lg:justify-around gap-10">
+              <Image
+                src={imageUrl}
+                width={200}
+                height={200}
+                alt={imageAlt}
+                className="rounded"
+              />
+              <div className="flex justify-between gap-10">
+                <div className="flex flex-col text-[20px]">
+                  <div>Кіль-сть: </div>
+                  <div>Назва: </div>
+                </div>
+                <div className="flex flex-col text-[20px]">
+                  <div>{countMaterial} пог.м</div>
+                  <div>{colorName}</div>
                 </div>
               </div>
             </div>
-            <div className="flex justify-center mb-[30px]">
-              <div className="flex justify-between gap-20">
-                <span>Загальна вартість:</span>
-                <span>
-                  <span className="text-[22px] font-bold">{sumOrder}</span> грн
-                </span>
-              </div>
+          </div>
+          <div className="flex justify-center mb-[30px]">
+            <div className="flex justify-between gap-20">
+              <span>Загальна вартість:</span>
+              <span>
+                <span className="text-[22px] font-bold">{sumOrder}</span> грн
+              </span>
             </div>
-            <div className="flex flex-col items-center">
-              <input
-                type="text"
-                placeholder="Напишіть № відділення Нової Пошти"
-                value={searchTerm}
-                onChange={handleSearch}
-                className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
-              />
-              {searchTerm && (
-                <select
-                  className="border-[3px] border-[#000]"
-                  onChange={handledPoshta}
-                  value={selectPoshta}
-                >
-                  {filteredWarehouses.map((warehouse) => (
-                    <option
-                      key={warehouse.Ref}
-                      value={warehouse.Description}
-                      className="bg-slate-600 bg-opacity-10"
-                    >
-                      {warehouse.Description}
-                      {/* ({warehouse.ShortAddress}) */}
-                    </option>
-                  ))}
-                </select>
-              )}
-            </div>
-            <div className="flex justify-center mt-[50px]">
-              <button
-                type="submit"
-                className="bg-[#000] bg-opacity-[30] rounded-[7px] text-[#fff] text-center p-[15px]"
+          </div>
+          <div className="flex flex-col items-center">
+            <input
+              type="text"
+              placeholder="Напишіть № відділення Нової Пошти"
+              value={searchTerm}
+              onChange={handleSearch}
+              className="border-[1px] border-[#000] w-[300px] rounded text-center m-[10px]"
+            />
+            {searchTerm && (
+              <select
+                className={`${classes.container_select} border-[3px] border-[#000]`}
+                onChange={handledPoshta}
+                value={selectPoshta}
               >
-                Відправити на обробку
-              </button>
-            </div>
-          </form>
-        </div>
-        <Footer />
+                {filteredWarehouses.map((warehouse) => (
+                  <option
+                    key={warehouse.Ref}
+                    value={warehouse.Description}
+                    className="bg-slate-600 bg-opacity-10"
+                  >
+                    {warehouse.Description}
+                    {/* ({warehouse.ShortAddress}) */}
+                  </option>
+                ))}
+              </select>
+            )}
+          </div>
+          <div className="flex justify-center mt-[50px]">
+            <button
+              type="submit"
+              className="bg-[#000] bg-opacity-[30] rounded-[7px] text-[#fff] text-center p-[15px]"
+            >
+              Відправити на обробку
+            </button>
+          </div>
+        </form>
       </div>
+      <Footer />
     </main>
   );
 };

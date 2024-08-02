@@ -14,9 +14,11 @@ const Fabrics = () => {
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
-        <FabricsFetch />
-        <Footer />
       </div>
+      <div className=" pt-[190px] lg:pt-[185px] mb-[50px]">
+        <FabricsFetch />
+      </div>
+      <Footer />
     </main>
   );
 };

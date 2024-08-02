@@ -92,7 +92,14 @@
     padding-top: 160px;
   }
 }
+.container_select {
+  width: 100%;
+}
 @media (min-width: 360px) and (max-width: 430px) {
+  .container_select {
+    width: 300px;
+    text-align: center;
+  }
   .head_top {
     display: none;
   }

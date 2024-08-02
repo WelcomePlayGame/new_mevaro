@@ -36,7 +36,9 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
         style={isClosed ? { boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' } : {}}
       >
         <span>Ваше замовлення:</span>
-        <div className="flex flex-col items-end mb-[30px]">
+        <div
+          className={`${classes.section_sale} flex flex-col items-end mb-[30px]`}
+        >
           <span className="m-[5px]">
             від 10 пог.м - {discount5.toFixed(2)} грн./пог.м{' '}
             <span className="bg-[red] text-[#fff] p-[2px]">знижка -5%</span>
@@ -48,7 +50,7 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
         </div>
         <hr />
         <div className="flex flex-col mt-[30px]">
-          <div className="flex justify-between items-center gap-2 ">
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-2 ">
             <img
               src={`${process.env.URL_AWS}${url}`}
               alt={title}

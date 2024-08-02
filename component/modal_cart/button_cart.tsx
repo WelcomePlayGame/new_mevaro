@@ -21,7 +21,7 @@ const ButtonCart = ({
   };
   return (
     <main>
-      <a className={`${classes.btn}`} onClick={handleChanged}>
+      <a className={`${classes.btn} m-[10px]`} onClick={handleChanged}>
         Купити
       </a>
       <PopCart

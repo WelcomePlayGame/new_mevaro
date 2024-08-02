@@ -50,3 +50,32 @@
   font-size: 16px;
   margin-bottom: 10px;
 }
+.container_select {
+  width: 100%;
+}
+@media (min-width: 360px) and (max-width: 600px) {
+  .section_sale {
+    display: none;
+  }
+  .pop_onen {
+    margin-top: 150px;
+    top: 10%;
+    left: 18%;
+    padding: 20px;
+  }
+  .container_select {
+    width: 300px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .section_sale {
+    display: none;
+  }
+  .pop_onen {
+    margin-top: 150px;
+    top: 5%;
+    left: 38%;
+    padding: 30px;
+  }
+}
