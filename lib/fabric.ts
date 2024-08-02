@@ -100,7 +100,7 @@ export const addFabric = async (formData: FormData) => {
     });
 
     await closeConnection();
-    revalidatePath('/', 'layout');
+    revalidatePath('/fabrics', 'layout');
   } catch (error) {
     await closeConnection();
     throw error;
