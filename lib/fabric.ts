@@ -3,7 +3,7 @@ import slugify from 'slugify';
 import { connectDB, getCollection, closeConnection } from '@/lib/db';
 import xss from 'xss';
 import { S3 } from '@aws-sdk/client-s3';
-
+import { revalidatePath } from 'next/cache';
 const s3 = new S3({
   region: 'us-east-1',
   credentials: {
@@ -100,6 +100,7 @@ export const addFabric = async (formData: FormData) => {
     });
 
     await closeConnection();
+    revalidatePath('/', 'layout');
   } catch (error) {
     await closeConnection();
     throw error;
