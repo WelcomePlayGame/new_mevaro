@@ -6,6 +6,10 @@ import PickerImage from '@/component/PickerImages/page-picker-image';
 import React, { useState } from 'react';
 import { addFabric } from '@/lib/fabric';
 import SelectedCategory from '@/component/selected_category/page-selected-category';
+import SendS3Bucket from '@/component/sent_s3/page-send-s3';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 interface Image {
   fileName: string;
   file: File;
@@ -63,14 +67,18 @@ const AddFabric = () => {
     formData.append('content', content);
     formData.append('category', category);
     formData.append('isChecked', isChecked.toString());
-    images.forEach((image, index) => {
-      formData.append(`images[${index}][fileName]`, image.fileName);
-      formData.append(`images[${index}][file]`, image.file);
-      formData.append(`images[${index}][originalName]`, image.originalName);
-    });
-
-    await addFabric(formData);
-    // window.location.reload();
+    let nameImages = [];
+    if (images) {
+      nameImages = await SendS3Bucket(images);
+    } else {
+      throw new Error('Что-то с файлом');
+    }
+    await addFabric(formData, nameImages);
+    toast.warn('Good Valdemar');
+    setContent('');
+    setImages(null);
+    setCategory(null);
+    setChecked(false);
   };
 
   const handleImagesChange = (newImages: Image[]) => {

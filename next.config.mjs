@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['mevaro.s3.amazonaws.com'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'lh3.googleusercontent.com',
+        hostname: 'mevaro.s3.amazonaws.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },

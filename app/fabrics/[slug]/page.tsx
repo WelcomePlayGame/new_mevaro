@@ -22,7 +22,7 @@ export const generateMetadata = async ({
 };
 const Fabric = async ({ params }: { params: { slug: string } }) => {
   const fabric = await get(params.slug);
-  const embed_url = fabric.url_video.replace(
+  const embed_url = fabric?.url_video.replace(
     'youtube.com/shorts/',
     'youtube.com/embed/'
   );
