@@ -73,6 +73,9 @@
   text-transform: uppercase;
   font-size: 1.1rem;
 }
+.container_content ul li {
+  list-style-type: disc;
+}
 @media (min-width: 1201px) {
   .head_sub h1 {
     font-size: 1.5rem;
