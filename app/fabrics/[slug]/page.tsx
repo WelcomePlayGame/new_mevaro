@@ -151,7 +151,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
         <section className="p-[30px]">
           <div
             dangerouslySetInnerHTML={createMarkup(fabric.content)}
-            className="break-words text-[1.1rem] leading-6 "
+            className="break-words text-[1.1rem] leading-6 list-disc "
           />
         </section>
         <Footer />
