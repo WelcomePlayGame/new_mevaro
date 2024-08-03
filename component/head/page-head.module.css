@@ -73,6 +73,9 @@
   text-transform: uppercase;
   font-size: 1.1rem;
 }
+.container_content {
+  padding: 50px;
+}
 .container_content ul li {
   list-style-type: disc;
 }
