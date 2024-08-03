@@ -74,7 +74,7 @@ const AddFabric = () => {
       throw new Error('Что-то с файлом');
     }
     await addFabric(formData, nameImages);
-    toast.warn('Good Valdemar');
+    toast.info('Good Valdemar');
     setContent('');
     setImages(null);
     setCategory(null);
