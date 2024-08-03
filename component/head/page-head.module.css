@@ -76,6 +76,12 @@
 .container_content {
   padding: 50px;
 }
+.container_content h3 {
+  margin: 10px;
+}
+.container_content h2 {
+  text-align: center;
+}
 .container_content ul li {
   list-style-type: disc;
 }
