@@ -1,4 +1,12 @@
+import { getAllFabrics } from '@/lib/fabric';
 export default async function sitemap() {
+  const fabrics = await getAllFabrics();
+  const modelFabrics = fabrics.map((fabric) => ({
+    url: `${process.env.BASE_URL}/fabrics/${fabric.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'yearly',
+    priority: 1,
+  }));
   return [
     {
       url: `${process.env.BASE_URL}`,
@@ -42,5 +50,6 @@ export default async function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...modelFabrics,
   ];
 }
