@@ -135,16 +135,18 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                 </ul>
               </div>
               <hr className={`${classes.hr_style}`} />
-              <div className="mt-[15px]">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={embed_url}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+              {embed_url && (
+                <div className="mt-[15px]">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={embed_url}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              )}
             </div>
           </div>
         </section>
