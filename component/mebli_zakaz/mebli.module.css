@@ -1,0 +1,45 @@
+.container_div {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 165px;
+}
+
+.container_relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image_full_width {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.container_h1 {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 50%;
+  background: rgba(9, 118, 101, 0.4);
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(9, 118, 101, 0.4);
+}
+
+.container_h1 h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.container_blockquoter {
+  display: flex;
+  justify-content: end;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+.container_blockquoter blockquote {
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; */
+}
