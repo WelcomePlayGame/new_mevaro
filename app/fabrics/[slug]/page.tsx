@@ -4,7 +4,7 @@ import AboutUs from '@/component/delivery_tkan_svg/page-we';
 import Footer from '@/component/footer/page-footer';
 import Head from '@/component/head/page-head';
 import classes from '@/component/head/page-head.module.css';
-import SubHead from '@/component/head/page-sub-head';
+import SubHead from '@/component/head/page-sub-header-tkani';
 import ButtonCart from '@/component/modal_cart/button_cart';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import { getFabricBySlug as get } from '@/lib/fabric';
