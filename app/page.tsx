@@ -41,7 +41,7 @@ export default function Home() {
       <ReverseTringle />
       <MakePillow />
       <Reviews />
-      <MapGoogle />
+      {/* <MapGoogle /> */}
       <Footer />
     </main>
   );
