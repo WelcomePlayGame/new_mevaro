@@ -50,6 +50,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               </div>
               <div className="pt-[30px] w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]">
                 <SliderProduct imgArray={fabric.images} />
+
                 <span className="mt-[7px]">
                   *Передача кольору може бути спотворена пристроєм
                 </span>

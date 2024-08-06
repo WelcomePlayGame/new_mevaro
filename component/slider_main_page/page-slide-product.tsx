@@ -11,6 +11,12 @@ import { useState } from 'react';
 
 const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const changeUrl = (url: string) => {
+    const extension = url.split('.').pop();
+    let updateUrl = url.replace(`.${extension}`, '');
+    updateUrl = updateUrl.replace('-', ' ');
+    return <span className={`${classes.element_span}`}>{updateUrl}</span>;
+  };
 
   return (
     <main>
@@ -34,6 +40,9 @@ const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
                 alt={url}
                 className="rounded"
               />
+            </div>
+            <div className={`${classes.container_element_span}`}>
+              {changeUrl(url)}
             </div>
           </SwiperSlide>
         ))}

@@ -43,3 +43,30 @@
 .container_blockquoter blockquote {
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; */
 }
+.container_h2 h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+  text-align: center;
+}
+.container_section_second_h2 {
+  padding-top: 50px;
+}
+.container_h2 {
+  position: absolute;
+  z-index: 10;
+  top: 110%;
+  left: 10%;
+  background: rgba(9, 118, 101, 0.4);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(9, 118, 101, 0.4);
+}
+.container_section_second {
+  margin-top: 50px;
+  background: url('/image/fon.webp') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}

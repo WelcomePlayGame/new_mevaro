@@ -17,3 +17,10 @@
 .container_miniSlider {
   margin-top: 20px;
 }
+
+.element_span {
+  text-transform: capitalize;
+}
+.container_element_span {
+  position: relative;
+}
