@@ -14,7 +14,7 @@ const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
   const changeUrl = (url: string) => {
     const extension = url.split('.').pop();
     let updateUrl = url.replace(`.${extension}`, '');
-    updateUrl = updateUrl.replace('-', ' ');
+    updateUrl = updateUrl.replace(/-/g, ' ');
     return <span className={`${classes.element_span}`}>{updateUrl}</span>;
   };
 
