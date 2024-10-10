@@ -1,8 +1,7 @@
-importScripts('https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js');
-importScripts(
-  'https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging.js'
+self.importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js');
+self.importScripts(
+  'https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js'
 );
-
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
   authDomain: 'mevaro-48817.firebaseapp.com',
