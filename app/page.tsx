@@ -14,8 +14,8 @@ import ImgSection from '@/component/canvas/ImgSection';
 import ImageMainBlock from '@/component/main_block/page-main-block';
 import { useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
-// import firebaseConfig from '../config/firebaseConfig';
 import { getMessaging, onMessage, getToken } from 'firebase/messaging';
+
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
   authDomain: 'mevaro-48817.firebaseapp.com',
@@ -29,10 +29,11 @@ const firebaseConfig = {
 
 export default function Home() {
   useEffect(() => {
+    // Инициализация Firebase
     const app = initializeApp(firebaseConfig);
     const messaging = getMessaging(app);
 
-    // Register the service worker
+    // Регистрация Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/firebase-messaging-sw.js')
@@ -47,6 +48,7 @@ export default function Home() {
         });
     }
 
+    // Функция для запроса разрешения на уведомления
     const requestNotificationPermission = async () => {
       try {
         const permission = await Notification.requestPermission();
@@ -57,21 +59,31 @@ export default function Home() {
           if (token) {
             console.log('FCM Token:', token);
           }
+        } else {
+          console.warn('Notification permission denied.');
         }
       } catch (error) {
-        console.log('Error getting token:', error);
+        console.error('Error getting token:', error);
       }
     };
 
     requestNotificationPermission();
 
+    // Подписка на сообщения
     const unsubscribe = onMessage(messaging, (payload) => {
       console.log('Message received:', payload);
       if (payload.notification) {
-        alert(`Messaging: ${payload.notification.title}`);
+        const { title, body, image } = payload.notification;
+
+        // Создаем новое уведомление
+        new Notification(title, {
+          body: body,
+          icon: image,
+        });
       }
     });
 
+    // Очистка подписки при размонтировании компонента
     return () => {
       unsubscribe();
     };
@@ -79,7 +91,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className={`${classes.container_head_block}`}>
+      <div className={classes.container_head_block}>
         <Head />
         <SubHead />
       </div>
