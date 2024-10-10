@@ -12,7 +12,7 @@ import Slider from '@/component/slider_main_page/page-slider-main';
 import MapGoogle from '@/component/map_google/page-map-google';
 import ImgSection from '@/component/canvas/ImgSection';
 import ImageMainBlock from '@/component/main_block/page-main-block';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getMessaging, onMessage, getToken } from 'firebase/messaging';
 
@@ -28,6 +28,9 @@ const firebaseConfig = {
 };
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [notificationData, setNotificationData] = useState(null);
+
   useEffect(() => {
     // Инициализация Firebase
     const app = initializeApp(firebaseConfig);
@@ -69,17 +72,14 @@ export default function Home() {
 
     requestNotificationPermission();
 
-    // Подписка на сообщения
     const unsubscribe = onMessage(messaging, (payload) => {
-      console.log('Message received:', payload);
-      if (payload.notification) {
-        const { title, body, image } = payload.notification;
+      console.log('Message received:', payload); // Логируем полное сообщение
 
-        // Создаем новое уведомление
-        new Notification(title, {
-          body: body,
-          icon: image,
-        });
+      if (payload.notification) {
+        setNotificationData(payload.notification);
+        setModalOpen(true); // Открываем модальное окно
+      } else {
+        console.warn('No notification found in payload.');
       }
     });
 
@@ -88,6 +88,10 @@ export default function Home() {
       unsubscribe();
     };
   }, []);
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <main>
@@ -108,6 +112,42 @@ export default function Home() {
       <Reviews />
       <MapGoogle />
       <Footer />
+
+      {modalOpen && notificationData && (
+        <div className="modal">
+          <div className="modal-content">
+            <h3>{notificationData.title}</h3>
+            <a href={notificationData.body}>Жмакай!</a>
+
+            <button onClick={closeModal}></button>
+          </div>
+        </div>
+      )}
+
+      {/* Стили для модального окна */}
+      <style jsx>{`
+        .modal {
+          position: fixed;
+          top: 17%;
+          left: 0;
+          width: 300px;
+          height: 100px;
+          // background: rgba(0, 0, 0, 0.7);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .modal-content {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          text-align: center;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      `}</style>
     </main>
   );
 }
