@@ -14,9 +14,17 @@ import ImgSection from '@/component/canvas/ImgSection';
 import ImageMainBlock from '@/component/main_block/page-main-block';
 import { useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
-import firebaseConfig from '../config/firebaseConfig';
+// import firebaseConfig from '../config/firebaseConfig';
 import { getMessaging, onMessage, getToken } from 'firebase/messaging';
-
+const firebaseConfig = {
+  apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
+  authDomain: 'mevaro-48817.firebaseapp.com',
+  projectId: 'mevaro-48817',
+  storageBucket: 'mevaro-48817.appspot.com',
+  messagingSenderId: '999314351470',
+  appId: '1:999314351470:web:2cd067d78ce33394504d7f',
+  measurementId: 'G-XE7MYY23CY',
+};
 export default function Home() {
   useEffect(() => {
     const app = initializeApp(firebaseConfig);
