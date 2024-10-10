@@ -16,11 +16,9 @@ const firebaseConfig = {
     'BL6SI-ZFv4sJx8Q3hue4I9QvB20JLQ8FCO27EPH7aeW2NzEgnoHma8J2Q_OWb-WGB1lWDZtMfTwi3X8sYynTU-o',
 };
 
-// Ініціалізуйте Firebase
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
-// Обробка фонових повідомлень
 messaging.onBackgroundMessage((payload) => {
   console.log('Received background message:', payload);
   const notificationTitle = payload.notification.title;
