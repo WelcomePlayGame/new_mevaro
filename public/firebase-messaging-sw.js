@@ -1,6 +1,9 @@
-self.importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js');
-self.importScripts(
-  'https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js'
+/* eslint-disable no-undef */
+importScripts(
+  'https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js'
+);
+importScripts(
+  'https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compat.js'
 );
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
