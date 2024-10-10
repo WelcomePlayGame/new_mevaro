@@ -1,0 +1,22 @@
+.container {
+  padding-top: 200px;
+  padding-bottom: 60px;
+  gap: 7px;
+}
+.container h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+}
+.container h3 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.container span {
+  background: rgb(0, 0, 0, 0.5);
+  margin-top: 10px;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}

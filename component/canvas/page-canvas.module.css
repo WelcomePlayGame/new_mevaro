@@ -1,0 +1,97 @@
+.canvas_block_sofa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_img {
+  width: 24x !important;
+  height: 24px;
+  border-radius: 90px;
+  margin: 5px;
+}
+.sofa_canvas {
+  width: 100%;
+  height: 400px;
+}
+.canvas_h2 {
+  font-size: 1.5rem;
+}
+
+/* tooltip */
+.container_tooltip {
+  position: relative;
+}
+.tooltip {
+  z-index: 10;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Прозрачный темный фон */
+  width: 300px;
+  padding: 20px; /* Добавление внутреннего отступа */
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Теневой эффект для глубины */
+}
+
+.tooltip h3 {
+  margin-top: 0;
+  font-size: 1.1rem; /* Увеличение размера шрифта */
+  color: #fff; /* Цвет текста заголовка */
+}
+
+.tooltip ul {
+  padding-left: 20px;
+  list-style-type: none; /* Удаление маркеров списка */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  list-style-type: '\25b6';
+}
+
+.tooltip ul li {
+  margin-bottom: 10px; /* Увеличение отступа между элементами списка */
+}
+/* with more 1201 px */
+@media (min-width: 1201px) {
+  .tooltip {
+    width: 500px;
+  }
+  .tooltip ul li {
+    font-size: 1.5rem;
+  }
+  .tooltip h3 {
+    font-size: 1.5rem;
+  }
+  .canvas_h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+}
+/* with max 360 */
+@media (min-width: 360px) and (max-width: 430px) {
+  .tooltip {
+    width: 350px;
+    left: -175px;
+    top: 150px;
+  }
+  .tooltip ul li {
+    font-size: 1.1rem;
+  }
+  .tooltip h3 {
+    font-size: 1.5rem;
+  }
+  .canvas_h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  .canvas_h2 {
+    font-size: 1.3rem;
+  }
+  .sofa_canvas {
+    height: 200px;
+  }
+}

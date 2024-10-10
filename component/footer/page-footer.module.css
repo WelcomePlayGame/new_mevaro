@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 10px;
+}
+.container_soc {
+  padding: 7px;
+  display: flex;
+  justify-content: baseline;
+  gap: 7px;
+}
+.container_adress {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+@media (min-width: 360px) and (max-width: 430px) {
+}

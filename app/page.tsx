@@ -1,0 +1,76 @@
+'use client';
+import Head from '@/component/head/page-head';
+import SubHead from '@/component/head/page-sub-head';
+import Tringle from '@/component/tringle/page-tringle';
+import ReverseTringle from '@/component/tringle/page-reverse-triangle';
+import ReplaceBlock from '@/component/replace_block/page-raplace-block';
+import Footer from '@/component/footer/page-footer';
+import classes from '../component/head/page-head.module.css';
+import Reviews from '@/component/reviews/page-reviews';
+import MakePillow from '@/component/make_pillows/page-make-pillows';
+import Slider from '@/component/slider_main_page/page-slider-main';
+import MapGoogle from '@/component/map_google/page-map-google';
+import ImgSection from '@/component/canvas/ImgSection';
+import ImageMainBlock from '@/component/main_block/page-main-block';
+import { useEffect } from 'react';
+import { initializeApp } from 'firebase/app';
+import firebaseConfig from '../config/firebaseConfig';
+import { getMessaging, onMessage, getToken } from 'firebase/messaging';
+
+export default function Home() {
+  useEffect(() => {
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+
+    const requestNotificationPermission = async () => {
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+          const token = await getToken(messaging, {
+            vapidKey: firebaseConfig.vapidKey,
+          });
+          if (token) {
+            console.log('FCM Token:', token);
+          }
+        }
+      } catch (error) {
+        console.log('Error getting token:', error);
+      }
+    };
+
+    requestNotificationPermission();
+
+    const unsubscribe = onMessage(messaging, (payload) => {
+      console.log('Message received:', payload);
+      if (payload.notification) {
+        alert(`Messaging: ${payload.notification.title}`);
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+  return (
+    <main>
+      <div className={`${classes.container_head_block}`}>
+        <Head />
+        <SubHead />
+      </div>
+      <ImageMainBlock />
+      <Tringle />
+      <ImgSection />
+      <Tringle />
+      <Slider />
+      <ReverseTringle />
+      <ReplaceBlock />
+      <ReverseTringle />
+      <MakePillow />
+      <ReverseTringle />
+      <Reviews />
+      <MapGoogle />
+      <Footer />
+    </main>
+  );
+}

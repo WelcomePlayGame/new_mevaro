@@ -1,0 +1,26 @@
+.slider_container {
+  display: flex;
+  justify-content: space-around;
+}
+.container_div {
+  position: relative;
+}
+.element_h2 {
+  font-size: 2.3rem;
+  line-height: 2.5rem;
+  font-weight: bolder;
+}
+.container_img {
+  width: 600px;
+  height: 300px;
+}
+.container_miniSlider {
+  margin-top: 20px;
+}
+
+.element_span {
+  text-transform: capitalize;
+}
+.container_element_span {
+  position: relative;
+}

@@ -1,0 +1,115 @@
+.container_div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 165px;
+}
+
+.container_relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image_full_width {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.container_h1 {
+  position: absolute;
+  z-index: 10;
+  top: 30%;
+  left: 50%;
+  background: rgba(9, 118, 101, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container_h1 h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+.container_blockquoter {
+  display: flex;
+  justify-content: end;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+.container_blockquoter blockquote {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+.container_h2 h2 {
+  color: #fff;
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+  text-align: center;
+}
+.container_section_second_h2 {
+  padding-top: 50px;
+}
+.container_h2 {
+  position: absolute;
+  z-index: 10;
+  top: 110%;
+  left: 10%;
+  background: rgba(9, 118, 101, 0.4);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(9, 118, 101, 0.4);
+}
+.container_section_second {
+  margin-top: 20px;
+
+  height: auto;
+  width: 100%;
+}
+.container_img_third {
+  width: 400px;
+  height: 200px;
+  object-fit: contain;
+}
+.container_img_third_h4 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 7px;
+  border-radius: 5px;
+}
+.container_h5 {
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+}
+.container_span {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+.container_slide {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 360px) and (max-width: 430px) {
+  .container_h1 {
+    top: 60%;
+    left: 20%;
+    padding: 6px;
+  }
+  .container_h1 h1 {
+    font-size: 1.2rem;
+  }
+  .container_blockquoter blockquote {
+    font-size: 0.8rem;
+  }
+  .image_full_width {
+    margin-top: 20px;
+  }
+}
