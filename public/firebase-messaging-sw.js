@@ -1,6 +1,8 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getMessaging, onBackgroundMessage } from 'firebase/messaging';
+// Імпортуйте Firebase Messaging SDK
+importScripts('https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js');
+importScripts(
+  'https://www.gstatic.com/firebasejs/9.22.1/firebase-messaging.js'
+);
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
@@ -12,14 +14,14 @@ const firebaseConfig = {
   vapidKey:
     'BL6SI-ZFv4sJx8Q3hue4I9QvB20JLQ8FCO27EPH7aeW2NzEgnoHma8J2Q_OWb-WGB1lWDZtMfTwi3X8sYynTU-o',
 };
-// Initialize the Firebase app
-const app = initializeApp(firebaseConfig);
-const messaging = getMessaging(app);
 
-// Handle background messages
-onBackgroundMessage(messaging, (payload) => {
+// Ініціалізуйте Firebase
+firebase.initializeApp(firebaseConfig);
+const messaging = firebase.messaging();
+
+// Обробка фонових повідомлень
+messaging.onBackgroundMessage((payload) => {
   console.log('Received background message:', payload);
-  // Customize notification here
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
