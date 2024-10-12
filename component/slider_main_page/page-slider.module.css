@@ -20,7 +20,21 @@
 
 .element_span {
   text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #fff;
 }
 .container_element_span {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(9, 118, 101, 0.6);
+  width: 30%;
+
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 7px;
+}
+@media (min-width: 360px) and (max-width: 430px) {
+  .container_element_span {
+    margin: auto;
+  }
 }
