@@ -52,4 +52,7 @@
     list-style-position: inside;
     color: #fff;
   }
+  .container_pillows_img {
+    width: 380px;
+  }
 }
