@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 const oauth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  `${process.env.BASE_UR}/api/auth/callback`
+  `${process.env.BASE_URL}/api/auth/callback`
 );
 
 // Метод GET для получения URL авторизации
@@ -16,6 +16,7 @@ export async function GET(req) {
     });
 
     // Перенаправляем пользователя на страницу авторизации
+    console.log(authUrl);
     return NextResponse.redirect(authUrl);
   } catch (error) {
     console.error('Error generating auth URL:', error);
