@@ -49,8 +49,8 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
           </span>
         </div>
         <hr />
-        <div className="flex flex-col mt-[30px]">
-          <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-2 ">
+        <div className="flex flex-col mt-[30px] ">
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center space-x-2">
             <img
               src={`${process.env.URL_AWS}${url}`}
               alt={title}
