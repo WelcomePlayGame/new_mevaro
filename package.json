@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "push_vercel": "git add . && git commit -m \"$(node -p 'new Date().toISOString().slice(0, 10)')_v2\" && git push origin master -f"
+    "push_vercel": "git add . && git diff-index --quiet HEAD || (git commit -m \"$(node -p 'new Date().toISOString().slice(0, 10)')_v2\" && git push origin master -f)"
   },
   "dependencies": {
     "-": "^0.0.1",
