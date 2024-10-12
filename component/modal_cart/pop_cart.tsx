@@ -50,7 +50,9 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
         </div>
         <hr />
         <div className="flex flex-col mt-[30px] ">
-          <div className="flex flex-col lg:flex-row lg:justify-between items-center space-x-2">
+          <div
+            className={`${classes.container_gap} flex flex-col lg:flex-row lg:justify-between items-center space-x-2`}
+          >
             <img
               src={`${process.env.URL_AWS}${url}`}
               alt={title}
@@ -67,12 +69,20 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
               {``} грн./пог.м
             </div>
 
-            <div className="flex justify-evenly items-center">
-              <button type="button" onClick={handleMinusCount}>
+            <div className={` flex justify-evenly items-center`}>
+              <button
+                className={`${classes.container_plus_minus}`}
+                type="button"
+                onClick={handleMinusCount}
+              >
                 -
               </button>
               <span className="p-[10px]">{count}</span>
-              <button type="button" onClick={handlePlusCount}>
+              <button
+                className={`${classes.container_plus_minus}`}
+                type="button"
+                onClick={handlePlusCount}
+              >
                 +
               </button>
             </div>
