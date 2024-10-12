@@ -1,4 +1,4 @@
-// app/auth/callback/route.js
+// app/auth/callback/route.ts
 import { NextResponse } from 'next/server';
 
 export async function GET(req) {
