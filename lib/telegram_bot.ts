@@ -18,19 +18,19 @@ bot.command('start', async (ctx) => {
 });
 
 // Handle button clicks
-bot.hears('📚   t', async (ctx) => {
+bot.hears('📚 Перетяжка меблів', async (ctx) => {
   await ctx.reply('This is a Telegram bot built with Next.js');
 });
 
-bot.hears('🔍 Search', async (ctx) => {
+bot.hears('🔍 Каталог Тканин', async (ctx) => {
   await ctx.reply('What would you like to search for?');
 });
 
-bot.hears('📞 Contact', async (ctx) => {
+bot.hears('📞 Контакти', async (ctx) => {
   await ctx.reply('Contact us at: contact@example.com');
 });
 
-bot.hears('⚙️ Settings', async (ctx) => {
+bot.hears('⚙️ Сайт', async (ctx) => {
   await ctx.reply('Settings are not implemented yet.');
 });
 
