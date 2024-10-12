@@ -1,35 +1,48 @@
 import { Telegraf, Markup } from 'telegraf';
 
-const bot = new Telegraf(process.env.BOT_TOKEN as string);
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN as string);
 
 // Create a keyboard menu
 const mainMenu = Markup.keyboard([
-  ['📚 About', '🔍 Search'],
-  ['📞 Contact', '⚙️ Settings'],
+  ['📚 Перетяжка меблів', '🔍 Каталог Тканин'],
+  ['📞 Контакти', '⚙️ Сайт'],
 ]).resize();
 
 // Command handler for /start
-bot.command('start', (ctx) => {
-  return ctx.reply('Welcome! Please choose an option:', mainMenu);
+bot.command('start', async (ctx) => {
+  console.log('Received /start command');
+  try {
+    await ctx.reply('Ласкаво просимо!', mainMenu);
+    console.log('Sent welcome message with menu');
+  } catch (error) {
+    console.error('Error sending welcome message:', error);
+  }
 });
 
 // Handle button clicks
-bot.hears('📚 About', (ctx) =>
-  ctx.reply('This is a Telegram bot built with Next.js')
-);
-bot.hears('🔍 Search', (ctx) =>
-  ctx.reply('What would you like to search for?')
-);
-bot.hears('📞 Contact', (ctx) =>
-  ctx.reply('Contact us at: contact@example.com')
-);
-bot.hears('⚙️ Settings', (ctx) =>
-  ctx.reply('Settings are not implemented yet.')
-);
+bot.hears('📚   t', async (ctx) => {
+  await ctx.reply('This is a Telegram bot built with Next.js');
+});
 
-// Add a catch-all handler
-bot.on('text', (ctx) => {
-  ctx.reply('Please select an option from the menu:', mainMenu);
+bot.hears('🔍 Search', async (ctx) => {
+  console.log('Search button clicked');
+  await ctx.reply('What would you like to search for?');
+});
+
+bot.hears('📞 Contact', async (ctx) => {
+  console.log('Contact button clicked');
+  await ctx.reply('Contact us at: contact@example.com');
+});
+
+bot.hears('⚙️ Settings', async (ctx) => {
+  console.log('Settings button clicked');
+  await ctx.reply('Settings are not implemented yet.');
+});
+
+// Catch-all handler for any text message
+bot.on('text', async (ctx) => {
+  console.log('Received text message:', ctx.message.text);
+  await ctx.reply('Будь ласка, скористайтеся меню:', mainMenu);
 });
 
 // Export the bot for use in your Next.js API routes
