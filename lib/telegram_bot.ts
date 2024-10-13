@@ -63,14 +63,14 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
   await ctx.reply('Який тип тканини вас цікавить?');
 });
 
-// bot.hears('📞 Контакти', async (ctx) => {
-//   await ctx.reply(
-//     "Зв'яжіться з нами:",
-//     Markup.inlineKeyboard([
-//       Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
-//     ])
-//   );
-// });
+bot.hears('📞 Контакти', async (ctx) => {
+  await ctx.reply(
+    "Зв'яжіться з нами:",
+    Markup.inlineKeyboard([
+      Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
+    ])
+  );
+});
 
 bot.hears('Про нас', async (ctx) => {
   await ctx.reply(
@@ -109,7 +109,7 @@ bot.hears('Заміна Пружинного Блоку з поролоном', 
 });
 
 // Catch-all handler for any text message
-bot.on(message('text'), async (ctx) => {
+bot.on('text', async (ctx) => {
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
 
