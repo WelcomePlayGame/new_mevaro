@@ -1,5 +1,7 @@
 import { Telegraf, Markup } from 'telegraf';
 import { message } from 'telegraf/filters';
+import { getAllFabrics, getFabricBySlug } from './fabric';
+
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
@@ -71,7 +73,19 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
 });
 
 bot.hears('🎨 Каталог Тканин', async (ctx) => {
-  await ctx.reply('Який тип тканини вас цікавить?');
+  try {
+    const fabrics = await getAllFabrics();
+    const fabricTypes = [...new Set(fabrics.map((f) => f.type))];
+
+    const keyboard = Markup.keyboard(
+      fabricTypes.map((type) => [type])
+    ).resize();
+
+    await ctx.reply('Який тип тканини вас цікавить?', keyboard);
+  } catch (error) {
+    console.error('Error fetching fabrics:', error);
+    await ctx.reply('Вибачте, сталася помилка при завантаженні каталогу.');
+  }
 });
 
 bot.hears('📞 Контакти', async (ctx) => {
@@ -126,6 +140,41 @@ bot.hears('Заміна Пружинного Блоку з поролоном', 
 bot.on(message('text'), async (ctx) => {
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
+
+// Handle fabric type selection
+bot.hears(fabricTypes, async (ctx) => {
+  const selectedType = ctx.message.text;
+  const fabricsOfType = fabrics.filter((f) => f.type === selectedType);
+
+  const keyboard = Markup.keyboard(
+    fabricsOfType.map((f) => [f.title])
+  ).resize();
+
+  await ctx.reply(`Оберіть тканину типу ${selectedType}:`, keyboard);
+});
+
+// Handle specific fabric selection
+bot.hears(
+  fabrics.map((f) => f.title),
+  async (ctx) => {
+    const selectedFabric = fabrics.find((f) => f.title === ctx.message.text);
+    if (selectedFabric) {
+      try {
+        const fabricDetails = await getFabricBySlug(selectedFabric.slug);
+        await ctx.reply(
+          `Інформація про тканину ${fabricDetails.title}:\n\n${fabricDetails.description}`
+        );
+      } catch (error) {
+        console.error('Error fetching fabric details:', error);
+        await ctx.reply(
+          'Вибачте, не вдалося завантажити інформацію про цю тканину.'
+        );
+      }
+    } else {
+      await ctx.reply('Вибачте, не вдалося знайти інформацію про цю тканину.');
+    }
+  }
+);
 
 // Export the bot for use in your Next.js API routes
 export default bot;
