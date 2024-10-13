@@ -3,7 +3,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
 const mainMenuKeyboard = Markup.keyboard([
-  ['✅ Перетяжка меблів', '🛋️ Нові меблі'],
+  ['✅ Перетяжка меблів', '🛋️ Каталог Тканин'],
   ['📞 Контакти', 'ℹ️ Про нас'],
 ]).resize();
 
@@ -11,6 +11,19 @@ const mainMenuKeyboard = Markup.keyboard([
 const reupholsterySubmenuKeyboard = Markup.keyboard([
   ['🛋️ Дивани', '🪑 Стільці'],
   ['🛏️ Ліжка', '🔙 Назад до головного меню'],
+]).resize();
+const reupholsterySubmenuforSofaKeyboard = Markup.keyboard([
+  ['🛋️ Прямий Диван', '🪑 Кутовий Диван'],
+  ['🔙 Назад до головного меню'],
+]).resize();
+
+const reupholsterySubmenuforChairKeyboard = Markup.keyboard([
+  ['🪑 Стілець зі спинкою', '🪑 Стілець без спинки'],
+  ['🔙 Назад до головного меню'],
+]).resize();
+const reupholsterySubmenuforBedKeyboard = Markup.keyboard([
+  ["🛏️ Узголів'я ліжка", '🛏️ Ліжко'],
+  ['🔙 Назад до головного меню'],
 ]).resize();
 
 // Start command
@@ -41,10 +54,9 @@ bot.hears(' ❗ Сайт', async (ctx) => {
 // Submenu options for "Перетяжка меблів"
 bot.hears('🛋️ Дивани', async (ctx) => {
   await ctx.reply('Інформація про перетяжку диванів...');
-  // Optionally, you can show the submenu again
   await ctx.reply(
     'Оберіть інший тип меблів або поверніться до головного меню:',
-    reupholsterySubmenuKeyboard
+    reupholsterySubmenuforSofaKeyboard
   );
 });
 
@@ -52,7 +64,7 @@ bot.hears('🪑 Стільці', async (ctx) => {
   await ctx.reply('Інформація про перетяжку стільців...');
   await ctx.reply(
     'Оберіть інший тип меблів або поверніться до головного меню:',
-    reupholsterySubmenuKeyboard
+    reupholsterySubmenuforChairKeyboard
   );
 });
 
@@ -60,7 +72,7 @@ bot.hears('🛏️ Ліжка', async (ctx) => {
   await ctx.reply('Інформація про перетяжку ліжок...');
   await ctx.reply(
     'Оберіть інший тип меблів або поверніться до головного меню:',
-    reupholsterySubmenuKeyboard
+    reupholsterySubmenuforBedKeyboard
   );
 });
 
