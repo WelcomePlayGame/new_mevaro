@@ -1,9 +1,10 @@
 import { Telegraf, Markup } from 'telegraf';
+import { message } from 'telegraf/filters';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
 const mainMenuKeyboard = Markup.keyboard([
-  ['🛠️ Перетяжка меблів', '🛏️ Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
+  ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
   ['📞 Контакти', 'ℹ️ Про нас'],
 ]).resize();
 const returnMainMenuKeyboard = Markup.keyboard([
@@ -51,7 +52,7 @@ bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
   );
 });
 
-bot.hears('🛏️ Заміна Пружинного Блоку', async (ctx) => {
+bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
   await ctx.reply(
     'Оберіть тип робіт з заміною пружинного блоку:',
     reupholsterySubmenuforSpringBlockKeyboard
@@ -63,7 +64,12 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
 });
 
 bot.hears('📞 Контакти', async (ctx) => {
-  await ctx.reply("Зв'яжіться з нами: @romaniv21");
+  await ctx.reply(
+    "Зв'яжіться з нами:",
+    Markup.inlineKeyboard([
+      Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
+    ])
+  );
 });
 
 bot.hears('ℹ️ Про нас', async (ctx) => {
@@ -84,7 +90,7 @@ bot.hears('🛏️ Ліжка', async (ctx) => {
 });
 
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
-  await ctx.reply('Головне меню:', mainMenuKeyboard);
+  await ctx.reply('', mainMenuKeyboard);
 });
 
 bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
@@ -101,7 +107,7 @@ bot.hears('Заміна Пружинного Блоку з поролоном', 
 });
 
 // Catch-all handler for any text message
-bot.on('text', async (ctx) => {
+bot.on(message('text'), async (ctx) => {
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
 
