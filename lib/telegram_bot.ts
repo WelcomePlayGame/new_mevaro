@@ -52,7 +52,7 @@ bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
   );
 });
 
-bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
+bot.hears('Заміна Пружинного Блоку', async (ctx) => {
   await ctx.reply(
     'Оберіть тип робіт з заміною пружинного блоку:',
     reupholsterySubmenuforSpringBlockKeyboard
@@ -73,7 +73,9 @@ bot.hears('📞 Контакти', async (ctx) => {
 });
 
 bot.hears('ℹ️ Про нас', async (ctx) => {
-  await ctx.reply('Інформація про нашу компанію...');
+  await ctx.reply(
+    '🛠 Перетяжка ліжка місто Київ Меваро | 🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.'
+  );
 });
 
 // Submenu options for "Перетяжка меблів"
