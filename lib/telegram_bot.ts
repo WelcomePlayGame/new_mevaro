@@ -43,7 +43,7 @@ const reupholsterySubmenuforSpringBlockKeyboard = Markup.keyboard([
 bot.command('start', async (ctx) => {
   try {
     // First, send the video banner
-    await ctx.replyWithVideo('/video/mevaro.mp4', {
+    await ctx.replyWithVideo('https://www.mevaro.kiev.ua/video/mevaro.mp4', {
       caption: 'Ласкаво просимо до нашого бота!',
     });
 
