@@ -7,104 +7,104 @@ const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
   ['📞 Контакти', 'Про нас'],
 ]).resize();
-const returnMainMenuKeyboard = Markup.keyboard([
-  ['🔙 Назад до головного меню'],
-]).resize();
-// Submenu keyboard for "Перетяжка меблів"
-const reupholsterySubmenuKeyboard = Markup.keyboard([
-  ['🛋️ Дивани', '🪑 Стільці'],
-  ['🛏️ Ліжка', '🔙 Назад до головного меню'],
-]).resize();
+// const returnMainMenuKeyboard = Markup.keyboard([
+//   ['🔙 Назад до головного меню'],
+// ]).resize();
 
-const reupholsterySubmenuforSofaKeyboard = Markup.keyboard([
-  ['🛋️ Прямий Диван', '🛋️↪️ Кутовий Диван'],
-  ['🔙 Назад до головного меню'],
-]).resize();
+// const reupholsterySubmenuKeyboard = Markup.keyboard([
+//   ['🛋️ Дивани', '🪑 Стільці'],
+//   ['🛏️ Ліжка', '🔙 Назад до головного меню'],
+// ]).resize();
 
-const reupholsterySubmenuforChairKeyboard = Markup.keyboard([
-  ['🪑 Стілець зі спинкою', '🔲 Стілець без спинки'],
-  ['🔙 Назад до головного меню'],
-]).resize();
+// const reupholsterySubmenuforSofaKeyboard = Markup.keyboard([
+//   ['🛋️ Прямий Диван', '🛋️↪️ Кутовий Диван'],
+//   ['🔙 Назад до головного меню'],
+// ]).resize();
 
-const reupholsterySubmenuforBedKeyboard = Markup.keyboard([
-  ["🛌 Узголів'я ліжка", '🛏️ Ліжко'],
-  ['🔙 Назад до головного меню'],
-]).resize();
+// const reupholsterySubmenuforChairKeyboard = Markup.keyboard([
+//   ['🪑 Стілець зі спинкою', '🔲 Стілець без спинки'],
+//   ['🔙 Назад до головного меню'],
+// ]).resize();
 
-const reupholsterySubmenuforSpringBlockKeyboard = Markup.keyboard([
-  [
-    'Заміна Пружинного Блоку без поролону',
-    'Заміна Пружинного Блоку з поролоном',
-  ],
-  ['🔙 Назад до головного меню'],
-]).resize();
+// const reupholsterySubmenuforBedKeyboard = Markup.keyboard([
+//   ["🛌 Узголів'я ліжка", '🛏️ Ліжко'],
+//   ['🔙 Назад до головного меню'],
+// ]).resize();
 
-// Start command
-bot.command('start', async (ctx) => {
-  await ctx.reply('Ласкаво просимо! Оберіть опцію:', mainMenuKeyboard);
-});
+// const reupholsterySubmenuforSpringBlockKeyboard = Markup.keyboard([
+//   [
+//     'Заміна Пружинного Блоку без поролону',
+//     'Заміна Пружинного Блоку з поролоном',
+//   ],
+//   ['🔙 Назад до головного меню'],
+// ]).resize();
 
-// Main menu options
-bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
-  await ctx.reply(
-    'Оберіть тип меблів для перетяжки:',
-    reupholsterySubmenuKeyboard
-  );
-});
+// // Start command
+// bot.command('start', async (ctx) => {
+//   await ctx.reply('Ласкаво просимо! Оберіть опцію:', mainMenuKeyboard);
+// });
 
-bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
-  await ctx.reply(
-    'Оберіть тип робіт з заміною пружинного блоку:',
-    reupholsterySubmenuforSpringBlockKeyboard
-  );
-});
+// // Main menu options
+// bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
+//   await ctx.reply(
+//     'Оберіть тип меблів для перетяжки:',
+//     reupholsterySubmenuKeyboard
+//   );
+// });
 
-bot.hears('🎨 Каталог Тканин', async (ctx) => {
-  await ctx.reply('Який тип тканини вас цікавить?');
-});
+// bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
+//   await ctx.reply(
+//     'Оберіть тип робіт з заміною пружинного блоку:',
+//     reupholsterySubmenuforSpringBlockKeyboard
+//   );
+// });
 
-bot.hears('📞 Контакти', async (ctx) => {
-  await ctx.reply(
-    "Зв'яжіться з нами:",
-    Markup.inlineKeyboard([
-      Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
-    ])
-  );
-});
+// bot.hears('🎨 Каталог Тканин', async (ctx) => {
+//   await ctx.reply('Який тип тканини вас цікавить?');
+// });
 
-bot.hears('Про нас', async (ctx) => {
-  await ctx.reply('Інформація про нашу компанію...');
-});
+// bot.hears('📞 Контакти', async (ctx) => {
+//   await ctx.reply(
+//     "Зв'яжіться з нами:",
+//     Markup.inlineKeyboard([
+//       Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
+//     ])
+//   );
+// });
 
-// Submenu options for "Перетяжка меблів"
-bot.hears('🛋️ Дивани', async (ctx) => {
-  await ctx.reply('Оберіть тип дивану:', reupholsterySubmenuforSofaKeyboard);
-});
+// bot.hears('Про нас', async (ctx) => {
+//   await ctx.reply('Інформація про нашу компанію...');
+// });
 
-bot.hears('🪑 Стільці', async (ctx) => {
-  await ctx.reply('Оберіть тип стільця:', reupholsterySubmenuforChairKeyboard);
-});
+// // Submenu options for "Перетяжка меблів"
+// bot.hears('🛋️ Дивани', async (ctx) => {
+//   await ctx.reply('Оберіть тип дивану:', reupholsterySubmenuforSofaKeyboard);
+// });
 
-bot.hears('🛏️ Ліжка', async (ctx) => {
-  await ctx.reply('Оберіть тип ліжка:', reupholsterySubmenuforBedKeyboard);
-});
+// bot.hears('🪑 Стільці', async (ctx) => {
+//   await ctx.reply('Оберіть тип стільця:', reupholsterySubmenuforChairKeyboard);
+// });
 
-bot.hears('🔙 Назад до головного меню', async (ctx) => {
-  await ctx.reply('', mainMenuKeyboard);
-});
+// bot.hears('🛏️ Ліжка', async (ctx) => {
+//   await ctx.reply('Оберіть тип ліжка:', reupholsterySubmenuforBedKeyboard);
+// });
 
-bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
-  await ctx.reply(
-    'Вартість заміни пружинного блоку без поролону: 4800 грн',
-    returnMainMenuKeyboard
-  );
-});
-bot.hears('Заміна Пружинного Блоку з поролоном', async (ctx) => {
-  await ctx.reply(
-    'Вартість заміни пружинного блоку з поролоном: 6000 грн +- грн в залежнотсі від щільності та висоти',
-    returnMainMenuKeyboard
-  );
-});
+// bot.hears('🔙 Назад до головного меню', async (ctx) => {
+//   await ctx.reply('', mainMenuKeyboard);
+// });
+
+// bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
+//   await ctx.reply(
+//     'Вартість заміни пружинного блоку без поролону: 4800 грн',
+//     returnMainMenuKeyboard
+//   );
+// });
+// bot.hears('Заміна Пружинного Блоку з поролоном', async (ctx) => {
+//   await ctx.reply(
+//     'Вартість заміни пружинного блоку з поролоном: 6000 грн +- грн в залежнотсі від щільності та висоти',
+//     returnMainMenuKeyboard
+//   );
+// });
 
 // Catch-all handler for any text message
 bot.on(message('text'), async (ctx) => {
