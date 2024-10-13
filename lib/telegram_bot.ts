@@ -6,7 +6,9 @@ const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', '🛏️ Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
   ['📞 Контакти', 'ℹ️ Про нас'],
 ]).resize();
-
+const returnMainMenuKeyboard = Markup.keyboard([
+  ['🔙 Назад до головного меню'],
+]).resize();
 // Submenu keyboard for "Перетяжка меблів"
 const reupholsterySubmenuKeyboard = Markup.keyboard([
   ['🛋️ Дивани', '🪑 Стільці'],
@@ -30,8 +32,8 @@ const reupholsterySubmenuforBedKeyboard = Markup.keyboard([
 
 const reupholsterySubmenuforSpringBlockKeyboard = Markup.keyboard([
   [
-    '🔩 Заміна Пружинного Блоку без поролону',
-    '🔩 Заміна Пружинного Блоку з поролоном',
+    'Заміна Пружинного Блоку без поролону',
+    'Заміна Пружинного Блоку з поролоном',
   ],
   ['🔙 Назад до головного меню'],
 ]).resize();
@@ -83,6 +85,19 @@ bot.hears('🛏️ Ліжка', async (ctx) => {
 
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
   await ctx.reply('Головне меню:', mainMenuKeyboard);
+});
+
+bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
+  await ctx.reply(
+    'Вартість заміни пружинного блоку без поролону: 4800 грн',
+    returnMainMenuKeyboard
+  );
+});
+bot.hears('Заміна Пружинного Блоку з поролоном', async (ctx) => {
+  await ctx.reply(
+    'Вартість заміни пружинного блоку з поролоном: 6000 грн +- грн в залежнотсі від щільності та висоти',
+    returnMainMenuKeyboard
+  );
 });
 
 // Catch-all handler for any text message
