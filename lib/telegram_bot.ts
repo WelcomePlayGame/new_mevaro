@@ -5,7 +5,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN as string);
 // Main menu keyboard
 const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
-  ['📞 Контакти', 'ℹ️ Про нас'],
+  ['📞 Контакти', 'Про нас'],
 ]).resize();
 const returnMainMenuKeyboard = Markup.keyboard([
   ['🔙 Назад до головного меню'],
@@ -72,7 +72,7 @@ bot.hears('📞 Контакти', async (ctx) => {
   );
 });
 
-bot.hears('ℹ️ Про нас', async (ctx) => {
+bot.hears('Про нас', async (ctx) => {
   await ctx.reply('Інформація про нашу компанію...');
 });
 
