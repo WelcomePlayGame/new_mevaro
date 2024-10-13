@@ -109,7 +109,7 @@ bot.hears('Заміна Пружинного Блоку з поролоном', 
 });
 
 // Catch-all handler for any text message
-bot.on('text', async (ctx) => {
+bot.on(message('text'), async (ctx) => {
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
 
