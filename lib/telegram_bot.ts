@@ -52,7 +52,7 @@ bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
   );
 });
 
-bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
+bot.hears('Заміна Пружинного Блоку', async (ctx) => {
   await ctx.reply(
     'Оберіть тип робіт з заміною пружинного блоку:',
     reupholsterySubmenuforSpringBlockKeyboard
