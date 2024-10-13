@@ -90,7 +90,15 @@ bot.hears('🛏️ Ліжка', async (ctx) => {
 });
 
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
-  await ctx.reply('', mainMenuKeyboard);
+  try {
+    await ctx.reply(
+      'Ви повернулися до головного меню:',
+      mainMenuKeyboard // Use the mainMenuKeyboard directly
+    );
+  } catch (error) {
+    console.error('Error in main menu handler:', error);
+    await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
+  }
 });
 
 bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
