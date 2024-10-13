@@ -44,7 +44,7 @@ bot.command('start', async (ctx) => {
   try {
     // First, send the video banner
     await ctx.replyWithVideo('https://www.mevaro.kiev.ua/video/mevaro.mp4', {
-      caption: 'Ласкаво просимо до нашого бота!',
+      caption: 'Ласкаво просимо до нашого бота компанії Mevaro!',
     });
 
     // Then, send the menu options
