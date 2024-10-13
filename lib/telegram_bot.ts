@@ -41,7 +41,18 @@ const reupholsterySubmenuforSpringBlockKeyboard = Markup.keyboard([
 
 // Start command
 bot.command('start', async (ctx) => {
-  await ctx.reply('Ласкаво просимо! Оберіть опцію:', mainMenuKeyboard);
+  try {
+    // First, send the video banner
+    await ctx.replyWithVideo('/video/mevaro.mp4', {
+      caption: 'Ласкаво просимо до нашого бота!',
+    });
+
+    // Then, send the menu options
+    await ctx.reply('Оберіть опцію:', mainMenuKeyboard);
+  } catch (error) {
+    console.error('Error in start command:', error);
+    await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
+  }
 });
 
 // Main menu options
@@ -91,10 +102,7 @@ bot.hears('🛏️ Ліжка', async (ctx) => {
 
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
   try {
-    await ctx.reply(
-      'Ви повернулися до головного меню:',
-      mainMenuKeyboard // Use the mainMenuKeyboard directly
-    );
+    await ctx.reply('Ви повернулися до головного меню:', mainMenuKeyboard);
   } catch (error) {
     console.error('Error in main menu handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
