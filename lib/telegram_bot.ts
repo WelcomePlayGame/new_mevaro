@@ -5,7 +5,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN as string);
 // Main menu keyboard
 const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
-  ['📞 Контакти', 'Про нас'],
+  ['📞 Контакти', 'ℹ️ Про нас'],
 ]).resize();
 const returnMainMenuKeyboard = Markup.keyboard([
   ['🔙 Назад до головного меню'],
@@ -52,7 +52,7 @@ bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
   );
 });
 
-bot.hears('Заміна Пружинного Блоку', async (ctx) => {
+bot.hears(' Заміна Пружинного Блоку', async (ctx) => {
   await ctx.reply(
     'Оберіть тип робіт з заміною пружинного блоку:',
     reupholsterySubmenuforSpringBlockKeyboard
@@ -72,10 +72,8 @@ bot.hears('📞 Контакти', async (ctx) => {
   );
 });
 
-bot.hears('Про нас', async (ctx) => {
-  await ctx.reply(
-    '🛠 Перетяжка ліжка місто Київ Меваро | 🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.'
-  );
+bot.hears('ℹ️ Про нас', async (ctx) => {
+  await ctx.reply('Інформація про нашу компанію...');
 });
 
 // Submenu options for "Перетяжка меблів"
