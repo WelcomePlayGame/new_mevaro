@@ -110,15 +110,9 @@ bot.hears(/.+/, async (ctx) => {
     } else {
       console.log('Fabric not found for text:', ctx.message.text);
       await ctx.reply('Вибачте, не вдалося знайти цю тканину.');
-      bot.on(message('text'), async (ctx) => {
-        await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
-      });
     }
   } catch (error) {
     console.error('Error in fabric selection handler:', error);
-    bot.on(message('text'), async (ctx) => {
-      await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
-    });
   }
 });
 
