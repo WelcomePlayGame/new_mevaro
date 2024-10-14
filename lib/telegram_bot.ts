@@ -70,12 +70,15 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
     reupholsterySubmenuforSpringBlockKeyboard
   );
 });
-
-let fabrics: any[] = null;
+interface Fabric {
+  title: string;
+  slug: string;
+}
+let fabrics: Fabric[] = null;
 bot.hears('🎨 Каталог Тканин', async (ctx) => {
   try {
     fabrics = await getAllFabrics();
-
+    console.log(fabrics);
     const showFabricsPage = async () => {
       const keyboard = Markup.keyboard(
         fabrics.map((fabric) => [fabric.title])
