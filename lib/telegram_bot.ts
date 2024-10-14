@@ -73,13 +73,37 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
 
 bot.hears('🎨 Каталог Тканин', async (ctx) => {
   try {
-    const fabrics: any[] = await getAllFabrics();
+    const fabrics = await getAllFabrics();
+    let page = 0;
 
-    const keyboard = Markup.keyboard(
-      fabrics.map((fabric) => [fabric.title])
-    ).resize();
+    const showFabricsPage = async (page: number) => {
+      const startIndex = page * 5;
+      const endIndex = startIndex + 5;
+      const currentPageFabrics = fabrics.slice(startIndex, endIndex);
 
-    await ctx.reply('Яка вас цікавить тканина?', keyboard);
+      const keyboard = Markup.keyboard([
+        ...currentPageFabrics.map((fabric) => [fabric.title]),
+        [
+          page > 0 ? '⬅️ Попередня' : '',
+          endIndex < fabrics.length ? 'Наступна ➡️' : '',
+        ].filter(Boolean),
+      ]).resize();
+
+      await ctx.reply('Оберіть тканину:', keyboard);
+    };
+
+    await showFabricsPage(page);
+
+    // Handle pagination
+    bot.hears('Наступна ➡️', async (ctx) => {
+      page++;
+      await showFabricsPage(page);
+    });
+
+    bot.hears('⬅️ Попередня', async (ctx) => {
+      page--;
+      await showFabricsPage(page);
+    });
   } catch (error) {
     console.error('Error in Каталог Тканин handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
