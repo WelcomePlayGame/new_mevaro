@@ -98,7 +98,7 @@ bot.hears(
   fabrics.map((f) => f.title),
   async (ctx) => {
     const fabric = fabrics.find((f) => f.title === ctx.message.text);
-    if (fabric) {
+    if (!fabric) {
       await ctx.reply(
         'Переглянути тканину:',
         Markup.inlineKeyboard([
