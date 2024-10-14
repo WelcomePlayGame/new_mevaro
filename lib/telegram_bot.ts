@@ -75,7 +75,7 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
   await ctx.reply(
     'Переглянути наш каталог тканин можна на нашому сайті:',
     Markup.inlineKeyboard([
-      Markup.button.url('Каталог тканин', 'https://www.mevaro.kiev.ua/'),
+      Markup.button.url('Каталог тканин', 'https://www.mevaro.kiev.ua/fabrics'),
     ])
   );
 });
