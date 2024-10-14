@@ -70,12 +70,15 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
     reupholsterySubmenuforSpringBlockKeyboard
   );
 });
-interface Fabric {
-  title: string;
-  slug: string;
-}
 
-bot.hears('🎨 Каталог Тканин', async (ctx) => {});
+bot.hears('🎨 Каталог Тканин', async (ctx) => {
+  await ctx.reply(
+    'Переглянути наш каталог тканин можна на нашому сайті:',
+    Markup.inlineKeyboard([
+      Markup.button.url('Каталог тканин', 'https://www.mevaro.kiev.ua/'),
+    ])
+  );
+});
 
 bot.hears('📞 Контакти', async (ctx) => {
   await ctx.reply(
