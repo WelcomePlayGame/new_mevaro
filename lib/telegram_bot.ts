@@ -74,9 +74,8 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
 bot.hears('🎨 Каталог Тканин', async (ctx) => {
   try {
     const fabrics = await getAllFabrics();
-    let page = 0;
 
-    const showFabricsPage = async (page: number) => {
+    const showFabricsPage = async () => {
       const keyboard = Markup.keyboard([
         fabrics.map((fabric) => [fabric.title]),
       ]).resize();
@@ -84,7 +83,7 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
       await ctx.reply('Оберіть тканину:', keyboard);
     };
 
-    await showFabricsPage(page);
+    await showFabricsPage();
 
     // bot.hears(
     //   fabrics.map((f) => f.title),
