@@ -113,7 +113,9 @@ bot.hears(/.+/, async (ctx) => {
     }
   } catch (error) {
     console.error('Error in fabric selection handler:', error);
-    await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
+    bot.on(message('text'), async (ctx) => {
+      await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
+    });
   }
 });
 
