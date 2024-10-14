@@ -77,8 +77,8 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
     let page = 0;
 
     const showFabricsPage = async (page: number) => {
-      const startIndex = page * 5;
-      const endIndex = startIndex + 5;
+      const startIndex = page * 6;
+      const endIndex = startIndex + 6;
       const currentPageFabrics = fabrics.slice(startIndex, endIndex);
 
       const keyboard = Markup.keyboard([
@@ -87,7 +87,6 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
           page > 0 ? '⬅️ Попередня' : '',
           endIndex < fabrics.length ? 'Наступна ➡️' : '',
         ].filter(Boolean),
-        ['🔙 Назад до головного меню'],
       ]).resize();
 
       await ctx.reply('Оберіть тканину:', keyboard);
@@ -105,54 +104,10 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
       page--;
       await showFabricsPage(page);
     });
-
-    // Handle fabric selection
-    bot.hears(
-      fabrics.map((f) => f.title),
-      async (ctx) => {
-        const selectedFabric = fabrics.find(
-          (f) => f.title === ctx.message.text
-        );
-        if (selectedFabric) {
-          await showFabricInfo(ctx, selectedFabric);
-        }
-      }
-    );
   } catch (error) {
     console.error('Error in Каталог Тканин handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
   }
-});
-
-async function showFabricInfo(ctx: any, fabric: any) {
-  let message = `Інформація про тканину ${fabric.title}:\n\n`;
-  message += `Опис: ${fabric.description}\n`;
-  message += `Ціна: ${fabric.price} грн/м²\n`;
-
-  const keyboard = Markup.inlineKeyboard([
-    [Markup.button.callback('🔙 Назад до списку тканин', 'back_to_fabrics')],
-  ]);
-
-  if (fabric.title === 'Calvados' && fabric.movieUrl) {
-    keyboard.reply_markup.inline_keyboard.unshift([
-      Markup.button.url('🎬 Дивитися відео про Calvados', fabric.movieUrl),
-    ]);
-  }
-
-  await ctx.reply(message, keyboard);
-}
-
-// Handle the 'back to fabrics' button
-bot.action('back_to_fabrics', async (ctx) => {
-  await ctx.answerCbQuery();
-  await ctx.deleteMessage();
-  await bot.handleUpdate({
-    ...ctx.update,
-    message: {
-      ...ctx.update.callback_query.message,
-      text: '🎨 Каталог Тканин',
-    } as any, // Type assertion to bypass type checking
-  });
 });
 
 bot.hears('📞 Контакти', async (ctx) => {
