@@ -88,30 +88,29 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
     };
 
     await showFabricsPage();
-
-    // bot.hears(
-    //   fabrics.map((f) => f.title),
-    //   async (ctx) => {
-    //     const fabric = fabrics.find((f) => f.title === ctx.message.text);
-    //     if (fabric) {
-    //       await ctx.reply(
-    //         'Переглянути тканину:',
-    //         Markup.inlineKeyboard([
-    //           Markup.button.url(
-    //             'Відкрити на сайті',
-    //             `https://mevaro.kiev.ua/fabrics/${fabric.slug}`
-    //           ),
-    //         ])
-    //       );
-    //     }
-    //   }
-    // ) as any;
   } catch (error) {
     console.error('Error in Каталог Тканин handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
   }
 });
 
+bot.hears(
+  fabrics.map((f) => f.title),
+  async (ctx) => {
+    const fabric = fabrics.find((f) => f.title === ctx.message.text);
+    if (fabric) {
+      await ctx.reply(
+        'Переглянути тканину:',
+        Markup.inlineKeyboard([
+          Markup.button.url(
+            'Відкрити на сайті',
+            `https://mevaro.kiev.ua/fabrics/${fabric.slug}`
+          ),
+        ])
+      );
+    }
+  }
+) as any;
 bot.hears('📞 Контакти', async (ctx) => {
   await ctx.reply(
     "Зв'яжіться з нами:",
