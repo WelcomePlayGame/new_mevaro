@@ -107,10 +107,6 @@ bot.hears(
             'Відкрити на сайті',
             `https://mevaro.kiev.ua/fabrics/${fabric.slug}`
           ),
-          Markup.button.callback(
-            '🔙 Назад до Каталогу Тканин',
-            'backToFabrics'
-          ),
         ])
       );
     } else {
