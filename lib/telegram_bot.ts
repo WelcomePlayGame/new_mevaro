@@ -95,16 +95,9 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
 });
 
 bot.hears(/.+/, async (ctx) => {
-  console.log('Received message:', ctx.message.text);
-  console.log(
-    'Available fabrics:',
-    fabrics.map((f) => f.title)
-  );
-
   try {
     const fabric = fabrics.find((f) => f.title === ctx.message.text);
     if (fabric) {
-      console.log('Selected fabric:', fabric.title);
       await ctx.reply(
         `Ви обрали тканину: ${fabric.title}\nПереглянути тканину:`,
         Markup.inlineKeyboard([
