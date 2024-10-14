@@ -4,9 +4,19 @@ const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
 const mainMenuKeyboard = Markup.keyboard([
-  ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку', '🎨 Каталог Тканин'],
+  ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
   ['📞 Контакти', 'Про нас'],
 ]).resize();
+
+const mainMenuInline = Markup.inlineKeyboard([
+  [
+    Markup.button.url(
+      '🎨 Каталог Тканин',
+      'https://www.mevaro.kiev.ua/fabrics'
+    ),
+  ],
+]);
+
 const returnMainMenuKeyboard = Markup.keyboard([
   ['🔙 Назад до головного меню'],
 ]).resize();
@@ -49,6 +59,7 @@ bot.command('start', async (ctx) => {
 
     // Then, send the menu options
     await ctx.reply('Що Вас цікавить?', mainMenuKeyboard);
+    await ctx.reply('Додаткові опції:', mainMenuInline);
   } catch (error) {
     console.error('Error in start command:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
