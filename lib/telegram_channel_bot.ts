@@ -15,7 +15,7 @@ export const mainMenuKeyboard = Markup.keyboard([
 async function isSubscribed(ctx: Context, userId: number): Promise<boolean> {
   try {
     const chatMember = await ctx.telegram.getChatMember(
-      '@' + CHANNEL_USERNAME,
+      CHANNEL_USERNAME,
       userId
     );
     return ['member', 'administrator', 'creator'].includes(chatMember.status);
@@ -37,16 +37,24 @@ bot.on('chat_member', async (ctx) => {
     const userId = chatMemberUpdate.new_chat_member.user.id;
 
     try {
-      // Send a welcome message to the user
-      await ctx.telegram.sendMessage(
-        userId,
-        `Вітаємо! Дякуємо за підписку на наш канал @${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
-        {
-          reply_markup: mainMenuKeyboard.reply_markup,
-        }
-      );
+      // Check if the user is subscribed using the isSubscribed function
+      const subscribed = await isSubscribed(ctx, userId);
+
+      if (subscribed) {
+        // Send a welcome message to the user
+        await ctx.telegram.sendMessage(
+          userId,
+          `Вітаємо! Дякуємо за підписку на наш канал @${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
+          {
+            reply_markup: mainMenuKeyboard.reply_markup,
+          }
+        );
+      }
     } catch (error) {
-      console.error('Error sending welcome message:', error);
+      console.error(
+        'Error checking subscription or sending welcome message:',
+        error
+      );
     }
   }
 });
