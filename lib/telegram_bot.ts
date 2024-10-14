@@ -94,16 +94,15 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
 
     await showFabricsPage(page);
 
-    // Handle pagination
-    bot.hears('Наступна ➡️', async (ctx) => {
-      page++;
-      await showFabricsPage(page);
-    });
-
-    bot.hears('⬅️ Попередня', async (ctx) => {
-      page--;
-      await showFabricsPage(page);
-    });
+    bot.hears(
+      fabrics.map((f) => f.title),
+      async (ctx) => {
+        const fabric = fabrics.find((f) => f.title === ctx.message.text);
+        if (fabric) {
+          await ctx.reply(`https://mevaro.kiev.ua/fabrics/${fabric.slug}`);
+        }
+      }
+    ) as any;
   } catch (error) {
     console.error('Error in Каталог Тканин handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
