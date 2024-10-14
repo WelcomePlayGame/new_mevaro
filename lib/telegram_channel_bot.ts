@@ -4,7 +4,7 @@ import {
   ChatMember,
   ChatMemberUpdated,
 } from 'telegraf/typings/core/types/typegram';
-
+import { mainMenuKeyboard } from './telegram_bot';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Your channel username
@@ -40,10 +40,7 @@ bot.on('chat_member', async (ctx) => {
       await ctx.telegram.sendMessage(
         userId,
         `Вітаємо! Дякуємо за підписку на наш канал ${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
-        Markup.keyboard([
-          ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
-          ['📞 Контакти', 'Про нас'],
-        ]).resize()
+        mainMenuKeyboard
       );
 
       // You can add more interactive elements or information here

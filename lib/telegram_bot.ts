@@ -3,7 +3,7 @@ import { message } from 'telegraf/filters';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
-const mainMenuKeyboard = Markup.keyboard([
+export const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
   ['📞 Контакти', 'Про нас'],
 ]).resize();
