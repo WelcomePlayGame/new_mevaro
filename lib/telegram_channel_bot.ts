@@ -23,6 +23,7 @@ async function isSubscribed(ctx: Context, userId: number): Promise<boolean> {
     return false;
   }
 }
+
 bot.on('chat_member', async (ctx) => {
   const chatMemberUpdate = ctx.chatMember as ChatMemberUpdated;
 
@@ -32,7 +33,23 @@ bot.on('chat_member', async (ctx) => {
     chatMemberUpdate.new_chat_member.status === 'member' &&
     chatMemberUpdate.old_chat_member.status !== 'member'
   ) {
-    // ... rest of the function
+    const userId = chatMemberUpdate.new_chat_member.user.id;
+
+    try {
+      // Send a welcome message to the user
+      await ctx.telegram.sendMessage(
+        userId,
+        `Вітаємо! Дякуємо за підписку на наш канал ${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
+        Markup.keyboard([
+          ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
+          ['📞 Контакти', 'Про нас'],
+        ]).resize()
+      );
+
+      // You can add more interactive elements or information here
+    } catch (error) {
+      console.error('Error sending welcome message:', error);
+    }
   }
 });
 
