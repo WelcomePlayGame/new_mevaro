@@ -59,7 +59,7 @@ bot.command('start', async (ctx) => {
 
     // Then, send the menu options
     await ctx.reply('Що Вас цікавить?', mainMenuKeyboard);
-    await ctx.reply('', mainMenuInline);
+    await ctx.reply('Обрати тканину', mainMenuInline);
   } catch (error) {
     console.error('Error in start command:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
