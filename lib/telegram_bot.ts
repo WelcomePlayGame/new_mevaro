@@ -94,9 +94,14 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
   }
 });
 
-bot.hears(
-  fabrics.map((f) => f.title),
-  async (ctx) => {
+bot.hears(/.+/, async (ctx) => {
+  console.log('Received message:', ctx.message.text);
+  console.log(
+    'Available fabrics:',
+    fabrics.map((f) => f.title)
+  );
+
+  try {
     const fabric = fabrics.find((f) => f.title === ctx.message.text);
     if (fabric) {
       console.log('Selected fabric:', fabric.title);
@@ -113,8 +118,11 @@ bot.hears(
       console.log('Fabric not found for text:', ctx.message.text);
       await ctx.reply('Вибачте, не вдалося знайти цю тканину.');
     }
+  } catch (error) {
+    console.error('Error in fabric selection handler:', error);
+    await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
   }
-);
+});
 
 bot.hears('📞 Контакти', async (ctx) => {
   await ctx.reply(
