@@ -71,14 +71,15 @@ bot.hears('Заміна Пружинного Блоку', async (ctx) => {
   );
 });
 
+let fabrics: any[] = null;
 bot.hears('🎨 Каталог Тканин', async (ctx) => {
   try {
-    const fabrics = await getAllFabrics();
+    fabrics = await getAllFabrics();
 
     const showFabricsPage = async () => {
-      const keyboard = Markup.keyboard([
-        fabrics.map((fabric) => [fabric.title]),
-      ]).resize();
+      const keyboard = Markup.keyboard(
+        fabrics.map((fabric) => [fabric.title])
+      ).resize();
 
       await ctx.reply('Оберіть тканину:', keyboard);
     };
