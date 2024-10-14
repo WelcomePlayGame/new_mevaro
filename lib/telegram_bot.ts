@@ -1,6 +1,5 @@
 import { Telegraf, Markup } from 'telegraf';
 import { message } from 'telegraf/filters';
-import { getAllFabrics } from './fabric';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Main menu keyboard
