@@ -74,47 +74,8 @@ interface Fabric {
   title: string;
   slug: string;
 }
-let fabrics: Fabric[];
-bot.hears('🎨 Каталог Тканин', async (ctx) => {
-  try {
-    fabrics = await getAllFabrics();
-    console.log(fabrics);
-    const showFabricsPage = async () => {
-      const keyboard = Markup.keyboard(
-        fabrics.map((fabric) => [fabric.title])
-      ).resize();
 
-      await ctx.reply('Оберіть тканину:', keyboard);
-    };
-
-    await showFabricsPage();
-  } catch (error) {
-    console.error('Error in Каталог Тканин handler:', error);
-    await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
-  }
-});
-
-bot.hears(/.+/, async (ctx) => {
-  try {
-    const fabric = fabrics.find((f) => f.title === ctx.message.text);
-    if (fabric) {
-      await ctx.reply(
-        `Ви обрали тканину: ${fabric.title}\nПереглянути тканину:`,
-        Markup.inlineKeyboard([
-          Markup.button.url(
-            'Відкрити на сайті',
-            `https://mevaro.kiev.ua/fabrics/${fabric.slug}`
-          ),
-        ])
-      );
-    } else {
-      console.log('Fabric not found for text:', ctx.message.text);
-      await ctx.reply('Вибачте, не вдалося знайти цю тканину.');
-    }
-  } catch (error) {
-    console.error('Error in fabric selection handler:', error);
-  }
-});
+bot.hears('🎨 Каталог Тканин', async (ctx) => {});
 
 bot.hears('📞 Контакти', async (ctx) => {
   await ctx.reply(
