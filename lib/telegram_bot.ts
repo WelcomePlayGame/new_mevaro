@@ -111,6 +111,7 @@ bot.hears(/.+/, async (ctx) => {
       console.log('Fabric not found for text:', ctx.message.text);
       await ctx.reply('Вибачте, не вдалося знайти цю тканину.');
     }
+    await ctx.reply('Ви повернулися до головного меню:', mainMenuKeyboard);
   } catch (error) {
     console.error('Error in fabric selection handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
