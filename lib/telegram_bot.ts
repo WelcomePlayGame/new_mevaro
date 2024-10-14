@@ -77,16 +77,8 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
     let page = 0;
 
     const showFabricsPage = async (page: number) => {
-      const startIndex = page * 6;
-      const endIndex = startIndex + 6;
-      const currentPageFabrics = fabrics.slice(startIndex, endIndex);
-
       const keyboard = Markup.keyboard([
-        ...currentPageFabrics.map((fabric) => [fabric.title]),
-        [
-          page > 0 ? '⬅️ Попередня' : '',
-          endIndex < fabrics.length ? 'Наступна ➡️' : '',
-        ].filter(Boolean),
+        fabrics.map((fabric) => [fabric.title]),
       ]).resize();
 
       await ctx.reply('Оберіть тканину:', keyboard);
@@ -99,7 +91,15 @@ bot.hears('🎨 Каталог Тканин', async (ctx) => {
       async (ctx) => {
         const fabric = fabrics.find((f) => f.title === ctx.message.text);
         if (fabric) {
-          await ctx.reply(`https://mevaro.kiev.ua/fabrics/${fabric.slug}`);
+          await ctx.reply(
+            'Переглянути тканину:',
+            Markup.inlineKeyboard([
+              Markup.button.url(
+                'Відкрити на сайті',
+                `https://mevaro.kiev.ua/fabrics/${fabric.slug}`
+              ),
+            ])
+          );
         }
       }
     ) as any;
