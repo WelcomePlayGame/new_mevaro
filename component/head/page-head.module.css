@@ -143,6 +143,11 @@
   font-weight: 400;
   font-style: italic;
 }
+.content_blog img {
+  margin: auto;
+  padding: 20px;
+  border-radius: 30px;
+}
 .hr_style {
   size: 1px;
   margin-top: 10px;
