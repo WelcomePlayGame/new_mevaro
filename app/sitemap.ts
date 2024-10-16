@@ -21,6 +21,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${process.env.BASE_URL}/blogs`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${process.env.BASE_URL}/armchair`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
