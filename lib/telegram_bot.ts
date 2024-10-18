@@ -2,19 +2,17 @@ import { Telegraf, Markup } from 'telegraf';
 import { message } from 'telegraf/filters';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
-// Main menu keyboard with an inline button for the "Каталог Тканин"
+// Main menu keyboard without inline buttons
 export const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
   ['📞 Контакти', 'Про нас'],
-  [
-    Markup.button.url(
-      '🎨 Каталог Тканин',
-      'https://www.mevaro.kiev.ua/fabrics'
-    ),
-  ], // Inline URL button
 ]).resize();
 
-// Return to main menu button
+// Inline keyboard with a URL button for "Каталог Тканин"
+const mainMenuInline = Markup.inlineKeyboard([
+  Markup.button.url('🎨 Каталог Тканин', 'https://www.mevaro.kiev.ua/fabrics'),
+]);
+
 const returnMainMenuKeyboard = Markup.keyboard([
   ['🔙 Назад до головного меню'],
 ]).resize();
@@ -33,8 +31,11 @@ bot.command('start', async (ctx) => {
       caption: 'Ласкаво просимо до нашого бота компанії Mevaro!',
     });
 
-    // Then, send the main menu with inline and regular buttons
+    // Then, send the main menu
     await ctx.reply('Що Вас цікавить?', mainMenuKeyboard);
+
+    // Then, send the inline button for "Каталог Тканин"
+    await ctx.reply('Оберіть розділ для переходу на сайт:', mainMenuInline);
   } catch (error) {
     console.error('Error in start command:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
@@ -69,22 +70,10 @@ bot.hears('Про нас', async (ctx) => {
   await ctx.reply('Інформація про нашу компанію...');
 });
 
-// Submenu options for "Перетяжка меблів"
-bot.hears('🛋️ Дивани', async (ctx) => {
-  await ctx.reply('Оберіть тип дивану:', reupholsterySubmenuKeyboard);
-});
-
-bot.hears('🪑 Стільці', async (ctx) => {
-  await ctx.reply('Оберіть тип стільця:', reupholsterySubmenuKeyboard);
-});
-
-bot.hears('🛏️ Ліжка', async (ctx) => {
-  await ctx.reply('Оберіть тип ліжка:', reupholsterySubmenuKeyboard);
-});
-
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
   try {
     await ctx.reply('Ви повернулися до головного меню:', mainMenuKeyboard);
+    await ctx.reply('Оберіть розділ для переходу на сайт:', mainMenuInline);
   } catch (error) {
     console.error('Error in main menu handler:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
