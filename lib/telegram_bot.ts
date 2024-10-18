@@ -112,7 +112,7 @@ bot.hears('🪑 Стільці', async (ctx) => {
   await ctx.reply('Оберіть тип стільця:', reupholsterySubmenuforChairKeyboard);
 });
 
-bot.hears('🛏️ Ліжко', async (ctx) => {
+bot.hears('🛏️ Ліжка', async (ctx) => {
   await ctx.reply('Оберіть тип ліжка:', reupholsterySubmenuforBedKeyboard);
 });
 
