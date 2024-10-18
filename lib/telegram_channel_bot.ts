@@ -1,64 +1,22 @@
-import { Telegraf, Markup, Context } from 'telegraf';
-import { ChatMemberUpdated } from 'telegraf/typings/core/types/typegram';
+import { Telegraf, Markup } from 'telegraf';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
+bot.command('check_subscription', async (ctx) => {
+  const userId = ctx.from?.id;
 
-const CHANNEL_USERNAME = process.env.CHANNEL_USERNAME as string;
-
-export const mainMenuKeyboard = Markup.keyboard([
-  ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
-  ['📞 Контакти', 'Про нас'],
-]).resize();
-// Function to check if a user is subscribed to the channel
-async function isSubscribed(ctx: Context, userId: number): Promise<boolean> {
   try {
     const chatMember = await ctx.telegram.getChatMember(
-      CHANNEL_USERNAME,
+      '@your_channel',
       userId
     );
-    return ['member', 'administrator', 'creator'].includes(chatMember.status);
-  } catch (error) {
-    console.error('Error checking subscription status:', error);
-    return false;
-  }
-}
-
-bot.on('chat_member', async (ctx) => {
-  console.log('Chat member update received:', ctx.chatMember);
-  const chatMemberUpdate = ctx.chatMember as ChatMemberUpdated;
-
-  if (
-    'username' in chatMemberUpdate.chat &&
-    chatMemberUpdate.chat.username === CHANNEL_USERNAME &&
-    chatMemberUpdate.new_chat_member.status === 'member' &&
-    chatMemberUpdate.old_chat_member.status !== 'member'
-  ) {
-    console.log(
-      'User joined the channel:',
-      chatMemberUpdate.new_chat_member.user.username
-    );
-    const userId = chatMemberUpdate.new_chat_member.user.id;
-
-    try {
-      const subscribed = await isSubscribed(ctx, userId);
-
-      if (subscribed) {
-        await ctx.telegram.sendMessage(
-          userId,
-          `Вітаємо! Дякуємо за підписку на наш канал @${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
-          {
-            reply_markup: mainMenuKeyboard.reply_markup,
-          }
-        );
-      } else {
-        console.log('User is not subscribed');
-      }
-    } catch (error) {
-      console.error(
-        'Error checking subscription or sending welcome message:',
-        error
-      );
+    if (
+      chatMember.status === 'member' ||
+      chatMember.status === 'administrator'
+    ) {
+      ctx.reply('Ви підписані на наш канал!');
+    } else {
+      ctx.reply('Будь ласка, підпишіться на наш канал!');
     }
+  } catch (error) {
+    ctx.reply('Не вдалося перевірити ваш статус.');
   }
 });
-
-bot.launch();
