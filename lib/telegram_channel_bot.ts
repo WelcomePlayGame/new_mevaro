@@ -3,10 +3,8 @@ import { ChatMemberUpdated } from 'telegraf/typings/core/types/typegram';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
 // Channel username without "@"
-const CHANNEL_USERNAME = process.env.CHANNEL_USERNAME?.replace(
-  '@',
-  ''
-) as string;
+const CHANNEL_USERNAME = '@mevaro_kiev';
+
 export const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
   ['📞 Контакти', 'Про нас'],
