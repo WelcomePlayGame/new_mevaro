@@ -2,8 +2,7 @@ import { Telegraf, Markup, Context } from 'telegraf';
 import { ChatMemberUpdated } from 'telegraf/typings/core/types/typegram';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
-// Channel username without "@"
-const CHANNEL_USERNAME = 'mevaro_kiev';
+const CHANNEL_USERNAME = '@mevaro_kiev';
 
 export const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
@@ -24,6 +23,7 @@ async function isSubscribed(ctx: Context, userId: number): Promise<boolean> {
 }
 
 bot.on('chat_member', async (ctx) => {
+  console.log('Chat member update received:', ctx.chatMember);
   const chatMemberUpdate = ctx.chatMember as ChatMemberUpdated;
 
   if (
@@ -32,14 +32,16 @@ bot.on('chat_member', async (ctx) => {
     chatMemberUpdate.new_chat_member.status === 'member' &&
     chatMemberUpdate.old_chat_member.status !== 'member'
   ) {
+    console.log(
+      'User joined the channel:',
+      chatMemberUpdate.new_chat_member.user.username
+    );
     const userId = chatMemberUpdate.new_chat_member.user.id;
 
     try {
-      // Check if the user is subscribed using the isSubscribed function
       const subscribed = await isSubscribed(ctx, userId);
 
       if (subscribed) {
-        // Send a welcome message to the user
         await ctx.telegram.sendMessage(
           userId,
           `Вітаємо! Дякуємо за підписку на наш канал @${CHANNEL_USERNAME}. Як ми можемо вам допомогти?`,
@@ -47,6 +49,8 @@ bot.on('chat_member', async (ctx) => {
             reply_markup: mainMenuKeyboard.reply_markup,
           }
         );
+      } else {
+        console.log('User is not subscribed');
       }
     } catch (error) {
       console.error(
