@@ -147,6 +147,9 @@ bot.hears("Узголів'я ліжка", async (ctx) => {
 
 // Catch-all handler for any text message
 bot.on(message('text'), async (ctx) => {
+  await ctx.replyWithVideo('https://www.mevaro.kiev.ua/video/mevaro.mp4', {
+    caption: 'Ласкаво просимо до нашого бота компанії Mevaro!',
+  });
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
 
