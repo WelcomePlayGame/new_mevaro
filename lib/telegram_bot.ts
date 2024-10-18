@@ -112,7 +112,7 @@ bot.hears('🪑 Стільці', async (ctx) => {
   await ctx.reply('Оберіть тип стільця:', reupholsterySubmenuforChairKeyboard);
 });
 
-bot.hears('🛏️ Ліжка', async (ctx) => {
+bot.hears('🛏️ Ліжко', async (ctx) => {
   await ctx.reply('Оберіть тип ліжка:', reupholsterySubmenuforBedKeyboard);
 });
 
@@ -135,6 +135,19 @@ bot.hears('Заміна Пружинного Блоку з поролоном', 
   await ctx.reply(
     'Вартість заміни пружинного блоку з поролоном: 6000 грн +- грн в залежнотсі від щільності та висоти',
     returnMainMenuKeyboard
+  );
+});
+
+bot.hears("Узголів'я ліжка", async (ctx) => {
+  await ctx.reply(
+    "В залежності обраної тканини та точних  розмірів вартість узголів'я ліжка:  від 5500 грн",
+    returnMainMenuKeyboard
+  );
+  await ctx.reply(
+    "Фото узголів'я ліжка пришліть нам, ми зможемо розрахувати вартість роботи з тканиною:",
+    Markup.inlineKeyboard([
+      Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
+    ])
   );
 });
 
