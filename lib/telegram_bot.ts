@@ -143,12 +143,6 @@ bot.hears("Узголів'я ліжка", async (ctx) => {
     "В залежності обраної тканини та точних  розмірів вартість узголів'я ліжка:  від 5500 грн",
     returnMainMenuKeyboard
   );
-  await ctx.reply(
-    "Фото узголів'я ліжка пришліть нам, ми зможемо розрахувати вартість роботи з тканиною:",
-    Markup.inlineKeyboard([
-      Markup.button.url('Написати @romaniv21', 'https://t.me/romaniv21'),
-    ])
-  );
 });
 
 // Catch-all handler for any text message
