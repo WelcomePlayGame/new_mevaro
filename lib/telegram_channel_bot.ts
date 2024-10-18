@@ -2,7 +2,7 @@ import { Telegraf, Markup, Context } from 'telegraf';
 import { ChatMemberUpdated } from 'telegraf/typings/core/types/typegram';
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
-const CHANNEL_USERNAME = 'mevaro_kiev';
+const CHANNEL_USERNAME = process.env.CHANNEL_USERNAME as string;
 
 export const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
