@@ -60,6 +60,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          charSet="UTF-8"
+          src="//web.webpushs.com/js/push/b6b24f64ee44d77c8800a47d8c4e1484_1.js"
+          async
+        ></Script>
+
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
