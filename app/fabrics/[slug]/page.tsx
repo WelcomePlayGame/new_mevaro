@@ -113,7 +113,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
             </div>
             <div className="flex flex-col  items-start mt-[30px]">
               <div className="flex flex-col">
-                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10">
+                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
                   <Delivery />
                   Швидка доставка
                 </h3>
@@ -123,7 +123,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                 </ul>
               </div>
               <div className="flex flex-col">
-                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10">
+                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
                   <AboutUs /> Чому ми?
                 </h3>
                 <ul className="list-disc list-inside p-[10xp]">
