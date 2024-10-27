@@ -1,7 +1,10 @@
+.image_style {
+  object-fit: contain;
+}
 .container_div {
   position: relative;
-  width: 600px;
-  height: 300px;
+  width: 100%;
+  height: 400px;
 }
 .head_top {
   display: flex;
