@@ -28,11 +28,7 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
         height: '300px',
       }}
     >
-      <img
-        src={src}
-        alt={alt}
-        style={{ visibility: 'hidden', width: '100%', height: '100%' }}
-      />
+      <img src={src} alt={alt} />
     </figure>
   );
 };
