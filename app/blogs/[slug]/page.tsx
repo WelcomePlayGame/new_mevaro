@@ -29,8 +29,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           <div className={`${classes.container_div}`}>
             <Image
               src={`${process.env.URL_AWS}${blog.image}`}
-              width={400}
-              height={200}
+              fill
               alt={blog.title}
               className={`${classes.image_style} rounded`}
             />
