@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface ZoomImageProps {
@@ -22,7 +23,7 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
       onMouseMove={handleMouseMove}
       style={{ backgroundImage: `url(${src})`, backgroundPosition }}
     >
-      <img src={src} alt={alt} className="page_product_img" />
+      <Image src={src} alt={alt} className="page_product_img" fill />
     </figure>
   );
 };
