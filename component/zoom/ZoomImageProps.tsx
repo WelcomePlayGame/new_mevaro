@@ -22,7 +22,7 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
       style={{
         backgroundImage: `url(${src})`,
         backgroundPosition,
-        backgroundSize: '200%', // Увеличение
+        // backgroundSize: '200%', // Увеличение
         backgroundRepeat: 'no-repeat',
         width: '600px',
         height: '300px',
