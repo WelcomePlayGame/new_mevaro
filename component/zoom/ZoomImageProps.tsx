@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
 
 interface ZoomImageProps {
@@ -10,9 +9,8 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
   const [backgroundPosition, setBackgroundPosition] = useState('0% 0%');
 
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const { left, top, width, height } = (
-      e.target as HTMLElement
-    ).getBoundingClientRect();
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
     const x = ((e.pageX - left) / width) * 100;
     const y = ((e.pageY - top) / height) * 100;
     setBackgroundPosition(`${x}% ${y}%`);
@@ -24,13 +22,17 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
       style={{
         backgroundImage: `url(${src})`,
         backgroundPosition,
-        backgroundSize: '200%',
+        backgroundSize: '200%', // Увеличение
         backgroundRepeat: 'no-repeat',
         width: '300px',
         height: '150px',
       }}
     >
-      <Image src={src} alt={alt} fill />
+      <img
+        src={src}
+        alt={alt}
+        style={{ visibility: 'hidden', width: '100%', height: '100%' }}
+      />
     </figure>
   );
 };
