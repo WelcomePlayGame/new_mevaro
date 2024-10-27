@@ -21,7 +21,12 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
   return (
     <figure
       onMouseMove={handleMouseMove}
-      style={{ backgroundImage: `url(${src})`, backgroundPosition }}
+      style={{
+        backgroundImage: `url(${src})`,
+        backgroundPosition,
+        backgroundSize: '200%',
+        backgroundRepeat: 'no-repeat',
+      }}
     >
       <Image src={src} alt={alt} className="page_product_img" fill />
     </figure>
