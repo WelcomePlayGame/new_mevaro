@@ -93,7 +93,7 @@
 .container_content h3::after {
   content: '';
   display: block;
-  width: 100%;
+  width: 20%;
   height: 1px;
   background-color: rgba(9, 118, 101, 0.8);
   margin-top: 5px;
