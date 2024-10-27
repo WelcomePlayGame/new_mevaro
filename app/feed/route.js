@@ -12,7 +12,7 @@ export async function GET() {
     site_url: process.env.BASE_URL,
     feed_url: `${process.env.BASE_URL}/feed.xml`,
     copyright: `${new Date().getFullYear()} Mevaro`,
-    language: 'ua',
+    language: 'en',
     pubDate: new Date().toUTCString(),
   });
 
