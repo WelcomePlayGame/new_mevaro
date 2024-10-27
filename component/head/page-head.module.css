@@ -86,6 +86,18 @@
   padding-left: 60px;
   padding-right: 60px;
 }
+.container_content h1 {
+  margin: 10px;
+  font-size: 1.9rem;
+}
+.container_content h1::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  background-color: rgba(9, 118, 101, 0.8);
+  margin-top: 5px;
+}
 .container_content h3 {
   margin: 10px;
   font-size: 1.5rem;
