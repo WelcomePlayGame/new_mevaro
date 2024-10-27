@@ -3,8 +3,8 @@ import { getAllFabrics } from '@/lib/fabric';
 import { getAllBlogs } from '@/lib/blog';
 
 export async function GET() {
-  const { fabrics } = await getAllFabrics();
-  const { blogs } = await getAllBlogs();
+  const fabrics = await getAllFabrics();
+  const blogs = await getAllBlogs();
   const fabricsAndBlogs = [...fabrics, ...blogs];
   const feed = new RSS({
     title: `Перетяжка та Виготовлення меблів від Mevaro`,
@@ -22,8 +22,8 @@ export async function GET() {
       ? `${process.env.URL_AWS}${element.images[0]}`
       : `${process.env.URL_AWS}${element.image}`;
     const isCategory = element.category
-      ? element.category
-      : 'Новини від Меваро в світі меблів';
+      ? [element.category]
+      : ['Новини від Меваро в світі меблів'];
     feed.item({
       title: element.title,
       guid: `${process.env.BASE_URL}/${isFabric ? 'fabrics' : 'blogs'}/${
