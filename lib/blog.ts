@@ -16,6 +16,7 @@ export const getAllBlogs = async () => {
   try {
     await connectDB();
     const blogs = getCollection('blogs');
+    revalidatePath('/', 'layout');
     return await blogs.find({}).toArray();
   } catch (error) {
     throw error;

@@ -56,6 +56,7 @@ export const getAllFabrics = async () => {
   try {
     await connectDB();
     const fabrics = getCollection('fabrics');
+    revalidatePath('/', 'layout');
     return await fabrics.find({}).toArray();
   } catch (error) {
     throw error;
