@@ -24,8 +24,8 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
         backgroundPosition,
         backgroundSize: '200%', // Увеличение
         backgroundRepeat: 'no-repeat',
-        width: '300px',
-        height: '150px',
+        width: '600px',
+        height: '300px',
       }}
     >
       <img
