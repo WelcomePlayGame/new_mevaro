@@ -157,6 +157,9 @@
   padding: 20px;
   border-radius: 30px;
 }
+.content_blog p {
+  font-size: 16px;
+}
 .hr_style {
   size: 1px;
   margin-top: 10px;
