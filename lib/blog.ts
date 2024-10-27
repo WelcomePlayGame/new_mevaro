@@ -4,7 +4,6 @@ import { connectDB, getCollection, closeConnection } from '@/lib/db';
 import xss from 'xss';
 import { revalidatePath } from 'next/cache';
 import { S3, S3ClientConfig } from '@aws-sdk/client-s3';
-import { ObjectId } from 'mongodb';
 
 const s3 = new S3({
   region: 'us-east-1',
