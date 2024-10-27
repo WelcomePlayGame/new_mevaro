@@ -1,3 +1,6 @@
+.container_div {
+  width: 100%;
+}
 .head_top {
   display: flex;
   justify-content: center;
@@ -129,6 +132,11 @@
 }
 .container_select {
   width: 100%;
+}
+.content_blog h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.9rem;
 }
 .content_blog h2 {
   text-align: center;
