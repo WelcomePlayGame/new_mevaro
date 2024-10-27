@@ -1,5 +1,5 @@
 .image_style {
-  object-fit: contain;
+  object-fit: none;
 }
 .container_div {
   position: relative;
