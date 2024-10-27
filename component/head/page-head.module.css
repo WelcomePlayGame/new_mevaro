@@ -89,6 +89,7 @@
 .container_content h1 {
   margin: 10px;
   font-size: 1.9rem;
+  margin-bottom: 15px;
 }
 .container_content h1::after {
   content: '';
