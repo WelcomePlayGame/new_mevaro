@@ -1,7 +1,7 @@
 import { getBlogBySlug as get } from '@/lib/blog';
-import HeadBlog from '@/component/head/page-blog-head';
+import Head from '@/component/head/page-head';
 import classes from '@/component/head/page-head.module.css';
-import SubHead from '@/component/head/page-sub-header-tkani';
+import HeadBlog from '@/component/head/page-blog-head';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
 export const generateMetadata = async ({
@@ -21,8 +21,8 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
+        <Head />
         <HeadBlog />
-        <SubHead />
       </div>
       <div className="flex flex-col pt-[180px]">
         <div className="flex flex-col items-center pt-[50px]">
