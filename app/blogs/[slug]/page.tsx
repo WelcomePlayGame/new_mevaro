@@ -26,7 +26,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
       </div>
       <div className="flex flex-col pt-[180px]">
         <div className="flex flex-col items-center pt-[50px]">
-          <div className={`${classes.container_div}`}>
+          <div className={`${classes.container_div_blog}`}>
             <Image
               src={`${process.env.URL_AWS}${blog.image}`}
               fill
