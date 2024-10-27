@@ -8,6 +8,7 @@ import { Navigation, Autoplay, FreeMode, Thumbs } from 'swiper/modules';
 import Image from 'next/image';
 import classes from './page-slider.module.css';
 import { useState } from 'react';
+import ZoomImage from '../zoom/ZoomImageProps';
 
 const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -33,12 +34,13 @@ const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
         {imgArray.map((url, index) => (
           <SwiperSlide key={index}>
             <div className={`${classes.container_div} w-[600px] h-[300px]`}>
-              <Image
+              <ZoomImage src={`${process.env.URL_AWS}${url}`} alt={url} />
+              {/* <Image
                 src={`${process.env.URL_AWS}${url}`}
                 fill
                 alt={url}
                 className="rounded"
-              />
+              /> */}
             </div>
             <div className={`${classes.container_element_span}`}>
               {changeUrl(url)}
