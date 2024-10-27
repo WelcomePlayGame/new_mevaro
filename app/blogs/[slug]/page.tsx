@@ -1,5 +1,5 @@
 import { getBlogBySlug as get } from '@/lib/blog';
-import Head from '@/component/head/page-head';
+import HeadBlog from '@/component/head/page-blog-head';
 import classes from '@/component/head/page-head.module.css';
 import SubHead from '@/component/head/page-sub-header-tkani';
 import Footer from '@/component/footer/page-footer';
@@ -21,7 +21,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
-        <Head />
+        <HeadBlog />
         <SubHead />
       </div>
       <div className="flex flex-col pt-[180px]">
