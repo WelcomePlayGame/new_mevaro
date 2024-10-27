@@ -10,9 +10,9 @@ export async function GET() {
     title: `Перетяжка та Виготовлення меблів від Mevaro`,
     description: 'Широкий вибір меблевих тканин для Вашої оселі',
     site_url: process.env.BASE_URL,
-    feed_url: `${process.env.BASE_URL}/feed.xml`,
+    feed_url: `https://www.mevaro.kiev.ua/feed.xml`,
     copyright: `${new Date().getFullYear()} Mevaro`,
-    language: 'en',
+    language: 'uk',
     pubDate: new Date().toUTCString(),
   });
 
@@ -46,7 +46,7 @@ export async function GET() {
 
   return new Response(feed.xml({ indent: true }), {
     headers: {
-      'Content-Type': 'application/atom+xml; charset=utf-8',
+      'Content-Type': 'application/rss+xml; charset=utf-8',
     },
   });
 }
