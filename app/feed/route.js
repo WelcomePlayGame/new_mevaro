@@ -33,7 +33,7 @@ export async function GET() {
         element.slug
       }`,
       date: element.date,
-      description: element.description,
+      description: element.content,
       author: 'Mevaro',
       categories: isCategory,
       enclosure: {
