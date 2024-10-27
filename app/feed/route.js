@@ -32,7 +32,7 @@ export async function GET() {
       url: `${process.env.BASE_URL}/${isFabric ? 'fabrics' : 'blogs'}/${
         element.slug
       }`,
-      date: element.date,
+      date: new Date().toUTCString(),
       description: element.content,
       author: 'Mevaro',
       categories: isCategory,
