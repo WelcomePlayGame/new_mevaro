@@ -26,9 +26,11 @@ const ZoomImage: React.FC<ZoomImageProps> = ({ src, alt }) => {
         backgroundPosition,
         backgroundSize: '200%',
         backgroundRepeat: 'no-repeat',
+        width: '300px',
+        height: '150px',
       }}
     >
-      <Image src={src} alt={alt} className="page_product_img" fill />
+      <Image src={src} alt={alt} fill />
     </figure>
   );
 };
