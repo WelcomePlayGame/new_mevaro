@@ -83,13 +83,13 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               <div className="flex flex-col text-[14px] pt-[30px]">
                 <span className="m-[5px]">
                   від 10 пог.м - {discount5.toFixed(2)} грн./пог.м{' '}
-                  <span className="bg-[red] text-[#fff] p-[2px]">
+                  <span className="bg-[red] text-[#fff] p-[3px] rounded-[3px]">
                     знижка -5%
                   </span>
                 </span>
                 <span className="m-[5px]">
                   від 20 пог.м - {discount10.toFixed(2)} грн./пог.м{' '}
-                  <span className="bg-[red] text-[#fff] p-[2px]">
+                  <span className="bg-[red] text-[#fff] p-[3px] rounded-[3px]">
                     знижка -10%
                   </span>{' '}
                 </span>
