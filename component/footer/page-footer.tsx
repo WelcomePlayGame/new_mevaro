@@ -19,25 +19,29 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          <Link
+          <a
             href={'https://www.instagram.com/mevaro_peretyajka/'}
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ознайомитись з нашими роботами в  Instagram"
           >
             <InstagramSVG />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link
+          <a
             href={'https://www.youtube.com/@WelcometoMeVARO'}
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ознайомитись з нашими роботами в  Youtube"
           >
             <YoutubeSVG />
-          </Link>
+          </a>
         </div>
         <div>
-          <Link href={'/blogs'}>
+          <a href={'/blogs'} aria-label="Ознайомитись з нашим блогом">
             <Blog />
-          </Link>
+          </a>
         </div>
       </div>
       <div className={`${classes.container_adress}`}>
