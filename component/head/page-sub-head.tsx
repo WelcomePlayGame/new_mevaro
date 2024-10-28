@@ -31,6 +31,7 @@ const SubHead = () => {
           <a
             href="tel:+380957162677?utm_source=website&utm_medium=link&utm_campaign=contact"
             data-gtm="phone-call"
+            aria-label="Зателефонувати за номером +380 95 716 26 77"
           >
             📱 095 71 62 677
           </a>
