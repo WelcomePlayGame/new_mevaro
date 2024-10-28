@@ -170,7 +170,7 @@ const Fabric = async ({ params }) => {
               description: fabric.content,
               brand: {
                 '@type': 'Brand',
-                name: 'Меблеві тканини',
+                name: 'Mevaro',
               },
               offers: {
                 '@type': 'Offer',
