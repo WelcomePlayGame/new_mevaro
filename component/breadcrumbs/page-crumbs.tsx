@@ -10,18 +10,18 @@ export interface Crumbs {
 const Crumbs = ({ crumbs }: Crumbs) => {
   return (
     <section>
-      <div className="breadcrumbs">
+      <ol className="breadcrumbs flex justify-normal">
         {crumbs.map((crumb: any, index: any) => {
           return (
-            <span key={index}>
+            <li key={index}>
               <a href={crumb.url} className="breadcrumps_a">
                 {crumb.label}
               </a>
               {index < crumbs.length - 1 && <span> / </span>}
-            </span>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </section>
   );
 };

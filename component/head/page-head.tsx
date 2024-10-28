@@ -7,7 +7,7 @@ const Head = () => {
   const path = usePathname();
   return (
     <menu>
-      <ul className={`${classes.head_top}`}>
+      <ol className={`${classes.head_top}`}>
         <li>{path !== '/' && <Link href="/">Перетяжка</Link>}</li>
         {path !== '/fabrics' && (
           <li>
@@ -27,7 +27,7 @@ const Head = () => {
         <li>
           <a href="/#map">Наша адреса</a>
         </li>
-      </ul>
+      </ol>
     </menu>
   );
 };
