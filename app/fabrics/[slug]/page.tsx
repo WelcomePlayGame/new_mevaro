@@ -95,8 +95,10 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                 </span>
               </div>
               <div className="">
-                <span className="text-[2.5rem] text-[red] font-bold">
-                  {fabric.price * Number(process.env.DOLLAR_RATE)}
+                <span className="text-[2.5rem] text-[red] font-bold strong">
+                  <strong>
+                    {fabric.price * Number(process.env.DOLLAR_RATE)}
+                  </strong>
                 </span>{' '}
                 грн./пог.м
               </div>
