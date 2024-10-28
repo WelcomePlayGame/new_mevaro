@@ -60,11 +60,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          src="//web.webformscr.com/apps/fc3/build/loader.js"
-          async
-          sp-form-id="4b145a099ba9013597ebf120e8cfa6f96769d844ada90c73ad235dfbcde82d70"
-        ></script>
         <Script
           charSet="UTF-8"
           src="//web.webpushs.com/js/push/b6b24f64ee44d77c8800a47d8c4e1484_1.js"
