@@ -9,35 +9,34 @@ import ButtonCart from '@/component/modal_cart/button_cart';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import { getFabricBySlug as get } from '@/lib/fabric';
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
+export const generateMetadata = async ({ params }) => {
   const fabric = await get(params?.slug);
   return {
     title: fabric?.seo_title,
     description: fabric?.seo_description,
   };
 };
-const Fabric = async ({ params }: { params: { slug: string } }) => {
+
+const Fabric = async ({ params }) => {
   const fabric = await get(params.slug);
   const embed_url = fabric?.url_video.replace(
     'youtube.com/shorts/',
     'youtube.com/embed/'
   );
-  const createMarkup = (html: any) => ({ __html: html });
+  const createMarkup = (html) => ({ __html: html });
   const discount10 = fabric.price * 0.9 * Number(process.env.DOLLAR_RATE);
   const discount5 = fabric.price * 0.95 * Number(process.env.DOLLAR_RATE);
+
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
-      <div className={`pt-[190px] lg:pt-[185px]`}>
-        <section className="flex flex-col ">
+      <div className="pt-[190px] lg:pt-[185px]">
+        <section className="flex flex-col">
           <div className="flex flex-col lg:flex-row lg:justify-center p-[20px] lg:space-x-20">
+            {/* Product Information Section */}
             <div className="flex flex-col items-start">
               <div>
                 <Crumbs
@@ -50,12 +49,12 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               </div>
               <div className="pt-[30px] w-[300px] h-[300px] lg:w-[500px] lg:h-[500px]">
                 <SliderProduct imgArray={fabric.images} />
-
                 <span className="mt-[7px]">
                   *Передача кольору може бути спотворена пристроєм
                 </span>
               </div>
             </div>
+            {/* Product Details and Pricing Section */}
             <div
               className="flex flex-col items-center mt-[190px] lg:mt-[20px] lg:p-[15px]"
               style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
@@ -63,7 +62,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
               <div className={`${classes.container_div}`}>
                 <h2 className="text-[1.4rem] uppercase">{fabric?.title}</h2>
               </div>
-              <div className="">
+              <div>
                 <ul>
                   <li>
                     Склад {fabric.title}: {fabric.compound}
@@ -72,10 +71,10 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                     Щільність {fabric.title}: {fabric.density}
                   </li>
                   <li>
-                    Стійкість до зносу {fabric.title} : {fabric.resistance}
+                    Стійкість до зносу {fabric.title}: {fabric.resistance}
                   </li>
                   {fabric.isChecked && (
-                    <li>Перевага {fabric.title} : Антикіготь</li>
+                    <li>Перевага {fabric.title}: Антикіготь</li>
                   )}
                 </ul>
               </div>
@@ -91,10 +90,10 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                   від 20 пог.м - {discount10.toFixed(2)} грн./пог.м{' '}
                   <span className="bg-[red] text-[#fff] p-[3px] rounded-[3px]">
                     знижка -10%
-                  </span>{' '}
+                  </span>
                 </span>
               </div>
-              <div className="">
+              <div>
                 <span className="text-[2.5rem] text-[red] font-bold strong">
                   <strong>
                     {fabric.price * Number(process.env.DOLLAR_RATE)}
@@ -103,21 +102,19 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                 грн./пог.м
               </div>
               <hr className={`${classes.hr_style}`} />
-              <div>
-                <ButtonCart
-                  price={fabric.price}
-                  title={fabric.title}
-                  discount10={discount10}
-                  discount5={discount5}
-                  url={fabric.images[0]}
-                />
-              </div>
+              <ButtonCart
+                price={fabric.price}
+                title={fabric.title}
+                discount10={discount10}
+                discount5={discount5}
+                url={fabric.images[0]}
+              />
             </div>
-            <div className="flex flex-col  items-start mt-[30px]">
+            {/* Additional Information Section */}
+            <div className="flex flex-col items-start mt-[30px]">
               <div className="flex flex-col">
                 <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
-                  <Delivery />
-                  Швидка доставка
+                  <Delivery /> Швидка доставка
                 </h3>
                 <ul className="list-disc list-inside p-[10px]">
                   <li className="text-[1.2rem]">Нова Пошта</li>
@@ -129,7 +126,7 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
                   <AboutUs /> Чому ми?
                 </h3>
                 <ul className="list-disc list-inside p-[10xp]">
-                  <li className="text-[1.2rem] ">
+                  <li className="text-[1.2rem]">
                     10 років працюємо з тканинами
                   </li>
                   <li className="text-[1.2rem]">
@@ -160,6 +157,35 @@ const Fabric = async ({ params }: { params: { slug: string } }) => {
           />
         </section>
         <Footer />
+
+        {/* JSON-LD Markup for Product */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org/',
+              '@type': 'Product',
+              name: fabric.title,
+              image: fabric.images[0],
+              description: fabric.content,
+              brand: {
+                '@type': 'Brand',
+                name: 'Меблеві тканини',
+              },
+              offers: {
+                '@type': 'Offer',
+                url: `https://www.mevaro.kiev.ua/fabrics/${params.slug}`,
+                priceCurrency: 'UAH',
+                price: (fabric.price * Number(process.env.DOLLAR_RATE)).toFixed(
+                  2
+                ),
+                priceValidUntil: '2025-01-01',
+                itemCondition: 'https://schema.org/NewCondition',
+                availability: 'https://schema.org/InStock',
+              },
+            }),
+          }}
+        />
       </div>
     </main>
   );
