@@ -63,7 +63,9 @@ const Fabric = async ({ params }) => {
               style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
               <div className={`${classes.container_div}`}>
-                <h2 className="text-[1.4rem] uppercase">{fabric?.title}</h2>
+                <h2 className={`${classes.container_h2_fabric} uppercase`}>
+                  {fabric?.title}
+                </h2>
               </div>
               <div>
                 <ul>
@@ -138,12 +140,7 @@ const Fabric = async ({ params }) => {
                 </ul>
               </div>
               <hr className={`${classes.hr_style}`} />
-              {embed_url && (
-                <VideoPlayer
-                  embed_url={embed_url}
-                  cover_url={`${process.env.URL_AWS}/${fabric.images[0]}`}
-                />
-              )}
+              {embed_url && <VideoPlayer embed_url={embed_url} />}
             </div>
 
             <SaleBox />

@@ -198,11 +198,11 @@
 }
 
 .container_span_sell {
-  font-size: calc(0.4rem + 0.8vw);
+  font-size: calc(0.8rem + 0.2vw);
   text-align: center;
 }
 .container_span_sell_bellow {
-  font-size: calc(0.5rem + 0.8vw);
+  font-size: calc(0.9rem + 0.2vw);
   background: red;
   color: #fff;
   padding: 5px;
@@ -240,6 +240,10 @@
   .container_h2_div {
     font-size: 1.3rem;
   }
+  .container_h2_fabric {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
 }
 .container_describe_fabrics {
   padding: 50px;
@@ -250,6 +254,9 @@
   margin-top: 30px;
   font-size: 1.6rem;
   text-align: center;
+}
+.container_h2_fabric {
+  font-size: calc(1.2rem + 0.6vw);
 }
 @media (min-width: 1201px) {
   .head_sub h1 {
