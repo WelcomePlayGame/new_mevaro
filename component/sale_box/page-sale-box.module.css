@@ -18,7 +18,7 @@
   font-size: 1.2rem;
 }
 .container_pop {
-  position: absolute;
+  position: fixed;
   top: 0%;
   right: 0%;
   background-color: rgba(0, 0, 0, 1);
