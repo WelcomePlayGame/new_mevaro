@@ -6,9 +6,10 @@ import Head from '@/component/head/page-head';
 import classes from '@/component/head/page-head.module.css';
 import SubHead from '@/component/head/page-sub-header-tkani';
 import ButtonCart from '@/component/modal_cart/button_cart';
+import SaleBox from '@/component/sale_box/page-sale-box';
+import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import { getFabricBySlug as get } from '@/lib/fabric';
-
 export const generateMetadata = async ({ params }) => {
   const fabric = await get(params?.slug);
   return {
@@ -148,6 +149,8 @@ const Fabric = async ({ params }) => {
                 </div>
               )}
             </div>
+
+            <SaleBox />
           </div>
         </section>
         <section className="p-[30px]">
@@ -156,6 +159,7 @@ const Fabric = async ({ params }) => {
             className={`${classes.container_content} break-words text-[1.1rem] leading-6 `}
           />
         </section>
+        <SlideForFabric />
         <Footer />
 
         {/* JSON-LD Markup for Product */}
