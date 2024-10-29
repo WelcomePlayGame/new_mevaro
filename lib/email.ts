@@ -20,8 +20,6 @@ export const addEmail = async (formData: FormData) => {
     });
   } catch (error) {
     console.error('Error inserting email:', error);
-  } finally {
-    await closeConnection();
   }
 };
 export const checkedEmail = async (email: string) => {
@@ -34,7 +32,5 @@ export const checkedEmail = async (email: string) => {
   } catch (error) {
     console.error('Error checking email:', error);
     return false;
-  } finally {
-    await closeConnection();
   }
 };
