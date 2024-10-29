@@ -1,3 +1,4 @@
+'use server';
 import { connectDB, getCollection, closeConnection } from '@/lib/db';
 
 export const addEmail = async (formData: FormData) => {
