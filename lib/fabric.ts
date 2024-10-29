@@ -44,11 +44,11 @@ export const addFabric = async (formData: FormData, nameImages) => {
       images: nameImages,
     });
 
-    await closeConnection();
     revalidatePath('/', 'layout');
   } catch (error) {
-    await closeConnection();
     throw error;
+  } finally {
+    await closeConnection();
   }
 };
 
@@ -60,8 +60,9 @@ export const getAllFabrics = async () => {
     return await fabrics.find({}).toArray();
   } catch (error) {
     throw error;
+  } finally {
+    await closeConnection();
   }
-  await closeConnection();
 };
 
 export const getFabricBySlug = async (slug) => {
@@ -71,6 +72,7 @@ export const getFabricBySlug = async (slug) => {
     return await fabric.findOne({ slug: slug });
   } catch (error) {
     throw error;
+  } finally {
+    await closeConnection();
   }
-  await closeConnection();
 };
