@@ -9,7 +9,9 @@ import ButtonCart from '@/component/modal_cart/button_cart';
 import SaleBox from '@/component/sale_box/page-sale-box';
 import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
+import VideoPlayer from '@/component/video_player/page-video-player';
 import { getFabricBySlug as get } from '@/lib/fabric';
+
 export const generateMetadata = async ({ params }) => {
   const fabric = await get(params?.slug);
   return {
@@ -81,16 +83,16 @@ const Fabric = async ({ params }) => {
               </div>
               <hr className={`${classes.hr_style}`} />
               <div className="flex flex-col text-[14px] pt-[30px]">
-                <span className="m-[5px]">
-                  від 10 пог.м - {discount5.toFixed(2)} грн./пог.м{' '}
-                  <span className="bg-[red] text-[#fff] p-[3px] rounded-[3px]">
-                    знижка -5%
+                <span className={`${classes.container_span_sell} m-[5px]`}>
+                  від 10 пог.м - {discount5.toFixed(2)} грн./пог.м знижка{' '}
+                  <span className={`${classes.container_span_sell_bellow} `}>
+                    5%
                   </span>
                 </span>
-                <span className="m-[5px]">
-                  від 20 пог.м - {discount10.toFixed(2)} грн./пог.м{' '}
-                  <span className="bg-[red] text-[#fff] p-[3px] rounded-[3px]">
-                    знижка -10%
+                <span className={`${classes.container_span_sell} m-[5px]`}>
+                  від 20 пог.м - {discount10.toFixed(2)} грн./пог.м знижка {``}
+                  <span className={`${classes.container_span_sell_bellow} `}>
+                    10%
                   </span>
                 </span>
               </div>
@@ -137,16 +139,10 @@ const Fabric = async ({ params }) => {
               </div>
               <hr className={`${classes.hr_style}`} />
               {embed_url && (
-                <div className="mt-[15px] flex flex-col items-center">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={embed_url}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
+                <VideoPlayer
+                  embed_url={embed_url}
+                  cover_url={`${process.env.URL_AWS}/${fabric.images[0]}`}
+                />
               )}
             </div>
 

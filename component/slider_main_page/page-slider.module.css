@@ -29,12 +29,12 @@
   background-color: rgba(9, 118, 101, 0.6);
   width: 50%;
 
-  margin-top: 10px;
+  margin: 10px auto;
   text-align: center;
   border-radius: 7px;
 }
 @media (min-width: 360px) and (max-width: 430px) {
   .container_element_span {
-    margin: auto;
+    margin: 10px auto;
   }
 }

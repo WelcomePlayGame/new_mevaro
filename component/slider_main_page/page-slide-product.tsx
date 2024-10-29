@@ -35,12 +35,6 @@ const SliderProduct = ({ imgArray }: { imgArray: any[] }) => {
           <SwiperSlide key={index}>
             <div className={`${classes.container_div} w-[600px] h-[300px]`}>
               <ZoomImage src={`${process.env.URL_AWS}${url}`} alt={url} />
-              {/* <Image
-                src={`${process.env.URL_AWS}${url}`}
-                fill
-                alt={url}
-                className="rounded"
-              /> */}
             </div>
             <div className={`${classes.container_element_span}`}>
               {changeUrl(url)}

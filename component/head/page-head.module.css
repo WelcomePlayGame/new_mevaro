@@ -196,6 +196,18 @@
   margin-top: 10px;
   width: 70%;
 }
+
+.container_span_sell {
+  font-size: calc(0.4rem + 0.8vw);
+  text-align: center;
+}
+.container_span_sell_bellow {
+  font-size: calc(0.5rem + 0.8vw);
+  background: red;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
 @media (min-width: 360px) and (max-width: 430px) {
   .container_content {
     padding: 5px;

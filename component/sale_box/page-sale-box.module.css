@@ -63,7 +63,7 @@
 }
 @media (min-width: 360px) and (max-width: 430px) {
   .container_sale {
-    transform: translate(40%, 60%) rotate(90deg);
+    transform: translate(40%, 290%) rotate(90deg);
   }
   .container_input {
     width: 200px;
