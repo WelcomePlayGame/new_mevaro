@@ -1,5 +1,5 @@
 import React from 'react';
-
+import classes from './page-breadcrumbs.module.css';
 export interface Crumbs {
   crumbs: {
     label: string;
@@ -10,7 +10,7 @@ export interface Crumbs {
 const Crumbs = ({ crumbs }: Crumbs) => {
   return (
     <section>
-      <ol className="breadcrumbs flex justify-normal">
+      <ol className={`${classes.breadcrumbs} flex justify-normal`}>
         {crumbs.map((crumb: any, index: any) => {
           return (
             <li key={index}>

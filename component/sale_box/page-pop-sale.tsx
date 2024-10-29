@@ -51,7 +51,7 @@ const PopSale: React.FC<TPopSale> = ({ isChecked, setIsChecked }) => {
       >
         <input
           type="email"
-          placeholder="Введіть Вашу пошту - @gmail.com"
+          placeholder=" @gmail.com"
           className={`${classes.container_input} py-2 px-4 border rounded`}
           pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
           title="Введіть коректну пошту, закінчення має бути @gmail.com"
