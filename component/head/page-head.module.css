@@ -103,14 +103,14 @@
 }
 .container_content h3 {
   margin: 10px;
-  font-size: calc(0.5rem + 0.8vw);
+  font-size: calc(0.6rem + 0.6vw);
   text-decoration: underline;
 }
 
 .container_content h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: calc(0.7rem+0.8vw);
+  font-size: calc(0.7rem + 0.6vw);
 }
 .container_content ul li {
   list-style-type: disc;
