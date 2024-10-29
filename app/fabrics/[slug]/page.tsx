@@ -149,7 +149,7 @@ const Fabric = async ({ params }) => {
         <section className="p-[30px]">
           <div
             dangerouslySetInnerHTML={createMarkup(fabric.content)}
-            className={`${classes.container_content} break-words text-[1.1rem] leading-6 `}
+            className={`${classes.container_content} break-words leading-6 `}
           />
         </section>
         <SlideForFabric />

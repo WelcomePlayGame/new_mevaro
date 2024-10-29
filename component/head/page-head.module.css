@@ -103,21 +103,14 @@
 }
 .container_content h3 {
   margin: 10px;
-  font-size: 1.5rem;
+  font-size: calc(0.5rem + 0.8vw);
   text-decoration: underline;
 }
-/* .container_content h3::after {
-  content: '';
-  display: block;
-  width: 25%;
-  height: 1px;
-  background-color: rgba(9, 118, 101, 0.8);
-  margin-top: 5px;
-} */
+
 .container_content h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 1.9rem;
+  font-size: calc(0.7rem+0.8vw);
 }
 .container_content ul li {
   list-style-type: disc;
