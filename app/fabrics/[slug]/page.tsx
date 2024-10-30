@@ -70,7 +70,7 @@ const Fabric = async ({ params }) => {
                 </h2>
               </div>
               <div>
-                <ul>
+                <ol className={`${classes.list_characteristics}`}>
                   <li>
                     Склад {fabric.title}: {fabric.compound}
                   </li>
@@ -83,7 +83,7 @@ const Fabric = async ({ params }) => {
                   {fabric.isChecked && (
                     <li>Перевага {fabric.title}: Антикіготь</li>
                   )}
-                </ul>
+                </ol>
               </div>
               <hr className={`${classes.hr_style}`} />
               <div className="flex flex-col text-[14px] pt-[30px]">

@@ -213,6 +213,9 @@
 .container_price {
   background: rgba(245, 224, 133, 0.2);
 }
+.list_characteristics {
+  list-style: circle;
+}
 @media (min-width: 360px) and (max-width: 430px) {
   .container_content {
     padding: 5px;
