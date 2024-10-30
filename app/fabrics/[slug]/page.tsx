@@ -61,7 +61,7 @@ const Fabric = async ({ params }) => {
             </div>
             {/* Product Details and Pricing Section */}
             <div
-              className="flex flex-col items-center mt-[190px] lg:mt-[20px] lg:p-[15px]"
+              className={`${classes.container_price} flex flex-col items-center mt-[190px] lg:mt-[20px] lg:p-[15px]`}
               style={{ boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}
             >
               <div className={`${classes.container_div}`}>

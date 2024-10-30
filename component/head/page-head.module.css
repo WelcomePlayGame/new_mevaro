@@ -210,6 +210,9 @@
   margin-top: 10px;
   font-size: calc(0.6rem + 0.4vw);
 }
+.container_price {
+  background: rgba(245, 224, 133, 0.2);
+}
 @media (min-width: 360px) and (max-width: 430px) {
   .container_content {
     padding: 5px;

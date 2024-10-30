@@ -3,6 +3,7 @@
   text-transform: capitalize;
   font-weight: bolder;
 }
+
 .container_comment {
   display: flex;
   flex-direction: column;
