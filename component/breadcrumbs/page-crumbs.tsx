@@ -13,7 +13,7 @@ const Crumbs = ({ crumbs }: Crumbs) => {
       <ol className={`${classes.breadcrumbs} flex justify-normal`}>
         {crumbs.map((crumb: any, index: any) => {
           return (
-            <li key={index}>
+            <li key={index} className={`${classes.breadcrumbs_li}`}>
               <a href={crumb.url} className="breadcrumps_a">
                 {crumb.label}
               </a>
