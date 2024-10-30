@@ -1,4 +1,4 @@
-.container_h2_comment {
+.container_h4_comment {
   font-size: calc(0.7rem + 0.5vw);
   text-transform: capitalize;
   font-weight: bolder;
@@ -10,6 +10,7 @@
   align-items: center;
   background: rgba(245, 224, 133, 0.2);
   padding: 10px;
+  padding: 20px;
 }
 .container_comment textarea::placeholder {
   text-align: center;
