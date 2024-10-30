@@ -1,4 +1,5 @@
 import Crumbs from '@/component/breadcrumbs/page-crumbs';
+import AddComment from '@/component/comment/page-add-comment';
 import Delivery from '@/component/delivery_tkan_svg/page-delivery';
 import AboutUs from '@/component/delivery_tkan_svg/page-we';
 import Footer from '@/component/footer/page-footer';
@@ -11,6 +12,7 @@ import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
 import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import VideoPlayer from '@/component/video_player/page-video-player';
 import { getFabricBySlug as get } from '@/lib/fabric';
+import Link from 'next/link';
 
 export const generateMetadata = async ({ params }) => {
   const fabric = await get(params?.slug);
@@ -141,6 +143,11 @@ const Fabric = async ({ params }) => {
               </div>
               <hr className={`${classes.hr_style}`} />
               {embed_url && <VideoPlayer embed_url={embed_url} />}
+              <div>
+                <Link href={`#reviews`} className={`${classes.link_reviews}`}>
+                  переглянути або додати відгук(и)
+                </Link>
+              </div>
             </div>
 
             <SaleBox />
@@ -152,6 +159,7 @@ const Fabric = async ({ params }) => {
             className={`${classes.container_content} break-words leading-6 `}
           />
         </section>
+        <AddComment />
         <SlideForFabric />
         <Footer />
 

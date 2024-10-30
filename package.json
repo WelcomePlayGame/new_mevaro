@@ -38,7 +38,9 @@
     "telegraf": "^4.16.3",
     "three": "^0.165.0",
     "valtio": "^1.13.2",
-    "xss": "^1.0.15"
+    "xss": "^1.0.15",
+    "next-auth": "^4.24.7",
+    "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
