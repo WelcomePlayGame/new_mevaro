@@ -212,9 +212,11 @@
 }
 .container_price {
   background: rgba(245, 224, 133, 0.2);
+  padding: 10px;
 }
 .list_characteristics {
   list-style: circle;
+  font-size: calc(0.5rem + 0.5vw);
 }
 @media (min-width: 360px) and (max-width: 430px) {
   .container_content {
