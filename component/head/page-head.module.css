@@ -218,6 +218,26 @@
   list-style: circle;
   font-size: calc(0.5rem + 0.5vw);
 }
+.container_describe_fabrics {
+  padding: 50px;
+  font-size: 18px;
+  break-words: break-words;
+}
+.container_describe_fabrics_h2 {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.container_h2_fabric {
+  font-size: calc(1.2rem + 0.6vw);
+}
+.container_info {
+  background: rgba(9, 118, 101, 0.8);
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+/* media request */
 @media (min-width: 360px) and (max-width: 430px) {
   .container_content {
     padding: 5px;
@@ -255,19 +275,7 @@
     padding-top: 30px;
   }
 }
-.container_describe_fabrics {
-  padding: 50px;
-  font-size: 18px;
-  break-words: break-words;
-}
-.container_describe_fabrics_h2 {
-  margin-top: 30px;
-  font-size: 1.6rem;
-  text-align: center;
-}
-.container_h2_fabric {
-  font-size: calc(1.2rem + 0.6vw);
-}
+
 @media (min-width: 1201px) {
   .head_sub h1 {
     font-size: 1.5rem;

@@ -118,28 +118,32 @@ const Fabric = async ({ params }) => {
               />
             </div>
             {/* Additional Information Section */}
-            <div className="flex flex-col items-start mt-[30px]">
-              <div className="flex flex-col">
-                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
-                  <Delivery /> Швидка доставка
-                </h3>
-                <ul className="list-disc list-inside p-[10px]">
-                  <li className="text-[1.2rem]">Нова Пошта</li>
-                  <li className="text-[1.2rem]">Делівері</li>
-                </ul>
-              </div>
-              <div className="flex flex-col">
-                <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
-                  <AboutUs /> Чому ми?
-                </h3>
-                <ul className="list-disc list-inside p-[10xp]">
-                  <li className="text-[1.2rem]">
-                    10 років працюємо з тканинами
-                  </li>
-                  <li className="text-[1.2rem]">
-                    якісні тканини перевірені часом
-                  </li>
-                </ul>
+            <div
+              className={`${classes.container_info_full} flex flex-col items-start mt-[30px]`}
+            >
+              <div className={`${classes.container_info} flex flex-col`}>
+                <div>
+                  <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
+                    🚐 Швидка доставка
+                  </h3>
+                  <ul className="list-disc list-inside p-[10px]">
+                    <li className="text-[1.2rem]">Нова Пошта</li>
+                    <li className="text-[1.2rem]">Делівері</li>
+                  </ul>
+                </div>
+                <div className={` flex flex-col`}>
+                  <h3 className="flex justify-normal items-center text-[1.5rem] space-x-10 gap-[20px]">
+                    📣 Чому ми?
+                  </h3>
+                  <ul className="list-disc list-inside p-[10xp]">
+                    <li className="text-[1.2rem]">
+                      10 років працюємо з тканинами
+                    </li>
+                    <li className="text-[1.2rem]">
+                      якісні тканини перевірені часом
+                    </li>
+                  </ul>
+                </div>
               </div>
               <hr className={`${classes.hr_style}`} />
               {embed_url && <VideoPlayer embed_url={embed_url} />}
