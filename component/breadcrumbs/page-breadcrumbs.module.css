@@ -1,6 +1,6 @@
 .breadcrumbs {
   /* font-size: 18px; */
-  font-size: calc(0.6rem + 0.6vw);
+  font-size: calc(0.6rem + 0.3vw);
 }
 /* @media (min-width: 360px) and (max-width: 430px) {
   .breadcrumbs {
