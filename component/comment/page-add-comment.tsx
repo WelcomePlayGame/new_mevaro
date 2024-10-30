@@ -19,13 +19,12 @@ const AddComment = () => {
 
   return (
     <div className={`${classes.container_comment}`}>
-      <h4 className={`${classes.container_h2_comment}`}>
+      <h4 className={`${classes.container_h4_comment}`}>
         бажаєте залишити відгук про Mevaro?
       </h4>
       <form className={`${classes.form_container}`} onSubmit={add}>
         <Rating onRatingSelect={handleRatingSelect} />{' '}
         <textarea
-          autoFocus
           maxLength={200}
           placeholder="Ваш комментар ..."
           aria-label="Написати комментар для Mevaro"
