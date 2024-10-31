@@ -240,7 +240,7 @@
 /* media request */
 @media (min-width: 360px) and (max-width: 430px) {
   .container_price {
-    padding: 1px;
+    padding-top: 1px;
   }
   .container_content {
     padding: 5px;
