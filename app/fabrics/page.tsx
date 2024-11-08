@@ -1,8 +1,8 @@
 import Grid from '@/component/fabrics/page-fabrics-grid';
 import Footer from '@/component/footer/page-footer';
-import Head from '@/component/head/page-head';
+
 import classes from '@/component/head/page-head.module.css';
-import SubHead from '@/component/head/page-sub-header-tkani';
+import HeadUpdate from '@/component/head/header_update _tkani';
 import { getAllFabrics as get } from '@/lib/fabric';
 const FabricsFetch = async () => {
   const fabrics = await get();
@@ -12,8 +12,7 @@ const Fabrics = () => {
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
-        <Head />
-        <SubHead />
+        <HeadUpdate />
       </div>
       <div className=" pt-[190px] lg:pt-[185px] mb-[50px] p-[10px]">
         <FabricsFetch />

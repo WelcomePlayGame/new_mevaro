@@ -1,5 +1,5 @@
 import HeadZakaz from '@/component/head/page-head-mebli-zakaz';
-import SubHead from '@/component/head/page-sub-head-zakaz';
+import SubHead from '@/component/head/page-sub-head';
 import classes from '@/component/head/page-head.module.css';
 import Footer from '@/component/footer/page-footer';
 import FirstSection from '@/component/mebli_zakaz/first_section';

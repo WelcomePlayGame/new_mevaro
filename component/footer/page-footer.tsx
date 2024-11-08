@@ -9,16 +9,16 @@ import Blog from '../svg/page-blog';
 const Footer = () => {
   return (
     <footer className={`${classes.footer}`}>
-      <div className={`${classes.container_soc} items-center`}>
-        <div>
+      <ol className={`${classes.container_soc} items-center`}>
+        <li>
           <Link
             href={'https://www.facebook.com/www.mevaro.kiev.ua'}
             target="_blank"
           >
             <FacebookSVG />
           </Link>
-        </div>
-        <div>
+        </li>
+        <li>
           <a
             href={'https://www.instagram.com/mevaro_peretyajka/'}
             target="_blank"
@@ -27,8 +27,8 @@ const Footer = () => {
           >
             <InstagramSVG />
           </a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a
             href={'https://www.youtube.com/@WelcometoMeVARO'}
             target="_blank"
@@ -37,16 +37,16 @@ const Footer = () => {
           >
             <YoutubeSVG />
           </a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a href={'/blogs'} aria-label="Ознайомитись з нашим блогом">
             <Blog />
           </a>
-        </div>
-      </div>
+        </li>
+      </ol>
       <div className={`${classes.container_adress}`}>
-        <span>місто Київ</span>
-        <span>вул. Екскаваторна 37</span>
+        <address>місто Київ</address>
+        <address>вул. Екскаваторна 37</address>
       </div>
     </footer>
   );

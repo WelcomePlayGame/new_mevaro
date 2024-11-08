@@ -1,3 +1,6 @@
+#pillow {
+  padding-top: 150px;
+}
 .main_pillow {
   display: flex;
   justify-content: space-evenly;

@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 const Head = () => {
   const path = usePathname();
   return (
-    <menu>
+    <section>
       <ol className={`${classes.head_top}`}>
         <li>{path !== '/' && <Link href="/">Перетяжка</Link>}</li>
         {path !== '/fabrics' && (
@@ -28,7 +28,7 @@ const Head = () => {
           <a href="/#map">Наша адреса</a>
         </li>
       </ol>
-    </menu>
+    </section>
   );
 };
 export default Head;

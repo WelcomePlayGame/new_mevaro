@@ -22,7 +22,7 @@ const SlideForFabric = () => {
   }, []);
 
   return (
-    <main>
+    <article>
       <h3 className={`${classes.container_h3_slide}`}>
         <strong>Можливо Вас також зацікавить інші тканини?</strong>
       </h3>
@@ -76,7 +76,7 @@ const SlideForFabric = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </main>
+    </article>
   );
 };
 

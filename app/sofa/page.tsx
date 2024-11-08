@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from '@/component/head/page-head';
+import Head from '@/component/head/header_update';
 import Footer from '@/component/footer/page-footer';
 import SubHead from '@/component/head/page-sub-head';
 import classes from '@/component/head/page-head.module.css';
@@ -52,14 +52,14 @@ export const metadata: Metadata = {
 };
 const SofaPage = () => {
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
       <Sofa />
       <Footer />
-    </main>
+    </section>
   );
 };
 

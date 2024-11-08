@@ -1,20 +1,16 @@
 'use client';
-import Head from '@/component/head/page-head';
 import SubHead from '@/component/head/page-sub-head';
-import Tringle from '@/component/tringle/page-tringle';
-import ReverseTringle from '@/component/tringle/page-reverse-triangle';
-import ReplaceBlock from '@/component/replace_block/page-raplace-block';
+
 import Footer from '@/component/footer/page-footer';
-import classes from '../component/head/page-head.module.css';
-import Reviews from '@/component/reviews/page-reviews';
-import MakePillow from '@/component/make_pillows/page-make-pillows';
-import Slider from '@/component/slider_main_page/page-slider-main';
+
 import MapGoogle from '@/component/map_google/page-map-google';
-import ImgSection from '@/component/canvas/ImgSection';
-import ImageMainBlock from '@/component/main_block/page-main-block';
+
 import { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getMessaging, onMessage, getToken } from 'firebase/messaging';
+import HeadUpdate from '@/component/head/header_update';
+import VideoSection from '@/component/video_section/page-video-section';
+import TypeWorks from '@/component/type_works/page-type-works';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
@@ -95,11 +91,16 @@ export default function Home() {
 
   return (
     <main>
-      <div className={classes.container_head_block}>
+      <HeadUpdate />
+      <SubHead />
+      <VideoSection />
+
+      <TypeWorks />
+      {/* <div className={classes.container_head_block}>
         <Head />
         <SubHead />
-      </div>
-      <ImageMainBlock />
+      </div> */}
+      {/* <ImageMainBlock />
       <Tringle />
       <ImgSection />
       <Tringle />
@@ -107,9 +108,9 @@ export default function Home() {
       <ReverseTringle />
       <ReplaceBlock />
       <ReverseTringle />
-      <MakePillow />
-      <ReverseTringle />
-      <Reviews />
+      <MakePillow /> */}
+
+      {/* <Reviews /> */}
       <MapGoogle />
       <Footer />
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const DeliverySVG: React.FC = () => {
   return (
-    <main>
+    <section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.77 68.25">
         <defs>
           <style>
@@ -118,7 +118,7 @@ const DeliverySVG: React.FC = () => {
           </g>
         </g>
       </svg>
-    </main>
+    </section>
   );
 };
 

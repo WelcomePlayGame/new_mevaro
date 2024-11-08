@@ -13,7 +13,7 @@ const Item = ({
   category: string;
 }) => {
   return (
-    <main className={`${classes.container_item} mt-[30px]`}>
+    <article className={`${classes.container_item} mt-[30px]`}>
       <div className={`${classes.container_div}`}>
         <Image
           src={`${process.env.URL_AWS}${image}`}
@@ -27,7 +27,7 @@ const Item = ({
       <Link href={`/blogs/${slug}`} className={`${classes.container_dtn}`}>
         Детальніше
       </Link>
-    </main>
+    </article>
   );
 };
 export default Item;

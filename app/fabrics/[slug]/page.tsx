@@ -1,11 +1,10 @@
 import Crumbs from '@/component/breadcrumbs/page-crumbs';
 import AddComment from '@/component/comment/page-add-comment';
-import Delivery from '@/component/delivery_tkan_svg/page-delivery';
-import AboutUs from '@/component/delivery_tkan_svg/page-we';
+
 import Footer from '@/component/footer/page-footer';
-import Head from '@/component/head/page-head';
+
 import classes from '@/component/head/page-head.module.css';
-import SubHead from '@/component/head/page-sub-header-tkani';
+
 import ButtonCart from '@/component/modal_cart/button_cart';
 import SaleBox from '@/component/sale_box/page-sale-box';
 import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
@@ -13,7 +12,7 @@ import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import VideoPlayer from '@/component/video_player/page-video-player';
 import { getFabricBySlug as get } from '@/lib/fabric';
 import Link from 'next/link';
-
+import HeadUpdate from '@/component/head/header_update _tkani';
 export const generateMetadata = async ({ params }) => {
   const fabric = await get(params?.slug);
   return {
@@ -35,8 +34,7 @@ const Fabric = async ({ params }) => {
   return (
     <main>
       <div className={`${classes.container_head_block}`}>
-        <Head />
-        <SubHead />
+        <HeadUpdate />
       </div>
       <div className="pt-[190px] lg:pt-[185px]">
         <section className="flex flex-col">

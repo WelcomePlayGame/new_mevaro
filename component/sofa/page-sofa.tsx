@@ -1,11 +1,18 @@
 import React from 'react';
 import classes from '@/component/office_armchair/page-office-armchair.module.css';
+import Image from 'next/image';
 const Sofa = () => {
   return (
     <main className={`${classes.container_office_armchair}`}>
       <h1>Перетяжка дивану </h1>
       <div className={`${classes.container_office_armchair_des}`}>
-        <img src="./image/sofa.jpg" alt="Перетяжка офісного крісла" />
+        <Image
+          src="/image/mebli/sofa.jpg"
+          alt="Перетяжка офісного крісла"
+          width={300}
+          height={300}
+          objectFit="contain"
+        />
         <div>
           <h2>Перетяжка дивану: Нове життя вашому місцю для відпочинку!</h2>
           <p>
