@@ -1,9 +1,13 @@
 .container_office_armchair {
-  padding-top: 200px;
+  padding-top: 250px;
 }
 .container_office_armchair h1 {
-  font-size: 2rem;
-  text-align: center;
+  font-size: calc(1.9rem + 0.5vw);
+  color: #fff;
+  background: #000;
+  width: 50%;
+  display: block;
+  margin: auto;
 }
 .container_office_armchair_des {
   display: flex;
