@@ -39,7 +39,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         </div>
         <div
           dangerouslySetInnerHTML={createMarkup(blog.content)}
-          className={`${classes.content_blog} pt-[30px] pl-[100px] pr-[100px] pb-[70px] text-[16px] w-[70%] mx-auto`}
+          className={`${classes.content_blog}`}
         />
       </div>
       <Footer />

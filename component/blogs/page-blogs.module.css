@@ -38,3 +38,42 @@
   padding: 10px;
   border-radius: 7px;
 }
+@media (min-width: 360px) and (max-width: 480px) {
+  .content_blog {
+    width: 100%;
+    font-size: calc(1rem + 0.3vw);
+    padding: 10px;
+  }
+  .content_blo h1 {
+    font-size: calc(1.5 + 0.5vw);
+  }
+  .content_blo h2 {
+    font-size: calc(1.3 + 0.5vw);
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .content_blog {
+    width: 100%;
+    font-size: calc(1.1rem + 0.3vw);
+    padding: 20px;
+  }
+  .content_blo h1 {
+    font-size: calc(1.7 + 0.5vw);
+  }
+  .content_blo h2 {
+    font-size: calc(1.5 + 0.5vw);
+  }
+}
+@media (min-width: 1201px) {
+  .content_blog {
+    width: 100%;
+    font-size: calc(1.3rem + 0.3vw);
+    padding: 50px;
+  }
+  .content_blo h1 {
+    font-size: calc(1.9 + 0.5vw);
+  }
+  .content_blo h2 {
+    font-size: calc(1.7 + 0.5vw);
+  }
+}
