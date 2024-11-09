@@ -23,7 +23,12 @@ const Item = ({
         />
       </div>
       <hr className={`${classes.hr_style}`} />
-      {/* <h2 className={`${classes.h2_style}`}>{title}</h2> */}
+      <h2 className={`${classes.h2_style}`}>{title}</h2>
+      {title.length > 20 ? (
+        <h2 className={`${classes.h2_style}`}>{title.slice(0, 20)}</h2>
+      ) : (
+        <h2 className={`${classes.h2_style}`}>{title}</h2>
+      )}
       <Link href={`/blogs/${slug}`} className={`${classes.container_dtn}`}>
         Детальніше
       </Link>
