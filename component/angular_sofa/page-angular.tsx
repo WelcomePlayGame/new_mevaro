@@ -3,7 +3,7 @@ import React from 'react';
 import classes from '@/component/office_armchair/page-office-armchair.module.css';
 const AngularSofa = () => {
   return (
-    <main className={`${classes.container_office_armchair}`}>
+    <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h1>Перетяжка кутового дивану </h1>
       <div className={`${classes.container_office_armchair_des}`}>
         <img src="./image/angular_sofa.jpg" alt="Перетяжка кутового дивану" />
@@ -42,7 +42,7 @@ const AngularSofa = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

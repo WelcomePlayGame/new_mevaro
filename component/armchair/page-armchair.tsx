@@ -2,7 +2,7 @@ import classes from '@/component/office_armchair/page-office-armchair.module.css
 
 const ArmchairPage = () => {
   return (
-    <main className={`${classes.container_office_armchair}`}>
+    <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h1>Перетяжка крісла</h1>
       <div className={`${classes.container_office_armchair_des}`}>
         <img src="./image/armchair.jpg" alt="Перетяжка  крісла" />
@@ -38,7 +38,7 @@ const ArmchairPage = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 export default ArmchairPage;

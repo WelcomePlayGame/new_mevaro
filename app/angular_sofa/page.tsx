@@ -52,14 +52,14 @@ export const metadata: Metadata = {
 };
 const AngularSofaPage = () => {
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
       <AngularSofa />
       <Footer />
-    </main>
+    </section>
   );
 };
 

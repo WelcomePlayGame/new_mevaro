@@ -56,14 +56,14 @@ export const metadata: Metadata = {
 };
 const Office = () => {
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
       <OfficeArmChair />
       <Footer />
-    </main>
+    </section>
   );
 };
 export default Office;

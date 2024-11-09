@@ -53,14 +53,14 @@ export const metadata: Metadata = {
 };
 const SofaPage = () => {
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
       <Lijko />
       <Footer />
-    </main>
+    </section>
   );
 };
 

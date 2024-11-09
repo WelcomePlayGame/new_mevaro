@@ -3,7 +3,7 @@ import classes from '@/component/office_armchair/page-office-armchair.module.css
 import Image from 'next/image';
 const Sofa = () => {
   return (
-    <main className={`${classes.container_office_armchair}`}>
+    <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h1>Перетяжка дивану </h1>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
@@ -46,7 +46,7 @@ const Sofa = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

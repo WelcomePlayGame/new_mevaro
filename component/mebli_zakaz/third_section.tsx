@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './mebli.module.css';
 const Third_section = () => {
   return (
-    <main>
+    <section>
       <div className="flex flex-col items-center lg:flex-wrap lg:flex-row lg:justify-center lg:items-center m-[10px]">
         <div className="flex flex-col items-center p-[7px]">
           <img
@@ -50,7 +50,7 @@ const Third_section = () => {
       <div className="flex flex-col items-center">
         <hr className="bg-[#000] mt-[30px] h-[5px] w-[300px] lg:w-[500px] mb-[50px]" />
       </div>
-    </main>
+    </section>
   );
 };
 

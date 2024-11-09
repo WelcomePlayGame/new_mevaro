@@ -51,14 +51,14 @@ export const metadata: Metadata = {
 };
 const ArmChair = () => {
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <Head />
         <SubHead />
       </div>
       <ArmchairPage />
       <Footer />
-    </main>
+    </section>
   );
 };
 export default ArmChair;

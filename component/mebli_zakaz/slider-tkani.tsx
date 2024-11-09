@@ -22,7 +22,7 @@ const SliderTkani = () => {
     fetchFabrics();
   }, []);
   return (
-    <main>
+    <section>
       <div className="flex flex-col items-center">
         <h5 className={`${classes.container_h5}`}>
           Які тканини використовуються?
@@ -73,7 +73,7 @@ const SliderTkani = () => {
       <div className="flex flex-col items-center">
         <hr className="bg-[#000] mt-[30px] h-[5px] w-[300px] lg:w-[500px] mb-[50px]" />
       </div>
-    </main>
+    </section>
   );
 };
 

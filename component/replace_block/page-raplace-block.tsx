@@ -3,7 +3,7 @@ import classes from './page-replace-block.module.css';
 import Image from 'next/image';
 const ReplaceBlock = () => {
   return (
-    <section id="block" className={`${classes.container_block}`}>
+    <section id="block" className={`${classes.container_block} pt-[30px]`}>
       <h2>Заміна пружинного блока</h2>
       <div className={`${classes.container_div} `}>
         <Image
@@ -13,7 +13,7 @@ const ReplaceBlock = () => {
           alt="Заміна пружинного блоку"
         />
       </div>
-      {/* <img src={'/image/block.jpg'} alt={'Заміна пружинного блоку'} /> */}
+
       <div className={`${classes.container_price_block}`}>
         <div className={`${classes.container_one_block}`}>
           <h3>Бюджет</h3>
