@@ -57,10 +57,11 @@
   text-align: center;
   word-wrap: break-word;
   white-space: normal;
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .h2_style {
-  font-size: calc(0.5rem + 0.5vw);
+  font-size: calc(0.5rem + 0.3vw);
 }
 .h3_style {
   font-size: 1.1rem;
