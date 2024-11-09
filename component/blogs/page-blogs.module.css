@@ -4,8 +4,8 @@
   height: 300px;
 }
 .container_div_img {
-  width: 300px;
-  height: 150px;
+  width: 400px;
+  height: 200px;
   object-fit: cover;
   position: relative;
 }
@@ -57,9 +57,10 @@
   text-align: center;
   word-wrap: break-word;
   white-space: normal;
+  margin-top: 10px;
 }
 .h2_style {
-  font-size: calc(1rem + 0.5vw);
+  font-size: calc(0.5rem + 0.5vw);
 }
 .h3_style {
   font-size: 1.1rem;
