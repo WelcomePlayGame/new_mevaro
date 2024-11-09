@@ -18,6 +18,10 @@
 .content_blog ul {
   list-style: square;
 }
+.content_blog img {
+  display: block;
+  margin: auto;
+}
 .h1_blog::after {
   content: '';
   height: 3px;
