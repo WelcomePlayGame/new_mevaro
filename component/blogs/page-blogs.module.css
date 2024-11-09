@@ -46,7 +46,7 @@
 }
 .image_style {
   border-radius: 7px;
-  object-fit: cover;
+  object-fit: none;
 }
 .h2_style {
   font-size: 1.5rem;
