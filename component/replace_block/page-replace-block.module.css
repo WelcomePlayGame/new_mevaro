@@ -13,6 +13,13 @@
   font-size: calc(1rem + 0.7vw);
   font-weight: bolder;
   margin-bottom: 30px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
 }
 .container_price_block {
   display: flex;
@@ -89,10 +96,10 @@
     font-weight: bolder;
   }
   .container_ul_block ul {
-    font-size: calc(0.8rem + 0.5vw);
+    font-size: calc(0.6rem + 0.5vw);
   }
   .container_block h2 {
-    font-size: 2.5rem;
+    font-size: calc(1.5rem + 0.5rem);
   }
   .container_block img {
     transform: translateY(50px);
@@ -101,7 +108,10 @@
     z-index: 100;
   }
 }
-@media (min-width: 360px) and (max-width: 430px) {
+@media (min-width: 360px) and (max-width: 480px) {
+  .container_block h2 {
+    width: 100%;
+  }
   .container_price_block {
     flex-direction: column;
   }

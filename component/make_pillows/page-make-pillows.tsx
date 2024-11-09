@@ -2,8 +2,8 @@ import Image from 'next/image';
 import clasees from './page-pillows.module.css';
 const MakePillow = () => {
   return (
-    <section id="pillow">
-      <h2>Виготовлення Подушок під замовлення</h2>
+    <section id="pillow" className={`${clasees.container_pillow}`}>
+      <h1 className={`${clasees.container_pillow_h1}`}>Виготовлення Подушок</h1>
       <div className={`${clasees.main_pillow}`}>
         <div className={`${clasees.container_pillows}`}>
           <Image
@@ -16,15 +16,15 @@ const MakePillow = () => {
         </div>
         <div className={`${clasees.pillow_container}`}>
           <h3 className={`${clasees.main_pillow_h3}`}>
-            Пошив подушок для Меблів
+            Пошив подушок під замовлення
           </h3>
           <hr />
           <div className={`${clasees.container_pillows_ul}`}>
-            <ul>
+            <ol>
               <li>Широкий вибір мебельної тканини</li>
               <li>Поролон різної щільності</li>
               <li>Якісні Армовані нитки</li>
-            </ul>
+            </ol>
           </div>
         </div>
       </div>
