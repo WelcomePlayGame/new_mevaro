@@ -189,6 +189,33 @@ const Fabric = async ({ params }) => {
                 priceValidUntil: '2025-01-01',
                 itemCondition: 'https://schema.org/NewCondition',
                 availability: 'https://schema.org/InStock',
+                hasMerchantReturnPolicy: {
+                  '@type': 'MerchantReturnPolicy',
+                  url: 'https://www.mevaro.kiev.ua/return-policy',
+                },
+                shippingDetails: {
+                  '@type': 'OfferShippingDetails',
+                  shippingRate: {
+                    '@type': 'MonetaryAmount',
+                    value: '100.00',
+                    currency: 'UAH',
+                  },
+                  deliveryTime: {
+                    '@type': 'ShippingDeliveryTime',
+                    handlingTime: {
+                      '@type': 'QuantitativeValue',
+                      minValue: 2,
+                      maxValue: 3,
+                      unitCode: 'DAY',
+                    },
+                    transitTime: {
+                      '@type': 'QuantitativeValue',
+                      minValue: 3,
+                      maxValue: 5,
+                      unitCode: 'DAY',
+                    },
+                  },
+                },
               },
             }),
           }}
