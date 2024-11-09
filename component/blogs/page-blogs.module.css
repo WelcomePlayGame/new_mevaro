@@ -52,8 +52,14 @@
   border-radius: 7px;
   object-fit: none;
 }
+.title_container {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+}
 .h2_style {
-  font-size: 1.5rem;
+  font-size: calc(1rem + 0.5vw);
 }
 .h3_style {
   font-size: 1.1rem;
