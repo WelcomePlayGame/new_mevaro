@@ -19,7 +19,7 @@ const Item = ({
           src={`${process.env.URL_AWS}${image}`}
           fill
           alt={title}
-          className={`${classes.image_style}`}
+          className={`${classes.image_style_blogs}`}
         />
       </div>
       <hr className={`${classes.hr_style}`} />

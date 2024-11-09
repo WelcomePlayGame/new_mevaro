@@ -9,8 +9,12 @@
   object-fit: cover;
   position: relative;
 }
+.image_style_blogs {
+  border-radius: 7px;
+  object-fit: cover;
+}
 .h1_blog {
-  font-size: calc(1.9rem + 0.5vw);
+  font-size: calc(1.5rem + 0.5vw);
   font-weight: bold;
   text-align: center;
   text-transform: capitalize;
@@ -106,7 +110,7 @@
     padding: 70px;
   }
   .h1_blog {
-    font-size: calc(1.9 + 0.5vw);
+    font-size: calc(1.5rem + 0.5vw);
   }
   .content_blog h2 {
     font-size: calc(1.3rem + 0.5vw);
