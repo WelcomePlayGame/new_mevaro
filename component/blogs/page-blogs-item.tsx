@@ -14,7 +14,7 @@ const Item = ({
 }) => {
   return (
     <article className={`${classes.container_item} mt-[30px]`}>
-      <div className={`${classes.container_div}`}>
+      <div className={`${classes.container_div_img}`}>
         <Image
           src={`${process.env.URL_AWS}${image}`}
           fill

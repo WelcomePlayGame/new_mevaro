@@ -1,6 +1,6 @@
 import { getBlogBySlug as get } from '@/lib/blog';
 
-import classes from '@/component/head/page-head.module.css';
+import classes from '@/component/blogs/page-blogs.module.css';
 import HeadUpdate from '@/component/head/header_update _blog';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
@@ -19,13 +19,13 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await get(params.slug);
   const createMarkup = (html: any) => ({ __html: html });
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <HeadUpdate />
       </div>
-      <div className="flex flex-col pt-[180px]">
-        <div className="flex flex-col items-center pt-[50px]">
-          <div className={`${classes.container_div_blog}`}>
+      <div className="flex flex-col pt-[150px]">
+        <div className="flex flex-col items-center">
+          <div className={`${classes.container_div_blog_img}`}>
             <Image
               src={`${process.env.URL_AWS}${blog.image}`}
               fill
@@ -35,7 +35,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
         <div className="pt-[30px]">
-          <h1 className="text-center text-[2.1rem]">{blog.title}</h1>
+          <h1 className={`${classes.h1_blog}`}>{blog.title}</h1>
         </div>
         <div
           dangerouslySetInnerHTML={createMarkup(blog.content)}
@@ -43,7 +43,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         />
       </div>
       <Footer />
-    </main>
+    </section>
   );
 };
 export default Blog;
