@@ -4,6 +4,7 @@ import classes from '@/component/blogs/page-blogs.module.css';
 import HeadUpdate from '@/component/head/header_update _blog';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
+import SubHead from '@/component/head/page-sub-head';
 export const generateMetadata = async ({
   params,
 }: {
@@ -22,6 +23,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
     <section>
       <div className={`${classes.container_head_block}`}>
         <HeadUpdate />
+        <SubHead />
       </div>
       <div className="flex flex-col pt-[150px]">
         <div className="flex flex-col items-center">
