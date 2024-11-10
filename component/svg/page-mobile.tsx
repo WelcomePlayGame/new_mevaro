@@ -7,6 +7,7 @@ const MobileSVG = () => {
         href="tel:+380957162677"
         data-gtm="phone-call"
         aria-label="Зателефонувати за номером +380 95 716 26 77"
+        title="Зателефонувати Меваро"
       >
         <svg
           version="1.1"

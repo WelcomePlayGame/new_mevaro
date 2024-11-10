@@ -6,6 +6,8 @@ function TelegramSVG() {
       <a
         href="https://t.me/romaniv21?utm_source=website&utm_medium=button&utm_campaign=contact"
         data-gtm="telegram"
+        title="Переслати фото в Телеграм"
+        aria-label="Переслати фото в Телеграм"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -90,7 +90,7 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <section>
       <HeadUpdate />
       <SubHead />
       <VideoSection />
@@ -149,6 +149,6 @@ export default function Home() {
           height: auto;
         }
       `}</style>
-    </main>
+    </section>
   );
 }

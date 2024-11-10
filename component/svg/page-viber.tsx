@@ -6,6 +6,8 @@ function ViberSVG() {
       <a
         href="viber://chat?number=%2B380957162677&utm_source=website&utm_medium=button&utm_campaign=contact"
         data-gtm="viber"
+        title="Переслати фото в Вайбер"
+        aria-label="Переслати фото в Вайбер"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
