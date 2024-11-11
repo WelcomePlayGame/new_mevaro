@@ -16,16 +16,16 @@ export const metadata: Metadata = {
     title: '🛠 Перетяжка дивану місто Київ Меваро | Безкоштовна Доставка',
     description:
       '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
-    url: 'https://www.mevaro.kiev.ua/image/armchair.jpg',
+    url: 'https://www.mevaro.kiev.ua/image/angular_sofa.jpg',
     siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
     images: [
       {
-        url: 'https://www.mevaro.kiev.ua/image/armchair.jpg',
+        url: 'https://www.mevaro.kiev.ua/image/angular_sofa.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: `https://www.mevaro.kiev.ua/image/armchair.jpg`,
+        url: `https://www.mevaro.kiev.ua/image/angular_sofa.jpg`,
         width: 1800,
         height: 1600,
         alt: 'перетяжка меблів',

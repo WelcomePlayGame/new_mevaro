@@ -1,11 +1,17 @@
 import React from 'react';
 import classes from '@/component/office_armchair/page-office-armchair.module.css';
+import Image from 'next/image';
 const Chair = () => {
   return (
-    <main className={`${classes.container_office_armchair}`}>
+    <section className={`${classes.container_office_armchair}`}>
       <h1>Перетяжка стільчика</h1>
       <div className={`${classes.container_office_armchair_des}`}>
-        <img src="./image/chair.jpg" alt="Перетяжка стільчика" />
+        <Image
+          src="/image/chair.jpg"
+          alt="Перетяжка стільчика"
+          width={600}
+          height={300}
+        />
         <div>
           <h2>Перетяжка стільчика: Нове життя вашому місцю для відпочинку!</h2>
           <p>
@@ -39,7 +45,7 @@ const Chair = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

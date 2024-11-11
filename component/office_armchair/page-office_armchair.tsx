@@ -1,12 +1,16 @@
 import classes from '@/component/office_armchair/page-office-armchair.module.css';
+import Image from 'next/image';
+
 const OfficeArmChair = () => {
   return (
-    <main className={`${classes.container_office_armchair}`}>
+    <section className={`${classes.container_office_armchair}`}>
       <h1>Перетяжка офісного крісла</h1>
       <div className={`${classes.container_office_armchair_des}`}>
-        <img
-          src="./image/office_armchair.webp"
+        <Image
+          src="/image/office_armchair.webp"
           alt="Перетяжка офісного крісла"
+          width={600}
+          height={300}
         />
         <div>
           <h2>Перетяжка офісного крісла: Нове життя вашому робочому місцю!</h2>
@@ -41,7 +45,7 @@ const OfficeArmChair = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 export default OfficeArmChair;
