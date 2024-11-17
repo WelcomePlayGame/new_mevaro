@@ -24,7 +24,7 @@ const HeadUpdate = () => {
               />
             </div>
             <h1 className={`${classes.container_h1}`}>
-              <strong>Блог Меваро</strong>{' '}
+              <strong>Блог</strong>
             </h1>
           </li>
           <ol className={`${classes.container_desctop_ol}`}>

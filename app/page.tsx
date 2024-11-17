@@ -11,6 +11,9 @@ import { getMessaging, onMessage, getToken } from 'firebase/messaging';
 import HeadUpdate from '@/component/head/header_update';
 import VideoSection from '@/component/video_section/page-video-section';
 import TypeWorks from '@/component/type_works/page-type-works';
+import FaqPage from '@/component/faq/page-faq';
+import Tringle from '@/component/tringle/page-tringle';
+import WorkLocation from '@/component/work_location/page-work-location';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
@@ -94,23 +97,10 @@ export default function Home() {
       <HeadUpdate />
       <SubHead />
       <VideoSection />
-
       <TypeWorks />
-      {/* <div className={classes.container_head_block}>
-        <Head />
-        <SubHead />
-      </div> */}
-      {/* <ImageMainBlock />
       <Tringle />
-      <ImgSection />
-      <Tringle />
-      <Slider />
-      <ReverseTringle />
-      <ReplaceBlock />
-      <ReverseTringle />
-      <MakePillow /> */}
-
-      {/* <Reviews /> */}
+      <FaqPage />
+      <WorkLocation />
       <MapGoogle />
       <Footer />
 

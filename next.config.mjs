@@ -17,6 +17,20 @@ const nextConfig = {
     DOLLAR_RATE: process.env.DOLLAR_RATE,
     POSHTA_KEY: process.env.POSHTA_KEY,
   },
+  async redirects() {
+    return [
+      {
+        source: '/categories/:slug*',
+        destination: '/fabrics',
+        permanent: true,
+      },
+      {
+        source: '/#pruj',
+        destination: '/block',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
