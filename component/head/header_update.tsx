@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import classes from './header_update.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import MapMobileGoogle from '../map_google/page-mobile-map-google';
 
 const HeadUpdate = () => {
   const [isHamburger, setHamburger] = useState(false);
