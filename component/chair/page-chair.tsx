@@ -4,7 +4,9 @@ import Image from 'next/image';
 const Chair = () => {
   return (
     <section className={`${classes.container_office_armchair}`}>
-      <h1>Перетяжка стільчика</h1>
+      <h2 className={`${classes.container_office_armchair_h2}`}>
+        Перетяжка стільчика
+      </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/chair.jpg"

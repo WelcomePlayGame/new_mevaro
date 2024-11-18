@@ -10,6 +10,15 @@
   margin: auto;
   text-align: center;
 }
+.container_office_armchair_h2 {
+  font-size: calc(1.9rem + 0.5vw);
+  color: #fff;
+  background: #000;
+  width: 50%;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
 .container_office_armchair_des {
   display: flex;
   justify-content: space-between;
@@ -21,7 +30,7 @@
   padding: 20px;
 }
 .container_office_armchair_des h2 {
-  font-size: 24px;
+  font-size: calc(1rem + 0.5vw);
   text-align: center;
 }
 .container_office_armchair_des ul {
@@ -48,6 +57,18 @@
   }
   .container_office_armchair h1 {
     width: 100%;
+  }
+  .container_office_armchair_h2 {
+    font-size: calc(0.8rem + 0.5vw);
+    color: #fff;
+    background: #000;
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+  .content_describe {
+    padding: 30px;
   }
 }
 @media (min-width: 1200px) {

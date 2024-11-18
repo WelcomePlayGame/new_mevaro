@@ -10,6 +10,15 @@
   margin: auto;
   text-align: center;
 }
+.container_paneli_h2 {
+  font-size: calc(1.9rem + 0.5vw);
+  color: #fff;
+  background: #000;
+  width: 50%;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
 .container_office_armchair_des {
   display: flex;
   justify-content: space-between;

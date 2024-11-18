@@ -5,7 +5,9 @@ import Link from 'next/link';
 const ArmchairPage = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
-      <h1>Перетяжка крісел</h1>
+      <h2 className={`${classes.container_office_armchair_h2}`}>
+        Перетяжка крісел
+      </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/armchair.jpg"

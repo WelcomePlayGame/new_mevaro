@@ -6,7 +6,9 @@ import Link from 'next/link';
 const Sofa = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
-      <h1>Перетяжка дивану</h1>
+      <h2 className={`${classes.container_office_armchair_h2}`}>
+        Перетяжка дивану
+      </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/mebli/sofa.jpg"

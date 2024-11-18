@@ -5,7 +5,9 @@ import classes from '@/component/office_armchair/page-office-armchair.module.css
 const AngularSofa = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
-      <h1>Перетяжка кутовиго дивану</h1>
+      <h2 className={`${classes.container_office_armchair_h2}`}>
+        Перетяжка кутовиго дивану
+      </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/angular_sofa.jpg"

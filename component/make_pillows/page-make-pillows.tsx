@@ -3,7 +3,7 @@ import clasees from './page-pillows.module.css';
 const MakePillow = () => {
   return (
     <section id="pillow" className={`${clasees.container_pillow}`}>
-      <h1 className={`${clasees.container_pillow_h1}`}>Виготовлення Подушок</h1>
+      <h2 className={`${clasees.container_pillow_h1}`}>Виготовлення Подушок</h2>
       <div className={`${clasees.main_pillow}`}>
         <div className={`${clasees.container_pillows}`}>
           <Image

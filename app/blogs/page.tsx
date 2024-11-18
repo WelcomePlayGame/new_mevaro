@@ -5,6 +5,54 @@ import classes from '@/component/head/page-head.module.css';
 import HeadUpdate from '@/component/head/header_update _blog';
 import { getAllBlogs as get } from '@/lib/blog';
 import SubHead from '@/component/head/page-sub-head';
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title:
+    '🛠 Інформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
+  description: '🚚 Корисна інформація в світі меблів. Читайте у нас на порталі',
+  keywords: ['Блог від Mevaro', 'корисна інформація про меблі', 'меблі'],
+  creator: 'Mevaro',
+  publisher: 'Mevaro',
+  openGraph: {
+    title:
+      '🛠 Інформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
+    description:
+      '🚚 Корисна інформація в світі меблів. Читайте у нас на порталі',
+    url: 'https://www.mevaro.kiev.ua/image/mebli/peretyajka.jpg',
+    siteName:
+      '🛠 Інформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
+    images: [
+      {
+        url: 'https://www.mevaro.kiev.ua/image/mebli/peretyajka.jpg',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: `https://www.mevaro.kiev.ua/image/mebli/peretyajka.jpg`,
+        width: 1800,
+        height: 1600,
+        alt: '🛠 Інформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
+      },
+    ],
+    locale: 'ua_UA',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  category: 'Меваро - Перетяжка меблів',
+};
 const FabricsFetch = async () => {
   const fabrics = await get();
   return <Grid fabrics={fabrics} />;

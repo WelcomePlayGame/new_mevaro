@@ -4,7 +4,9 @@ import classes from './page-paneli.module.css';
 const PagePaneli = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
-      <h1>Перетяжка стінових панелей</h1>
+      <h2 className={`${classes.container_paneli_h2}`}>
+        Перетяжка стінових панелей
+      </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <div>
           <Image
