@@ -6,7 +6,7 @@ import classes from './mebli.module.css';
 
 const FirstSection = () => {
   return (
-    <main className={`${classes.container_div}`}>
+    <section className={`${classes.container_div}`}>
       <AnimatePresence>
         <div className={`${classes.container_relative}`}>
           <img
@@ -25,7 +25,7 @@ const FirstSection = () => {
           </div>
         </div>
       </AnimatePresence>
-    </main>
+    </section>
   );
 };
 

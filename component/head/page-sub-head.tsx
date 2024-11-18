@@ -7,7 +7,7 @@ import MobileSVG from '../svg/page-mobile';
 const SubHead = () => {
   return (
     <section className={`${clasess.container_head_sub}`}>
-      <h3>Консультація</h3>
+      <h3>Безкоштовна Консультація</h3>
       <div className={`${clasess.head_sub}`}>
         <TelegramSVG />
         <ViberSVG />

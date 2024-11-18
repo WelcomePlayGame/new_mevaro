@@ -112,6 +112,48 @@ export default function RootLayout({
                       name: 'Заміна поролона',
                       item: 'https://www.mevaro.kiev.ua/porolon',
                     },
+                    {
+                      '@type': 'ListItem',
+                      position: 4,
+                      name: 'Перетяжка дивану',
+                      item: 'https://www.mevaro.kiev.ua/sofa',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 5,
+                      name: 'Перетяжка кутовго дивану',
+                      item: 'https://www.mevaro.kiev.ua/angular_sofa',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 6,
+                      name: 'Перетяжка ліжка',
+                      item: 'https://www.mevaro.kiev.ua/lijko',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 7,
+                      name: 'Перетяжка ліжка',
+                      item: 'https://www.mevaro.kiev.ua/armchair',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 8,
+                      name: 'Перетяжка ліжка',
+                      item: 'https://www.mevaro.kiev.ua/office_armchair',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 9,
+                      name: 'Подушки на замовлення',
+                      item: 'https://www.mevaro.kiev.ua/pillow',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 10,
+                      name: 'Стінові панелі на замовлення',
+                      item: 'https://www.mevaro.kiev.ua/paneli',
+                    },
                   ],
                 },
                 {

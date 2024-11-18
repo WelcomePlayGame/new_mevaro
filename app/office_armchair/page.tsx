@@ -5,7 +5,7 @@ import classes from '@/component/head/page-head.module.css';
 import OfficeArmChair from '@/component/office_armchair/page-office_armchair';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: '🛠 Перетяжка Офісного Крісла місто Київ Меваро | Безкоштовна Доставка',
+  title: 'ᐈПеретяжка Офісного Крісла|Безкоштовна Доставка',
   description:
     '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
   keywords: [
