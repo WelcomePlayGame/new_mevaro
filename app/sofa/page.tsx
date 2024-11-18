@@ -8,15 +8,13 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'ᐈПеретяжка дивану місто Київ Меваро|Безкоштовна Доставка',
-  description:
-    '✅Перетяжка та ремонт Дивану|Безкоштовна Доставка по місту Київ.',
+  description: '✅Перетяжка та ремонт Дивану|Широкий вибір тканин',
   keywords: ['перетяжка дивана', 'ремонт дивана Київ', 'оббивка диванна'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
     title: 'ᐈПеретяжка дивану місто Київ Меваро | Безкоштовна Доставка',
-    description:
-      'Перетяжка та ремонт Дивану|Безкоштовна Доставка по місту Київ.',
+    description: '✅Перетяжка та ремонт Дивану|Широкий вибір тканин',
     url: 'https://www.mevaro.kiev.ua/image/mebli/sofa.jpg',
     siteName: 'ᐈПеретяжка Меблів місто Київ Меваро',
     images: [
@@ -68,8 +66,7 @@ export const metadata: Metadata = {
           },
           datePublished: '2021-08-03T07:03:20+00:00',
           dateModified: new Date().toISOString(),
-          description:
-            '✅ Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.✅',
+          description: '✅Перетяжка та ремонт Дивану|Широкий вибір тканин',
           breadcrumb: {
             '@id': 'https://www.mevaro.kiev.ua/',
           },
