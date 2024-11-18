@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title:
-    '✅ Перетяжка та Ремонт Меблів місто Київ Меваро | Безкоштовна Доставка',
+    'ᐈ Перетяжка та Ремонт Меблів місто Київ Меваро | Безкоштовна Доставка',
   description:
     '✅ Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.✅',
   keywords: ['перетяжка меблів', 'ремонт меблів Київ', 'оббивка меблів'],
@@ -61,7 +61,128 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          charSet="UTF-8"
+          id="json-ld-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'WebPage',
+                  '@id': 'https://www.mevaro.kiev.ua',
+                  url: 'https://www.mevaro.kiev.ua',
+                  name: 'ᐈ Перетяжка та Ремонт Меблів місто Київ Меваро | Безкоштовна Доставка',
+                  isPartOf: {
+                    '@id': 'https://www.mevaro.kiev.ua/',
+                  },
+                  datePublished: '2021-08-03T07:03:20+00:00',
+                  dateModified: new Date().toISOString(),
+                  description:
+                    '✅ Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.✅',
+                  breadcrumb: {
+                    '@id': 'https://www.mevaro.kiev.ua/',
+                  },
+                  inLanguage: 'uk',
+                  potentialAction: [
+                    {
+                      '@type': 'ReadAction',
+                      target: ['https://www.mevaro.kiev.ua/'],
+                    },
+                  ],
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  '@id': 'https://www.mevaro.kiev.ua/',
+                  itemListElement: [
+                    {
+                      '@type': 'ListItem',
+                      position: 1,
+                      name: 'Перетяжка меблів',
+                      item: 'https://www.mevaro.kiev.ua/',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 2,
+                      name: 'Заміна пружинного блока',
+                      item: 'https://www.mevaro.kiev.ua/block',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 3,
+                      name: 'Заміна поролона',
+                      item: 'https://www.mevaro.kiev.ua/porolon',
+                    },
+                  ],
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://www.mevaro.kiev.ua/#website',
+                  url: 'https://www.mevaro.kiev.ua/',
+                  name: 'Mevaro',
+                  inLanguage: 'uk',
+                  potentialAction: [
+                    {
+                      '@type': 'SearchAction',
+                      target: {
+                        '@type': 'EntryPoint',
+                        urlTemplate:
+                          'https://www.mevaro.kiev.ua/?s={search_term_string}',
+                      },
+                      'query-input': {
+                        '@type': 'PropertyValueSpecification',
+                        valueRequired: true,
+                        valueName: 'search_term_string',
+                      },
+                    },
+                  ],
+                },
+                // {
+                //   '@type': 'AggregateRating',
+                //   '@id': 'https://www.mevaro.kiev.ua#aggregateRating',
+                //   itemReviewed: {
+                //     '@type': 'Service',
+                //     name: 'Перетяжка меблів',
+                //   },
+                //   ratingValue: '4.8',
+                //   reviewCount: '54',
+                //   bestRating: '5',
+                //   worstRating: '1',
+                // },
+                // {
+                //   '@type': 'Review',
+                //   author: {
+                //     '@type': 'Person',
+                //     name: 'Іван Петренко',
+                //   },
+                //   reviewBody:
+                //     'Швидко та якісно перетягнули диван. Результат перевершив очікування!',
+                //   reviewRating: {
+                //     '@type': 'Rating',
+                //     ratingValue: '5',
+                //     bestRating: '5',
+                //   },
+                //   datePublished: '2024-10-20',
+                // },
+                // {
+                //   '@type': 'Review',
+                //   author: {
+                //     '@type': 'Person',
+                //     name: 'Олена Коваленко',
+                //   },
+                //   reviewBody: 'Чудовий сервіс і доступні ціни. Рекомендую!',
+                //   reviewRating: {
+                //     '@type': 'Rating',
+                //     ratingValue: '4.5',
+                //     bestRating: '5',
+                //   },
+                //   datePublished: '2024-11-10',
+                // },
+              ],
+            }),
+          }}
+        />
+
+        <Script
           src="//web.webpushs.com/js/push/b6b24f64ee44d77c8800a47d8c4e1484_1.js"
           async
         ></Script>
