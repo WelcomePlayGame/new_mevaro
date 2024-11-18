@@ -1,3 +1,4 @@
+'use client';
 import SubHead from '@/component/head/page-sub-head';
 import Footer from '@/component/footer/page-footer';
 import MapGoogle from '@/component/map_google/page-map-google';
@@ -10,53 +11,7 @@ import TypeWorks from '@/component/type_works/page-type-works';
 import FaqPage from '@/component/faq/page-faq';
 import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
-import type { Metadata } from 'next';
-export const metadata: Metadata = {
-  title:
-    '✅ Перетяжка та Ремонт Меблів місто Київ Меваро | Безкоштовна Доставка',
-  description:
-    '✅ Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.✅',
-  keywords: ['перетяжка меблів', 'ремонт меблів Київ', 'оббивка меблів'],
-  creator: 'Mevaro',
-  publisher: 'Mevaro',
-  openGraph: {
-    title: '🛠 Перетяжка Меблів місто Київ Меваро | Безкоштовна Доставка',
-    description:
-      '🚚 Безкоштовна Доставка по місту Київ. Широкий вибір мебельної тканини для оббивки меблів.',
-    url: 'https://www.mevaro.kiev.ua/image/peretyajka.jpg',
-    siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
-    images: [
-      {
-        url: 'https://www.mevaro.kiev.ua/image/peretyajka.jpg',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: `https://www.mevaro.kiev.ua/image/peretyajka.jpg`,
-        width: 1800,
-        height: 1600,
-        alt: 'перетяжка меблів',
-      },
-    ],
-    locale: 'ua_UA',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
 
-  category: 'Перетяжка меблів Київ',
-};
 const firebaseConfig = {
   apiKey: 'AIzaSyBzQUiiA479cUSNuTG_gecN_Iw-pfTrwno',
   authDomain: 'mevaro-48817.firebaseapp.com',
