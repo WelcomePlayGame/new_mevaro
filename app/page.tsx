@@ -1,4 +1,3 @@
-'use client';
 import SubHead from '@/component/head/page-sub-head';
 import Footer from '@/component/footer/page-footer';
 import MapGoogle from '@/component/map_google/page-map-google';
