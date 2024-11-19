@@ -32,7 +32,7 @@ const Fabric = async ({ params }) => {
   const discount5 = fabric.price * 0.95 * Number(process.env.DOLLAR_RATE);
 
   return (
-    <main>
+    <section>
       <div className={`${classes.container_head_block}`}>
         <HeadUpdate />
       </div>
@@ -221,7 +221,7 @@ const Fabric = async ({ params }) => {
           }}
         />
       </div>
-    </main>
+    </section>
   );
 };
 
