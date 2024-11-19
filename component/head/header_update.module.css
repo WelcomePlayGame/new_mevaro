@@ -136,9 +136,6 @@
 }
 /* Media request */
 @media (min-width: 991px) {
-  .hamburger {
-    display: none;
-  }
   .container_div_image {
     margin: 10px;
     width: 100px;
@@ -149,6 +146,16 @@
 }
 @media (max-width: 991px) {
   .container_desctop_ol {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container_desctop_ol {
+    display: none;
+  }
+}
+@media (min-width: 1201px) {
+  .hamburger {
     display: none;
   }
 }
