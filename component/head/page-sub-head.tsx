@@ -8,7 +8,11 @@ const SubHead = () => {
   return (
     <section className={`${clasess.container_head_sub}`}>
       <h3>
-        <a href="tel:+380957162677" title="Зателефонувати - 09 71 62 677 Роман">
+        <a
+          href="tel:+380957162677"
+          title="Зателефонувати - 09 71 62 677 Роман"
+          className={`${clasess.container_mob_tel}`}
+        >
           095 71 62 677
         </a>
       </h3>
