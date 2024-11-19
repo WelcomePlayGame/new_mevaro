@@ -5,16 +5,16 @@ import ReplacePorolon from '@/component/replace_porolon/page_replace_porolon';
 import React from 'react';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: '🛠 Заміна поролону- місто Київ Меваро | Безкоштовна Доставка',
+  title: 'ᐈЗаміна поролону- місто Київ Меваро | Безкоштовна Доставка',
   description:
-    '🚚 Безкоштовна Доставка по місту Київ. Заміна  поролону в дивані.',
+    '✅Безкоштовна Доставка по місту Київ. Заміна  поролону в дивані.',
   keywords: ['заміна поролону', 'купити поролон', 'поролон'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: '🛠 Заміна поролону - місто Київ Меваро | Безкоштовна Доставка',
+    title: 'ᐈЗаміна поролону - місто Київ Меваро | Безкоштовна Доставка',
     description:
-      '🚚 Безкоштовна Доставка по місту Київ. Заміна поролону в дивані.',
+      '✅Безкоштовна Доставка по місту Київ. Заміна поролону в дивані.',
     url: 'https://www.mevaro.kiev.ua/image/porolon.webp',
     siteName: '🛠 Заміна поролону - місто Київ Меваро | Безкоштовна Доставка',
     images: [

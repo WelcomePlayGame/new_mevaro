@@ -7,7 +7,11 @@ import MobileSVG from '../svg/page-mobile';
 const SubHead = () => {
   return (
     <section className={`${clasess.container_head_sub}`}>
-      <h3>Безкоштовна Консультація</h3>
+      <h3>
+        <a href="tel:+380957162677" title="Зателефонувати - 09 71 62 677 Роман">
+          095 71 62 677
+        </a>
+      </h3>
       <div className={`${clasess.head_sub}`}>
         <TelegramSVG />
         <ViberSVG />

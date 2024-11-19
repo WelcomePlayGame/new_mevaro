@@ -1,8 +1,16 @@
 import { getAllFabrics } from '@/lib/fabric';
+import { getAllBlogs } from '@/lib/blog';
 export default async function sitemap() {
   const fabrics = await getAllFabrics();
+  const blogs = await getAllBlogs();
   const modelFabrics = fabrics.map((fabric) => ({
     url: `${process.env.BASE_URL}/fabrics/${fabric.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'yearly',
+    priority: 1,
+  }));
+  const modelBlogs = blogs.map((blog) => ({
+    url: `${process.env.BASE_URL}/blogs/${blog.slug}`,
     lastModified: new Date(),
     changeFrequency: 'yearly',
     priority: 1,
@@ -94,5 +102,6 @@ export default async function sitemap() {
       priority: 0.8,
     },
     ...modelFabrics,
+    ...modelBlogs,
   ];
 }

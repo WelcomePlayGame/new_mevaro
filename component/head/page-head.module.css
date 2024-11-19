@@ -261,6 +261,7 @@
   color: #fff;
   border-radius: 10px;
 }
+
 /* media request */
 @media (max-width: 360px) {
   .head_sub {

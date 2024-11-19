@@ -51,6 +51,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
 }
+.pillow_describe {
+  padding: 20px;
+  display: block;
+  margin: auto;
+  font-size: calc(0.7rem + 0.5vw);
+}
 @media (min-width: 360px) and (max-width: 480px) {
   .pillow_container {
     padding: 20px;

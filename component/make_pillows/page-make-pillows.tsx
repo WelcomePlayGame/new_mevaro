@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import clasees from './page-pillows.module.css';
+import Tringle from '../tringle/page-tringle';
+import FaqPillow from '../faq/page-pillow-faq';
+import WorkLocation from '../work_location/page-work-location';
+
 const MakePillow = () => {
   return (
     <section id="pillow" className={`${clasees.container_pillow}`}>
@@ -28,6 +32,34 @@ const MakePillow = () => {
           </div>
         </div>
       </div>
+      <div className={`${clasees.pillow_describe}`}>
+        <p>
+          <strong>Подушки на замовлення</strong> – це ідеальний спосіб створити
+          унікальний дизайн і комфорт для вашого дому чи офісу.
+        </p>
+
+        <ul>
+          <li>
+            ✅ <strong>Вибір форми та розміру</strong>: круглі, квадратні,
+            прямокутні.
+          </li>
+          <li>
+            ✅ <strong>Широкий асортимент тканин</strong> і кольорів.
+          </li>
+          <li>
+            ✅ <strong>Наповнювач на вибір</strong>: холлофайбер,
+            пінополіуретан, натуральні матеріали.
+          </li>
+        </ul>
+
+        <p>
+          Ми створимо подушки, які будуть відповідати вашим бажанням і
+          гармонійно доповнювати інтер’єр.
+        </p>
+      </div>
+      <Tringle />
+      <FaqPillow />
+      <WorkLocation />
     </section>
   );
 };
