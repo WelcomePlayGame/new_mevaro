@@ -337,4 +337,7 @@
   .video_block {
     padding-top: 160px;
   }
+  .container_mob_tel {
+    display: none;
+  }
 }
