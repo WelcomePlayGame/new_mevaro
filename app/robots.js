@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/admin/',
     },
-    sitemap: 'https://www.mevaro.kiev.ua/sitemap.xml',
+    sitemap: 'https://mevaro.kiev.ua/sitemap.xml',
   };
 }
