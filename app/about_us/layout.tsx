@@ -3,28 +3,29 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка дивану|Безкоштовна Доставка',
-  description: '【Широкий вибір мебельної тканини】.✅Безкоштовна Консультація',
-  keywords: ['перетяжка дивана', 'ремонт дивана Київ', 'оббивка диванна'],
+  title: 'ᐈКомпанія Mevaro|Ми дбаємо про Ваші меблі',
+  description:
+    '✅Mevaro – це професійна компанія, яка спеціалізується на перетяжці, ремонті та оновленні меблів|вул. Екскаваторна 37',
+  keywords: ['компанія Меваро', 'відгуки Mevaro', 'Mevaro меблі'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка дивану|Безкоштовна Доставка',
+    title: 'ᐈКомпанія Mevaro|Ми дбаємо про Ваші меблі',
     description:
-      '【Широкий вибір мебельної тканини】.✅Безкоштовна Консультація',
-    url: 'https://mevaro.kiev.ua/image/mebli/sofa.jpg',
-    siteName: 'ᐈПеретяжка Меблів місто Київ Меваро',
+      '✅Mevaro – це професійна компанія, яка спеціалізується на перетяжці, ремонті та оновленні меблів|вул. Екскаваторна 37',
+    url: 'https://mevaro.kiev.ua/image/mevaro.png',
+    siteName: 'ᐈПеретяжка крісла місто Київ Меваро',
     images: [
       {
-        url: 'https://mevaro.kiev.ua/image/mebli/sofa.jpg',
+        url: 'https://mevaro.kiev.ua/image/mevaro.png',
         width: 800,
         height: 600,
       },
       {
-        url: `https://mevaro.kiev.ua/image/mebli/sofa.jpg`,
+        url: `https://mevaro.kiev.ua/image/mevaro.png`,
         width: 1800,
         height: 1600,
-        alt: 'перетяжка дивану',
+        alt: 'перетяжка ліжка',
       },
     ],
     locale: 'ua_UA',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
 
-  category: 'Перетяжка дивану Київ',
+  category: 'Перетяжка крісла Київ',
 };
 const inter = Inter({ subsets: ['latin'] });
 
@@ -66,8 +67,8 @@ export default function RootLayout({
                 {
                   '@type': 'WebPage',
                   '@id': 'https://mevaro.kiev.ua',
-                  url: 'https://mevaro.kiev.ua/sofa',
-                  name: 'ᐈПеретяжка дивану|Безкоштовна Доставка',
+                  url: 'https://mevaro.kiev.ua/about_us',
+                  name: 'ᐈКомпанія Mevaro|Ми дбаємо про Ваші меблі',
                   review: {
                     '@type': 'Review',
                     url: 'https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews',
@@ -78,7 +79,7 @@ export default function RootLayout({
                   datePublished: '2021-08-03T07:03:20+00:00',
                   dateModified: new Date().toISOString(),
                   description:
-                    '【Широкий вибір мебельної тканини】.✅Безкоштовна Консультація',
+                    '✅Mevaro – це професійна компанія, яка спеціалізується на перетяжці, ремонті та оновленні меблів|вул. Екскаваторна 37',
                   breadcrumb: {
                     '@id': 'https://mevaro.kiev.ua/',
                   },
@@ -189,7 +190,7 @@ export default function RootLayout({
           }}
         />
 
-        <link rel="canonical" href="https://mevaro.kiev.ua/sofa" />
+        <link rel="canonical" href="https://mevaro.kiev.ua/about_us" />
       </head>
 
       <body className={inter.className}>{children}</body>

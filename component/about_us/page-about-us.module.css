@@ -1,0 +1,28 @@
+.container_about {
+  padding-top: 250px;
+  padding-left: 30px;
+  height: 86vh;
+}
+.container_about_h2 {
+  font-size: calc(1rem + 0.7vh);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 2%;
+}
+.container_about_h3 {
+  font-size: calc(0.9rem + 0.7vh);
+  font-style: italic;
+}
+.container_about p {
+  font-size: calc(0.7rem + 0.7vh);
+  line-height: calc(1.4rem + 0.9vh);
+}
+.container_about_ol {
+  list-style: square;
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  .container_about {
+    height: 100%;
+    padding-top: 150px;
+  }
+}
