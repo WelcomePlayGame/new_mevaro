@@ -139,8 +139,7 @@ export default function RootLayout({
                       name: 'Mevaro',
                     },
                     datePublished: '2024-11-24',
-                    // url: 'https://g.page/r/CaVODvw2utWNEBM/review',
-                    url: 'https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews',
+                    url: 'https://g.page/r/CaVODvw2utWNEBM/review',
                   },
 
                   isPartOf: { '@id': 'https://mevaro.kiev.ua/' },
