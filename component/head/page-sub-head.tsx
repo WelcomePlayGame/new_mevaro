@@ -12,6 +12,7 @@ const SubHead = () => {
           href="tel:+380957162677"
           title="Зателефонувати - 09 71 62 677 Роман"
           className={`${clasess.container_mob_tel}`}
+          data-gtm="phone-call"
         >
           095 71 62 677
         </a>
