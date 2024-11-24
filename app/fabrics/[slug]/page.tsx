@@ -217,7 +217,6 @@ const Fabric = async ({ params }) => {
                   },
                 },
               },
-              // Добавляем LocalBusiness с отзывами
               '@graph': [
                 {
                   '@type': 'LocalBusiness',
