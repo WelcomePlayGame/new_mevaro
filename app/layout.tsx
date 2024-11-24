@@ -123,8 +123,26 @@ export default function RootLayout({
                   name: metadata.title,
                   review: {
                     '@type': 'Review',
+                    reviewBody:
+                      'Робота сподобалася: якісно, професійно, відповідно до зазначеного терміну -рекомендую.',
+                    reviewRating: {
+                      '@type': 'Rating',
+                      ratingValue: '5',
+                      bestRating: '5',
+                    },
+                    author: {
+                      '@type': 'Person',
+                      name: 'Любов Петрович',
+                    },
+                    publisher: {
+                      '@type': 'Organization',
+                      name: 'Mevaro',
+                    },
+                    datePublished: '2024-11-24',
+                    // url: 'https://g.page/r/CaVODvw2utWNEBM/review',
                     url: 'https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews',
                   },
+
                   isPartOf: { '@id': 'https://mevaro.kiev.ua/' },
                   datePublished: '2021-08-03T07:03:20+00:00',
                   dateModified: new Date().toISOString(),
