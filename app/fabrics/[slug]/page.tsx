@@ -11,10 +11,42 @@ import { getFabricBySlug as get } from '@/lib/fabric';
 import Link from 'next/link';
 import HeadUpdate from '@/component/head/header_update _tkani';
 export const generateMetadata = async ({ params }) => {
-  const fabric = await get(params?.slug);
+  // Получаем данные о ткани по slug
+  const fabric = await get(params.slug);
+
+  // Динамически заполняем метаданные
   return {
     title: fabric?.seo_title,
     description: fabric?.seo_description,
+    keywords: fabric?.seo_keywords || [
+      'каталог тканин',
+      'меблеві тканини',
+      'тканина для перетяжки',
+    ],
+    creator: 'Mevaro',
+    publisher: 'Mevaro',
+    openGraph: {
+      title: fabric?.seo_title,
+      description: fabric?.seo_description,
+      url: `${process.env.URL_AWS}${fabric.images[0]}`,
+      siteName: 'Mevaro',
+      images: fabric?.seo_images || [
+        {
+          url: `${process.env.URL_AWS}${fabric.images[0]}`,
+          width: 800,
+          height: 600,
+        },
+        {
+          url: `${process.env.URL_AWS}${fabric.images[0]}`,
+          width: 1800,
+          height: 1600,
+          alt: `${params.title}`,
+        },
+      ],
+      locale: 'ua_UA',
+      type: 'website',
+    },
+    category: fabric?.category,
   };
 };
 

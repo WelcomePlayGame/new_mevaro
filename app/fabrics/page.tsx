@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
 
-  category: 'Меваро - Перетяжка меблів',
+  category: 'Меваро - Каталог Тканин',
 };
 const FabricsFetch = async () => {
   const fabrics = await get();
