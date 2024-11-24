@@ -65,31 +65,55 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@graph': [
                 {
-                  '@type': 'WebPage',
+                  '@type': 'LocalBusiness',
                   '@id': 'https://mevaro.kiev.ua',
-                  url: 'https://mevaro.kiev.ua/about_us',
-                  name: 'ᐈКомпанія Mevaro|Ми дбаємо про Ваші меблі',
-                  review: {
-                    '@type': 'Review',
-                    url: 'https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews',
+                  name: 'Mevaro',
+                  url: 'https://mevaro.kiev.ua',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Київ',
+                    addressCountry: 'UA',
                   },
-                  isPartOf: {
-                    '@id': 'https://mevaro.kiev.ua/',
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '5',
+                    reviewCount: '5',
                   },
-                  datePublished: '2021-08-03T07:03:20+00:00',
-                  dateModified: new Date().toISOString(),
-                  description:
-                    '✅Mevaro – це професійна компанія, яка спеціалізується на перетяжці, ремонті та оновленні меблів|вул. Екскаваторна 37',
-                  breadcrumb: {
-                    '@id': 'https://mevaro.kiev.ua/',
-                  },
-                  inLanguage: 'uk',
-                  potentialAction: [
+                  review: [
                     {
-                      '@type': 'ReadAction',
-                      target: ['https://mevaro.kiev.ua/'],
+                      '@type': 'Review',
+                      reviewBody:
+                        'Робота сподобалася: якісно, професійно, відповідно до зазначеного терміну - рекомендую.',
+                      reviewRating: {
+                        '@type': 'Rating',
+                        ratingValue: '5',
+                        bestRating: '5',
+                      },
+                      author: {
+                        '@type': 'Person',
+                        name: 'Любов Петрович',
+                      },
+                      datePublished: '2024-11-24',
+                    },
+                    {
+                      '@type': 'Review',
+                      reviewBody:
+                        "Із великим задоволенням залишаю відгук про відмінну роботу майстрів Меваро🙌🏻 ✨ з мого старого і від початку не дуже доброго дивану вони зробили чудо! - новий, дуже гарний і зручний для відпочинку. Я мега задоволена! Фактично за пів ціни я отримала новий диван 👌🏻 повністю замінили наповнювач, підігнали всі нюанси по каркасу і замінили оббивку - він просто красень зараз 🤩 дуже кваліфіковані, чемні, професійні. Радять, пропонують великий вибір тканин. Вирішила, більш ніяких купівель меблів)) Дякую ще раз! За нагоди обов'язково буду звертатись 💙💛",
+
+                      reviewRating: {
+                        '@type': 'Rating',
+                        ratingValue: '5',
+                        bestRating: '5',
+                      },
+                      author: {
+                        '@type': 'Person',
+                        name: 'Ольга Ильчук',
+                      },
+                      datePublished: '2024-11-23',
                     },
                   ],
+                  description: metadata.description,
+                  image: metadata.openGraph.images[0]?.url,
                 },
                 {
                   '@type': 'BreadcrumbList',
