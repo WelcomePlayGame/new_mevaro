@@ -1,10 +1,7 @@
 import Crumbs from '@/component/breadcrumbs/page-crumbs';
 import AddComment from '@/component/comment/page-add-comment';
-
 import Footer from '@/component/footer/page-footer';
-
 import classes from '@/component/head/page-head.module.css';
-
 import ButtonCart from '@/component/modal_cart/button_cart';
 import SaleBox from '@/component/sale_box/page-sale-box';
 import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
@@ -181,7 +178,7 @@ const Fabric = async ({ params }) => {
               },
               offers: {
                 '@type': 'Offer',
-                url: `https://www.mevaro.kiev.ua/fabrics/${params.slug}`,
+                url: `https://mevaro.kiev.ua/fabrics/${params.slug}`,
                 priceCurrency: 'UAH',
                 price: (fabric.price * Number(process.env.DOLLAR_RATE)).toFixed(
                   2
@@ -191,7 +188,7 @@ const Fabric = async ({ params }) => {
                 availability: 'https://schema.org/InStock',
                 hasMerchantReturnPolicy: {
                   '@type': 'MerchantReturnPolicy',
-                  url: 'https://www.mevaro.kiev.ua/return-policy',
+                  url: 'https://mevaro.kiev.ua/return-policy',
                 },
                 shippingDetails: {
                   '@type': 'OfferShippingDetails',
