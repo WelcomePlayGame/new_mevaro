@@ -8,8 +8,9 @@ import SubHead from '@/component/head/page-sub-head';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title:
-    '🛠 Інформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
-  description: '🚚 Корисна інформація в світі меблів. Читайте у нас на порталі',
+    'ᐈІнформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
+  description:
+    '【Корисна інформація в світі меблів. Читайте у нас на порталі】',
   keywords: ['Блог від Mevaro', 'корисна інформація про меблі', 'меблі'],
   creator: 'Mevaro',
   publisher: 'Mevaro',

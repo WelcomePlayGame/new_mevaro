@@ -46,6 +46,15 @@ const HeadUpdate = () => {
                 наші послуги
               </li>
             </Link>
+            <li className={`${classes.container_desctop_li}`}>
+              <a
+                href="tel:+380957162677"
+                className={`${classes.container_desctop_li_tel}`}
+                title="Зателефонувати - 09 71 62 677 Роман"
+              >
+                095 71 62 677
+              </a>
+            </li>
           </ol>
           <li>
             <div

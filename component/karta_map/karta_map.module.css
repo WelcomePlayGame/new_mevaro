@@ -1,0 +1,30 @@
+.container_karta_map {
+  padding-top: 150px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 87vh;
+}
+.wrap_karta_map {
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap_karta_map_div {
+  display: flex;
+  flex-direction: column;
+}
+.wrap_karta_map_div_h2 {
+  font-size: calc(1.4rem + 0.7vh);
+  text-align: center;
+  margin-bottom: 30px;
+}
+.wrap_karta_map_div_h3 {
+  font-size: calc(1.2rem + 0.5vh);
+  margin-bottom: 20px;
+}
+.wrap_karta_map_div_ol {
+  display: flex;
+  flex-direction: column;
+  list-style: square;
+  gap: 7px;
+  padding-left: 50px;
+}
