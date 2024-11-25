@@ -201,7 +201,6 @@ export default function RootLayout({
         </Script>
         <Script async src="https://static.elfsight.com/platform/platform.js" />
         <Analytics />
-        <link rel="canonical" href="https://mevaro.kiev.ua" />
       </head>
       <body className={inter.className}>
         <noscript>

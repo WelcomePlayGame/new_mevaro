@@ -15,6 +15,9 @@ export const generateMetadata = async ({
   return {
     title: blog?.seo_title,
     description: blog?.seo_des,
+    alternates: {
+      canonical: `${process.env.BASE_URL}/blogs/${blog.slug}`,
+    },
   };
 };
 

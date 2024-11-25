@@ -51,7 +51,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
+  alternates: {
+    canonical: `${process.env.BASE_URL}/blogs/`,
+  },
   category: 'Меваро - Блог',
 };
 const FabricsFetch = async () => {

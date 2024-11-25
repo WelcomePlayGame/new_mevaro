@@ -10,6 +10,7 @@ import VideoPlayer from '@/component/video_player/page-video-player';
 import { getFabricBySlug as get } from '@/lib/fabric';
 import Link from 'next/link';
 import HeadUpdate from '@/component/head/header_update _tkani';
+
 export const generateMetadata = async ({ params }) => {
   // Получаем данные о ткани по slug
   const fabric = await get(params.slug);
@@ -41,6 +42,9 @@ export const generateMetadata = async ({ params }) => {
       ],
       locale: 'ua_UA',
       type: 'website',
+    },
+    alternates: {
+      canonical: `${process.env.BASE_URL}/fabrics/${fabric.slug}`,
     },
     category: fabric?.category,
   };
