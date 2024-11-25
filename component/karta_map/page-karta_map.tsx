@@ -1,4 +1,6 @@
 import classes from './karta_map.module.css';
+import KartaBlogs from './page-karta_blogs';
+import KartaFabrics from './page-karta_fabrics';
 
 const Karta_MapPage = () => {
   return (
@@ -81,11 +83,13 @@ const Karta_MapPage = () => {
           <h3 className={`${classes.wrap_karta_map_div_h3}`}>
             <a href="https://mevaro.kiev.ua/fabrics">Каталог тканин</a>
           </h3>
+          <KartaFabrics />
         </div>
         <div className={`${classes.wrap_karta_map_div}`}>
           <h3 className={`${classes.wrap_karta_map_div_h3}`}>
             <a href="https://mevaro.kiev.ua/blogs">Корисна інформація</a>
           </h3>
+          <KartaBlogs />
         </div>
       </section>
     </section>

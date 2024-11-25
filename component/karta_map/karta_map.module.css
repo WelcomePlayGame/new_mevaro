@@ -28,3 +28,21 @@
   gap: 7px;
   padding-left: 50px;
 }
+@media (min-width: 360px) and (max-width: 560px) {
+  .wrap_karta_map {
+    flex-direction: column;
+  }
+  .container_karta_map {
+    height: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .container_karta_map {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container_karta_map {
+    height: 100%;
+  }
+}
