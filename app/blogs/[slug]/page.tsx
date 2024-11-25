@@ -14,7 +14,7 @@ export const generateMetadata = async ({
   const blog = await get(params?.slug);
   return {
     title: blog?.seo_title,
-    description: blog?.seo_description,
+    description: blog?.seo_des,
   };
 };
 

@@ -18,16 +18,12 @@ export const generateMetadata = async ({ params }) => {
   return {
     title: fabric?.seo_title,
     description: fabric?.seo_description,
-    keywords: fabric?.seo_keywords || [
-      'каталог тканин',
-      'меблеві тканини',
-      'тканина для перетяжки',
-    ],
+    keywords: ['каталог тканин', 'меблеві тканини', 'тканина для перетяжки'],
     creator: 'Mevaro',
     publisher: 'Mevaro',
     openGraph: {
       title: fabric?.seo_title,
-      description: fabric?.seo_description,
+      description: fabric?.seo_content,
       url: `${process.env.URL_AWS}${fabric.images[0]}`,
       siteName: 'Mevaro',
       images: fabric?.seo_images || [
