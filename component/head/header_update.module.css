@@ -144,8 +144,16 @@
     height: 120px;
   }
 }
+@media (min-width: 360px) and (max-width: 480px) {
+  .container_desctop_li_tel {
+    display: none;
+  }
+}
 @media (max-width: 991px) {
   .container_desctop_ol {
+    display: none;
+  }
+  .container_desctop_li_tel_bor {
     display: none;
   }
 }

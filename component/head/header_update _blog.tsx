@@ -51,9 +51,9 @@ const HeadUpdate = () => {
                 наші послуги
               </li>
             </Link>
-          </ol>
-          <li>
-            <li className={`${classes.container_desctop_li}`}>
+            <li
+              className={`${classes.container_desctop_li} ${classes.container_desctop_li_tel_bor}`}
+            >
               <a
                 href="tel:+380957162677"
                 className={`${classes.container_desctop_li_tel}`}
@@ -62,6 +62,8 @@ const HeadUpdate = () => {
                 095 71 62 677
               </a>
             </li>
+          </ol>
+          <li>
             <div
               className={`${classes.hamburger} ${
                 isHamburger ? classes.hamburger_active : ''

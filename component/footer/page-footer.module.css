@@ -28,7 +28,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-@media (min-width: 360px) and (max-width: 480px) {
+@media (min-width: 360px) and (max-width: 560px) {
   .container_mini_menu_ol {
     display: flex;
     flex-direction: column;
