@@ -113,6 +113,19 @@ export default async function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${process.env.BASE_URL}/video/mevaro.mp4`,
+      video: [
+        {
+          contentLoc: 'https://mevaro.kiev.ua/video/mevaro.mp4',
+          title: 'Послуги перетяжка меблів-Mevaro',
+          description:
+            'Послуги перетяжка меблів-Mevaro. Які переваги перетяжки меблів?',
+          thumbnailLoc: 'https://mevaro.kiev.ua/image/mevaro.png',
+          publicationDate: new Date('2024-11-01').toISOString(),
+        },
+      ],
+    },
     ...modelFabrics,
     ...modelBlogs,
   ];
