@@ -19,7 +19,6 @@
   padding: 10px;
 }
 .container_li {
-  text-transform: capitalize;
   font-size: calc(1.1rem + 0.5vw);
   font-style: italic;
 }
