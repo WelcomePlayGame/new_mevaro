@@ -8,7 +8,7 @@ const ArmchairPage = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h2 className={`${classes.container_office_armchair_h2}`}>
-        Перетяжка крісел
+        Перетяжка крісла Київ
       </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image

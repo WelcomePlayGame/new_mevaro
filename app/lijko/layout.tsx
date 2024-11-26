@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     },
   },
 
-  category: 'Перетяжка кутового дивану Київ',
+  category: 'Перетяжка ліжка Київ',
 };
 const inter = Inter({ subsets: ['latin'] });
 
@@ -129,13 +129,13 @@ export default function RootLayout({
                     {
                       '@type': 'ListItem',
                       position: 7,
-                      name: 'Перетяжка ліжка',
+                      name: 'Перетяжка крісла',
                       item: 'https://mevaro.kiev.ua/armchair',
                     },
                     {
                       '@type': 'ListItem',
                       position: 8,
-                      name: 'Перетяжка ліжка',
+                      name: 'Перетяжка офісного крісла',
                       item: 'https://mevaro.kiev.ua/office_armchair',
                     },
                     {

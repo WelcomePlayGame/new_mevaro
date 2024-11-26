@@ -4,12 +4,14 @@ import classes from './page-faq.module.css';
 const FaqArmChair = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>
+        Відповіді, які Вас можуть цікавить?
+      </h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка крісла?</span>
+              <span>Що таке перетяжка крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка крісла — це процес оновлення ліжка, який включає заміну
@@ -23,7 +25,7 @@ const FaqArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки крісла?</span>
+              <span>Які переваги перетяжки крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка крісла дозволяє заощадити кошти, адже це дешевше за
@@ -37,7 +39,7 @@ const FaqArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка крісла?</span>
+              <span>Як відбувается доставка крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка крісла відбувається швидко та зручно. У нас безкоштовна
@@ -50,7 +52,7 @@ const FaqArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою

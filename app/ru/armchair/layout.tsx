@@ -3,16 +3,16 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка крісла ціна-Київ|Mevaro【Безкоштовна Консультація】',
+  title: 'ᐈПеретяжка кресла цена-Киев|Mevaro【Бесплатная Консультация】',
   description:
-    '✅Перетяжка крісла. Ціна|Київ. 【Заміна войлока та поролона в кріслі】. Гарантія 12 місяців. Працюємо за Договором.',
+    '✅Перетяжка кресла. Цена|Киев. 【Замена войлока та поролона в кресле】. Гарантия 12 месяцев. Работаем за Договором.',
   keywords: ['перетяжка крісла', 'ремонт крісла Київ', 'оббивка крісла'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка крісла місто Київ Меваро | Безкоштовна Доставка',
+    title: 'ᐈПеретяжка кресла цена-Киев|Mevaro【Бесплатная Консультация】',
     description:
-      '✅Безкоштовна Консультація по місту Київ|Широкий вибір тканин',
+      '✅Перетяжка кресла. Цена|Киев. 【Замена войлока та поролона в кресле】. Гарантия 12 месяцев. Работаем за Договором.',
     url: 'https://mevaro.kiev.ua/image/armchair.jpg',
     siteName: 'ᐈПеретяжка крісла місто Київ Меваро',
     images: [
@@ -214,7 +214,7 @@ export default function RootLayout({
           }}
         />
 
-        <link rel="canonical" href="https://mevaro.kiev.ua/armchair" />
+        <link rel="canonical" href="https://mevaro.kiev.ua/ru/armchair" />
       </head>
 
       <body className={inter.className}>{children}</body>
