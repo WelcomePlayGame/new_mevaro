@@ -30,6 +30,12 @@ export default async function sitemap() {
       priority: 1,
     },
     {
+      url: `${process.env.BASE_URL}/ru/sofa`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
       url: `${process.env.BASE_URL}/office_armchair`,
       lastModified: new Date(),
       changeFrequency: 'monthly',

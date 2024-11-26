@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка дивана цена - Киев|Mevaro【Бесплатная Консультация】',
+  title: 'ᐈПеретяжка мебели цена - Киев|Mevaro【Бесплатная Консультация】',
   description: '【Перетяжка дивану от Меваро】.✅Бесплатная Доставка',
   keywords: [
     'перетяжка мебели',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка дивана цена - Киев|Mevaro【Бесплатная Консультация】',
+    title: 'ᐈПеретяжка мебели цена - Киев|Mevaro【Бесплатная Консультация】',
     description: '【Перетяжка дивану от Меваро】.✅Бесплатная Доставка',
     url: 'https://mevaro.kiev.ua/image/peretyajka.web',
     siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
