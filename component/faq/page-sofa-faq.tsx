@@ -4,12 +4,14 @@ import classes from './page-faq.module.css';
 const FaqSofa = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>
+        Відповіди, які можуть Вас цікавить?
+      </h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка та ремонт дивану?</span>
+              <span>Що таке перетяжка дивана?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка дивану — це процес оновлення м&apos;яких меблів, який
@@ -23,7 +25,7 @@ const FaqSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки дивану?</span>
+              <span>Які переваги перетяжки дивана?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка дивану дозволяє заощадити кошти, адже це дешевше за
@@ -37,7 +39,7 @@ const FaqSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка дивану?</span>
+              <span>Як відбувается доставка дивана по місту Київ?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка дивану відбувається швидко та зручно. У нас безкоштовна
@@ -50,7 +52,7 @@ const FaqSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою

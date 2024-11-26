@@ -4,9 +4,8 @@ import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'ᐈ Перетяжка Мебели | Бесплатная  Доставка',
-  description:
-    '【Широкий выбор тканини для оббивки мебели】.✅Бесплатная Консультация',
+  title: 'ᐈПеретяжка дивана цена - Киев|Mevaro【Бесплатная Консультация】',
+  description: '【Перетяжка дивану от Меваро】.✅Бесплатная Доставка',
   keywords: [
     'перетяжка мебели',
     'перетяжка мебели киев',
@@ -15,9 +14,8 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈ Перетяжка Мебели|Бесплатная  Доставка',
-    description:
-      '【Широкий выбор тканини для оббивки мебели】.✅Бесплатная Консультация',
+    title: 'ᐈПеретяжка дивана цена - Киев|Mevaro【Бесплатная Консультация】',
+    description: '【Перетяжка дивану от Меваро】.✅Бесплатная Доставка',
     url: 'https://mevaro.kiev.ua/image/peretyajka.web',
     siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
     images: [
