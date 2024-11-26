@@ -5,7 +5,7 @@ const WorkLocation = () => {
     <section className={`${classes.container_work_location}`}>
       <hr />
       <h4 className={`${classes.container_work_location_h4}`}>
-        ми працюємо по Києву
+        Ми робимо перетяжку по таким районам:
       </h4>
       <section className={`${classes.container_section_ol}`}>
         <ol className={`${classes.container_ol}`}>

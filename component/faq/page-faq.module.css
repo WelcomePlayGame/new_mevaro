@@ -9,7 +9,7 @@
 
 .container_h3 {
   text-align: center;
-  text-transform: capitalize;
+
   font-size: calc(1.2rem + 0.6vw);
   font-weight: bold;
 }

@@ -3,7 +3,9 @@ import classes from './page-faq.module.css';
 const FaqPage = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>
+        Питання та відповіді по перетяжці
+      </h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
