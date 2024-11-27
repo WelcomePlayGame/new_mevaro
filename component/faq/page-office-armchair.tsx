@@ -4,12 +4,15 @@ import classes from './page-faq.module.css';
 const FaqOfficeArmChair = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>
+        {' '}
+        Відповіди, які можуть Вас цікавить?
+      </h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка офісного крісла?</span>
+              <span>Що таке перетяжка офісного крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка офісного крісла — це процес оновлення крісла, який
@@ -23,7 +26,7 @@ const FaqOfficeArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки офісного крісла?</span>
+              <span>Які переваги перетяжки офісного крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка офісного крісла дозволяє заощадити кошти, адже це
@@ -37,7 +40,7 @@ const FaqOfficeArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка офісного крісла?</span>
+              <span>Як відбувается доставка офісного крісла?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка офісного крісла відбувається швидко та зручно. У нас
@@ -51,7 +54,7 @@ const FaqOfficeArmChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою

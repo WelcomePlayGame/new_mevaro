@@ -3,8 +3,9 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка офісного крісла місто Київ Меваро|Безкоштовна Доставка',
-  description: '✅Безкоштовна Консультація по місту Київ|Широкий вибір тканин',
+  title: 'ᐈПеретяжка офисного кресла город Киев Mevaro|Бесплатная Доставка',
+  description:
+    '✅Перетяжка офисного кресла. Цена|Киев✓【Замена войлока та поролона в кресле】✓Гарантия 12 месяцев✓ Работаем за Договором.',
   keywords: [
     'перетяжка офісного крісла',
     'ремонт офісного крісла Київ',
@@ -13,9 +14,9 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка офісного крісла місто Київ|Безкоштовна Доставка',
+    title: 'ᐈПеретяжка офисного кресла город Київ Mevaro|Безкоштовна Доставка',
     description:
-      '✅Перетяжка офісного крісла. Ціна|Київ✓【Заміна войлока та поролона в кріслі】✓Гарантія 12 місяців✓ Працюємо за Договором.',
+      '✅Перетяжка офисного кресла. Цена|Киев✓【Замена войлока та поролона в кресліе】✓Гарантия 12 месяцев✓ Работаем за Договором.',
     url: 'https://mevaro.kiev.ua/image/office_armchair.webp',
     siteName: 'ᐈПеретяжка офісного крісла місто Київ Меваро',
     images: [
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     },
   },
 
-  category: 'Перетяжка офісного крісла Київ',
+  category: 'Перетяжка офисного кресла Киев',
 };
 const inter = Inter({ subsets: ['latin'] });
 
@@ -217,7 +218,10 @@ export default function RootLayout({
           }}
         />
 
-        <link rel="canonical" href="https://mevaro.kiev.ua/office_armchair" />
+        <link
+          rel="canonical"
+          href="https://mevaro.kiev.ua/ru/office_armchair"
+        />
       </head>
 
       <body className={inter.className}>{children}</body>

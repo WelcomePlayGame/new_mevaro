@@ -6,6 +6,26 @@ export default function robots() {
         allow: '/',
         disallow: ['/admin/'],
       },
+      {
+        userAgent: 'Yahoo',
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'MJ12bot',
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'Mediapartners-Google',
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'AhrefsBot',
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'Yandex',
+        disallow: ['/'],
+      },
     ],
     sitemap: 'https://mevaro.kiev.ua/sitemap.xml',
     host: 'https://mevaro.kiev.ua',
