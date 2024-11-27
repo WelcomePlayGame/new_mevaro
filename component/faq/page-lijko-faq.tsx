@@ -4,12 +4,15 @@ import classes from './page-faq.module.css';
 const FaqLijko = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>
+        {' '}
+        Відповіди, які можуть Вас цікавить?
+      </h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка та ліжка?</span>
+              <span>Що таке перетяжка ліжка?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка ліжка — це процес оновлення ліжка, який включає заміну
@@ -23,7 +26,7 @@ const FaqLijko = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки ліжка?</span>
+              <span>Які переваги перетяжки ліжка?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка ліжка дозволяє заощадити кошти, адже це дешевше за
@@ -37,7 +40,7 @@ const FaqLijko = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка ліжка?</span>
+              <span>Як відбувается доставка ліжка?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка ліжка відбувається швидко та зручно. У нас безкоштовна
@@ -50,7 +53,7 @@ const FaqLijko = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою

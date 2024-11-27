@@ -7,7 +7,7 @@ import WorkLocation from '../work_location/page-work-location';
 const Lijko = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
-      <h1>Перетяжка ліжка</h1>
+      <h1>Перетяжка ліжка Київ</h1>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/mebli/lijko.jpg"
@@ -39,12 +39,6 @@ const Lijko = () => {
           <p>
             Ми гарантуємо якісне виконання робіт, яке подарує вашому ліжку нове
             життя.
-          </p>
-          <p>
-            <a href="/contact" title="Замовити перетяжку ліжка">
-              Зв’яжіться з нами
-            </a>
-            вже сьогодні, щоб замовити послугу!
           </p>
         </div>
       </div>
