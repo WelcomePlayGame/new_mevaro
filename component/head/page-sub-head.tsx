@@ -13,6 +13,7 @@ const SubHead = () => {
           title="Зателефонувати - 09 71 62 677 Роман"
           className={`${clasess.container_mob_tel}`}
           data-gtm="phone-call"
+          aria-labelledby="telephone-icon"
         >
           095 71 62 677
         </a>

@@ -21,6 +21,8 @@ const MobileSVG = () => {
           viewBox="0 0 792 792"
           enableBackground="new 0 0 792 792"
           xmlSpace="preserve"
+          role="img"
+          aria-labelledby="phone-icon"
         >
           <g>
             <path
