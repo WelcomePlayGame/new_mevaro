@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:
-    'ᐈПеретяжка мебели цена Киев|Mevaro【Бесплатная Консультация】⚡${new Date().getFullYear()',
+    'ᐈПеретяжка мебели|Mevaro【Бесплатная Доставка】⚡${new Date().getFullYear()',
   description:
     '✅Перетяжка мебели✓ Цена|Киев✓【Замена ообивки на Вашей мебели】✓Гарантия 12 месяцев✓Работаем за Договором.',
   keywords: [
@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка мебели цена - Киев|Mevaro【Бесплатная Консультация】',
+    title:
+      'ᐈПеретяжка мебели|Mevaro【Бесплатная Доставка】⚡${new Date().getFullYear()',
     description:
       '✅Перетяжка мебели✓ Цена|Киев✓【Замена ообивки на Вашей мебели】✓Гарантия 12 месяцев✓Работаем за Договором.',
     url: 'https://mevaro.kiev.ua/image/peretyajka.web',
