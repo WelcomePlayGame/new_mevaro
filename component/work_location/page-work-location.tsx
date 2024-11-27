@@ -1,26 +1,92 @@
 import React from 'react';
 import classes from './page-work-location.module.css';
+
 const WorkLocation = () => {
   return (
-    <section className={`${classes.container_work_location}`}>
+    <section
+      className={`${classes.container_work_location}`}
+      itemScope
+      itemType="http://schema.org/Place"
+    >
       <hr />
-      <h4 className={`${classes.container_work_location_h4}`}>
+      <h4 className={`${classes.container_work_location_h4}`} itemProp="name">
         Ми робимо перетяжку по таким районам:
       </h4>
-      <section className={`${classes.container_section_ol}`}>
+      <section
+        className={`${classes.container_section_ol}`}
+        itemProp="containsPlace"
+      >
         <ol className={`${classes.container_ol}`}>
-          <li className={`${classes.container_li}`}>Троещина</li>
-          <li className={`${classes.container_li}`}>Лісова</li>
-          <li className={`${classes.container_li}`}>Воскресенка</li>
-          <li className={`${classes.container_li}`}>Лівобережка</li>
-          <li className={`${classes.container_li}`}>Русановка</li>
-          <li className={`${classes.container_li}`}>Софіївська Борщагівка</li>
-          <li className={`${classes.container_li}`}>
-            Петропавлівська Борщагівка
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Троещина</span>
           </li>
-          <li className={`${classes.container_li}`}>Південна Борщагівка</li>
-          <li className={`${classes.container_li}`}>Оболонь</li>
-          <li className={`${classes.container_li}`}>Крюковщина</li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Лісова</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Воскресенка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Лівобережка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Русановка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Софіївська Борщагівка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Петропавлівська Борщагівка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Південна Борщагівка</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Оболонь</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Крюковщина</span>
+          </li>
         </ol>
       </section>
     </section>

@@ -160,16 +160,7 @@ export default function RootLayout({
                   description: metadata.description,
                   image: metadata.openGraph.images[0]?.url,
                 },
-                {
-                  '@type': 'BreadcrumbList',
-                  '@id': 'https://mevaro.kiev.ua/breadcrumbs',
-                  itemListElement: breadcrumbItems.map((item) => ({
-                    '@type': 'ListItem',
-                    position: item.position,
-                    name: item.name,
-                    item: item.item,
-                  })),
-                },
+
                 {
                   '@type': 'WebSite',
                   '@id': 'https://mevaro.kiev.ua/#website',
