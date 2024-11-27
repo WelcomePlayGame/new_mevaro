@@ -13,7 +13,6 @@ export const generateMetadata = async () => {
       canonical: `${process.env.BASE_URL}`,
       languages: {
         ru: `${process.env.BASE_URL}/ru`,
-        uk: `${process.env.BASE_URL}/uk`,
       },
     },
   };
