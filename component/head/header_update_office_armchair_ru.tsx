@@ -79,33 +79,33 @@ const HeadUpdate = () => {
                 </Link>
               </li>
               <li>
-                <Link href={`/sofa`} aria-label="Перетяжка дивану">
+                <Link href={`/ru/sofa`} aria-label="Перетяжка дивану">
                   Перетяжка дивана
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/angular_sofa`}
+                  href={`/ru/angular_sofa`}
                   aria-label="Перетяжка кутового дивану"
                 >
                   Перетяжка углового дивана
                 </Link>
               </li>
               <li>
-                <Link href={`/lijko`} aria-label="Перетяжка ліжка">
+                <Link href={`/ru/lijko`} aria-label="Перетяжка ліжка">
                   Перетяжка кровати
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/office_armchair`}
+                  href={`/ru/office_armchair`}
                   aria-label="Перетяжка Офісного крісла"
                 >
                   Перетяжка Офисного кресла
                 </Link>
               </li>
               <li>
-                <Link href={`/armchair`} aria-label="Перетяжка крісла">
+                <Link href={`/ru/armchair`} aria-label="Перетяжка крісла">
                   Перетяжка кресла
                 </Link>
               </li>

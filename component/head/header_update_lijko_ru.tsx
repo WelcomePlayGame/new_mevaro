@@ -29,7 +29,7 @@ const HeadUpdate = () => {
           <ol className={`${classes.container_desctop_ol}`}>
             <Link href={`/fabrics`}>
               <li className={`${classes.container_desctop_li}`}>
-                каталог тканин
+                каталог тканей
               </li>
             </Link>
             <Link href={`/blogs`}>
@@ -37,13 +37,11 @@ const HeadUpdate = () => {
             </Link>
             <Link href={`/#map`}>
               <li className={`${classes.container_desctop_li}`}>
-                ми знаходимось
+                мы находимся
               </li>
             </Link>
             <Link href={`/#works`}>
-              <li className={`${classes.container_desctop_li}`}>
-                наші послуги
-              </li>
+              <li className={`${classes.container_desctop_li}`}>наши услуги</li>
             </Link>
             <li className={`${classes.container_desctop_li}`}>
               <a
@@ -77,38 +75,38 @@ const HeadUpdate = () => {
             >
               <li className={`${classes.container_fabrics}`}>
                 <Link href={`/fabrics`} aria-label="Каталог меблевих тканин">
-                  Каталог тканин
+                  Каталог тканей
                 </Link>
               </li>
               <li>
-                <Link href={`/sofa`} aria-label="Перетяжка дивану">
-                  Перетяжка дивану
+                <Link href={`/ru/sofa`} aria-label="Перетяжка дивану">
+                  Перетяжка дивана
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/angular_sofa`}
+                  href={`/ru/angular_sofa`}
                   aria-label="Перетяжка кутового дивану"
                 >
-                  Перетяжка кутового дивану
+                  Перетяжка углового дивана
                 </Link>
               </li>
               <li>
-                <Link href={`/lijko`} aria-label="Перетяжка ліжка">
-                  Перетяжка ліжка
+                <Link href={`/ru/lijko`} aria-label="Перетяжка ліжка">
+                  Перетяжка кровати
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/office_armchair`}
+                  href={`/ru/office_armchair`}
                   aria-label="Перетяжка Офісного крісла"
                 >
-                  Перетяжка Офісного крісла
+                  Перетяжка офисного кресла
                 </Link>
               </li>
               <li>
-                <Link href={`/armchair`} aria-label="Перетяжка крісла">
-                  Перетяжка крісла
+                <Link href={`/ru/armchair`} aria-label="Перетяжка крісла">
+                  Перетяжка кресла
                 </Link>
               </li>
               <li className={`${classes.container_container_liner}`}></li>
