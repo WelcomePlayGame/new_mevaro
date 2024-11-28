@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   publisher: 'Mevaro',
   openGraph: {
     title:
-      'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】2024${new Date().getFullYear()',
+      'Перетяжка меблів|Mevaro【Безкоштовна Доставка】2024${new Date().getFullYear()',
     description:
       '⭐Перетяжка меблів.Ціна|Київ✓【Широкий вибір тканин】✓Гарантія 12 місяців✓Працюємо за Договором',
     url: 'https://mevaro.kiev.ua/image/peretyajka.web',
