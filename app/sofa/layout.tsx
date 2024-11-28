@@ -3,8 +3,9 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка дивана ціна - Київ|Mevaro【Безкоштовна Консультація】',
-  description: '【Перетяжка дивану від Меваро】.✅Безкоштовна Доставка',
+  title: 'ᐈПеретяжка дивана|Mevaro【Безкоштовна Консультація】',
+  description:
+    '✅Перетяжка дивана. Ціна|Київ✓【Заміна механізмів та ремонт ліжка】✓Гарантія 12 місяців✓ Працюємо за Договором.',
   keywords: [
     'перетяжка дивана',
     'перетяжка дивана ціна',
@@ -13,8 +14,9 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈПеретяжка дивана ціна - Київ|Mevaro【Безкоштовна Консультація】',
-    description: '【Перетяжка дивану від Меваро】.✅Безкоштовна Доставка',
+    title: 'ᐈПеретяжка дивана|Mevaro【Безкоштовна Консультація】',
+    description:
+      '✅Перетяжка дивана. Ціна|Київ✓【Заміна механізмів та ремонт ліжка】✓Гарантія 12 місяців✓ Працюємо за Договором.',
     url: 'https://mevaro.kiev.ua/image/mebli/sofa.jpg',
     siteName: 'ᐈПеретяжка дивана місто Київ | Меваро',
     images: [
