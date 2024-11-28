@@ -6,7 +6,7 @@ import HeadUpdate from '@/component/head/header_update _tkani';
 import { getAllFabrics as get } from '@/lib/fabric';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈКаталог меблевої тканини – великий вибір в Україні',
+  title: 'ᐈКаталог меблевої тканини✓Великий вибір в Україні',
   description:
     '【Каталог меблевих тканин: широкий асортимент, різноманітні кольори та фактури.】Замовляйте якісні тканини для перетяжки меблів з доставкою по Україні!',
   keywords: [
@@ -75,7 +75,7 @@ const Fabrics = () => {
       <div className={`${classes.container_describe_fabrics}`}>
         <hr />
         <h2 className={`${classes.container_describe_fabrics_h2}`}>
-          <strong>Оберіть Меблеві Тканини</strong>
+          <strong>Тканина для меблів</strong>
         </h2>
         <p>
           Меблеві тканини є важливою складовою при виборі меблів, адже вони

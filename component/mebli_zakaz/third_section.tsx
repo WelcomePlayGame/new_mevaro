@@ -4,6 +4,7 @@ import Image from 'next/image';
 const Third_section = () => {
   return (
     <section>
+      <h2 className="text-center text-[1.5rem]">Меблі на замовлення Київ</h2>
       <div className="flex flex-col items-center lg:flex-wrap lg:flex-row lg:justify-center lg:items-center m-[10px]">
         <div className="flex flex-col items-center p-[7px]">
           <Image
