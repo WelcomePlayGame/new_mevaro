@@ -1,107 +1,123 @@
 import React from 'react';
-import Head from 'next/head';
+import classes from './page-faq.module.css';
 
 const FaqSofa = () => {
-  const faqData = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Що таке перетяжка дивана?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: "Перетяжка дивану — це процес оновлення м'яких меблів, який включає заміну оббивки, наповнювача чи ремонт каркаса. Це дозволяє відновити естетичний вигляд, комфорт та функціональність меблів, продовживши їх термін служби. Популярне рішення для економії та збереження улюблених предметів інтер’єру.",
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Які переваги перетяжки дивана?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Перетяжка дивану дозволяє заощадити кошти, адже це дешевше за покупку нового дивану. Ви можете обрати дизайн і тканину, що відповідають вашому стилю. Це екологічно, адже зменшує кількість відходів, продовжує термін служби дивану та допомагає зберегти улюблені предмети інтер’єру.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Як відбувається доставка дивана по місту Київ?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Доставка дивану відбувається швидко та зручно. У нас безкоштовна доставка/вивіз по Києву за умови наявності працюючого ліфта. Ми дбаємо про збереження дивану під час транспортування, тому гарантуємо акуратне завантаження, перевезення та розвантаження.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'У вас є безкоштовна консультація?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'У нас є безкоштовна консультація зі зразками тканини за Вашою адресою. Ми приїдемо у зручний для Вас час, покажемо варіанти оббивки та допоможемо з вибором. Це дозволяє Вам зекономити час і отримати професійні рекомендації, не виходячи з дому.',
-        },
-      },
-    ],
-  };
-
   return (
-    <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-        />
-      </Head>
-      <section>
-        <h3>Відповіди, які можуть Вас цікавить?</h3>
-        <ol>
-          <li>
-            <details>
-              <summary>Що таке перетяжка дивана?</summary>
-              <p>
+    <section
+      className={`${classes.container_faq}`}
+      itemScope
+      itemType="http://schema.org/FAQPage"
+    >
+      <h3 className={`${classes.container_h3}`}>
+        Відповіди, які можуть Вас цікавить?
+      </h3>
+      <ol className={`${classes.container_ol}`}>
+        {/* Вопрос 1 */}
+        <li
+          className={`${classes.container_li}`}
+          itemProp="mainEntity"
+          itemScope
+          itemType="http://schema.org/Question"
+        >
+          <details>
+            <summary itemProp="name">Що таке перетяжка дивана?</summary>
+            <p
+              className={`${classes.container_p}`}
+              itemProp="acceptedAnswer"
+              itemScope
+              itemType="http://schema.org/Answer"
+            >
+              <span itemProp="text">
                 Перетяжка дивану — це процес оновлення м&apos;яких меблів, який
                 включає заміну оббивки, наповнювача чи ремонт каркаса. Це
                 дозволяє відновити естетичний вигляд, комфорт та
                 функціональність меблів, продовживши їх термін служби. Популярне
                 рішення для економії та збереження улюблених предметів
-                інтер’єру.
-              </p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>Які переваги перетяжки дивана?</summary>
-              <p>
+                інтер&apos;єру.
+              </span>
+            </p>
+          </details>
+        </li>
+
+        {/* Вопрос 2 */}
+        <li
+          className={`${classes.container_li}`}
+          itemProp="mainEntity"
+          itemScope
+          itemType="http://schema.org/Question"
+        >
+          <details>
+            <summary itemProp="name">Які переваги перетяжки дивана?</summary>
+            <p
+              className={`${classes.container_p}`}
+              itemProp="acceptedAnswer"
+              itemScope
+              itemType="http://schema.org/Answer"
+            >
+              <span itemProp="text">
                 Перетяжка дивану дозволяє заощадити кошти, адже це дешевше за
-                покупку нового дивану. Ви можете обрати дизайн і тканину, що
+                покупку новиго дивану. Ви можете обрати дизайн і тканину, що
                 відповідають вашому стилю. Це екологічно, адже зменшує кількість
                 відходів, продовжує термін служби дивану та допомагає зберегти
-                улюблені предмети інтер’єру.
-              </p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>Як відбувається доставка дивана по місту Київ?</summary>
-              <p>
+                улюблені предмети інтер&apos;єру.
+              </span>
+            </p>
+          </details>
+        </li>
+
+        {/* Вопрос 3 */}
+        <li
+          className={`${classes.container_li}`}
+          itemProp="mainEntity"
+          itemScope
+          itemType="http://schema.org/Question"
+        >
+          <details>
+            <summary itemProp="name">
+              Як відбувается доставка дивана по місту Київ?
+            </summary>
+            <p
+              className={`${classes.container_p}`}
+              itemProp="acceptedAnswer"
+              itemScope
+              itemType="http://schema.org/Answer"
+            >
+              <span itemProp="text">
                 Доставка дивану відбувається швидко та зручно. У нас безкоштовна
                 доставка/вивіз по Києву за умови наявності працюючого ліфта. Ми
                 дбаємо про збереження дивану під час транспортування, тому
                 гарантуємо акуратне завантаження, перевезення та розвантаження.
-              </p>
-            </details>
-          </li>
-          <li>
-            <details>
-              <summary>У вас є безкоштовна консультація?</summary>
-              <p>
+              </span>
+            </p>
+          </details>
+        </li>
+
+        {/* Вопрос 4 */}
+        <li
+          className={`${classes.container_li}`}
+          itemProp="mainEntity"
+          itemScope
+          itemType="http://schema.org/Question"
+        >
+          <details>
+            <summary itemProp="name">У вас є безкоштовна консультація?</summary>
+            <p
+              className={`${classes.container_p}`}
+              itemProp="acceptedAnswer"
+              itemScope
+              itemType="http://schema.org/Answer"
+            >
+              <span itemProp="text">
                 У нас є безкоштовна консультація зі зразками тканини за Вашою
                 адресою. Ми приїдемо у зручний для Вас час, покажемо варіанти
                 оббивки та допоможемо з вибором. Це дозволяє Вам зекономити час
                 і отримати професійні рекомендації, не виходячи з дому.
-              </p>
-            </details>
-          </li>
-        </ol>
-      </section>
-    </>
+              </span>
+            </p>
+          </details>
+        </li>
+      </ol>
+    </section>
   );
 };
 
