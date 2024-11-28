@@ -6,8 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title:
-    'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】2024${new Date().getFullYear()',
+  title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
   description:
     '⭐Перетяжка меблів.Ціна|Київ✓【Широкий вибір тканин】✓Гарантія 12 місяців✓Працюємо за Договором',
   keywords: [
