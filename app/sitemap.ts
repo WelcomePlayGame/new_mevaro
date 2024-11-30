@@ -42,6 +42,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${process.env.BASE_URL}/ru/remont_mebeli`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${process.env.BASE_URL}/office_armchair`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
