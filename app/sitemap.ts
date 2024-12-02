@@ -24,6 +24,13 @@ export default async function sitemap() {
       priority: 1,
     },
     {
+      url: `${process.env.BASE_URL}/privacy_policy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+
+    {
       url: `${process.env.BASE_URL}/ru`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
