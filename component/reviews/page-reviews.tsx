@@ -127,8 +127,11 @@ const Reviews = () => {
       {averageRating !== null && totalReviewCount !== null && (
         <div className={classes.stats}>
           <p className={`${classes.verageRating}`}>
-            Середній рейтинг: <span>{averageRating.toFixed(1)}</span>
+            Середній рейтинг: <span>{averageRating.toFixed(1)}/5</span>
           </p>
+          {/* <p className={`${classes.countRating}`}>
+            Кількість відгуків: <span>{totalReviewCount}</span>
+          </p> */}
         </div>
       )}
       {loading ? (
