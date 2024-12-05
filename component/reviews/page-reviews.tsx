@@ -73,6 +73,18 @@ const Reviews = () => {
     setVisibleReviews((prevVisible) => prevVisible + 6);
   };
 
+  // Маппинг строковых значений рейтинга в числа
+  const ratingToNumber = (rating: string) => {
+    const ratingMap: { [key: string]: number } = {
+      ONE: 1,
+      TWO: 2,
+      THREE: 3,
+      FOUR: 4,
+      FIVE: 5,
+    };
+    return ratingMap[rating.toUpperCase()] || 0; // Если значение не найдено, возвращаем 0
+  };
+
   // Создаем объект для JSON-LD
   const jsonLdData = {
     '@context': 'http://schema.org',
@@ -89,7 +101,7 @@ const Reviews = () => {
         review.comment?.split('(Original)')[1]?.trim() || 'Немає оригіналу',
       reviewRating: {
         '@type': 'Rating',
-        ratingValue: parseFloat(review.starRating) || 0, // Убедимся, что ratingValue — это число
+        ratingValue: ratingToNumber(review.starRating), // Используем маппинг для преобразования в число
       },
       itemReviewed: {
         '@type': 'Product', // Используем тип Product для оценки товара
