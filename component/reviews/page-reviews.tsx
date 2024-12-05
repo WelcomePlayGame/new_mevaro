@@ -91,6 +91,10 @@ const Reviews = () => {
         '@type': 'Rating',
         ratingValue: review.starRating,
       },
+      itemReviewed: {
+        '@type': 'Thing',
+        name: 'Mevaro',
+      },
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
