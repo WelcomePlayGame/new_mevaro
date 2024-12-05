@@ -73,37 +73,49 @@ const Reviews = () => {
     setVisibleReviews((prevVisible) => prevVisible + 6);
   };
 
+  // Создаем объект для JSON-LD
+  const jsonLdData = {
+    '@context': 'http://schema.org',
+    '@type': 'ItemList',
+    itemListElement: reviews.slice(0, visibleReviews).map((review, index) => ({
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: review.reviewer.displayName,
+        image: review.reviewer.profilePhotoUrl || '/image/default-avatar.png',
+      },
+      datePublished: review.createTime,
+      reviewBody:
+        review.comment?.split('(Original)')[1]?.trim() || 'Немає оригіналу',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: review.starRating,
+      },
+    })),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: averageRating?.toFixed(1),
+      reviewCount: totalReviewCount,
+    },
+  };
+
   return (
-    <div
-      className={classes.container}
-      id="reviews"
-      itemScope
-      itemType="http://schema.org/ItemList"
-    >
+    <div className={classes.container} id="reviews">
       <a
         href="https://g.page/r/CaVODvw2utWNEBM/review"
         target="_blank"
         className={`${classes.addReviews}`}
-        itemProp="url"
       >
         Залишити Відгук
       </a>
       {averageRating !== null && totalReviewCount !== null && (
         <div className={classes.stats}>
-          <div
-            itemScope
-            itemType="http://schema.org/AggregateRating"
-            itemProp="aggregateRating"
-          >
-            <p className={`${classes.verageRating}`}>
-              Середній рейтинг:
-              <span itemProp="ratingValue">{averageRating.toFixed(1)}</span>
-            </p>
-            <p className={`${classes.countRating}`}>
-              Кількість відгуків:
-              <span itemProp="reviewCount">{totalReviewCount}</span>
-            </p>
-          </div>
+          <p className={`${classes.verageRating}`}>
+            Середній рейтинг: <span>{averageRating.toFixed(1)}</span>
+          </p>
+          <p className={`${classes.countRating}`}>
+            Кількість відгуків: <span>{totalReviewCount}</span>
+          </p>
         </div>
       )}
       {loading ? (
@@ -113,13 +125,7 @@ const Reviews = () => {
       ) : reviews.length > 0 ? (
         <ul className={classes.list}>
           {reviews.slice(0, visibleReviews).map((review, index) => (
-            <li
-              key={index}
-              className={classes.item}
-              itemScope
-              itemType="http://schema.org/Review"
-              itemProp="review"
-            >
+            <li key={index} className={classes.item}>
               <div className={classes.avatarWrapper}>
                 <Image
                   width={70}
@@ -130,30 +136,20 @@ const Reviews = () => {
                     '/image/default-avatar.png'
                   }
                   alt={review.reviewer.displayName || 'Avatar'}
-                  itemProp="author"
                 />
               </div>
               <div className={classes.reviewContent}>
-                <strong className={classes.name} itemProp="author">
+                <strong className={classes.name}>
                   {review.reviewer.displayName}
                 </strong>
-                <p className={classes.comment} itemProp="reviewBody">
+                <p className={classes.comment}>
                   {review.comment?.split('(Original)')[1]?.trim() ||
                     'Немає оригіналу'}
                 </p>
                 <p className={classes.rating}>
-                  <span
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="http://schema.org/Rating"
-                  >
-                    {renderStars(review.starRating)}
-                    <meta itemProp="ratingValue" content={review.starRating} />
-                  </span>
+                  {renderStars(review.starRating)}
                 </p>
-                <p className={classes.date} itemProp="datePublished">
-                  {formatDate(review.createTime)}
-                </p>
+                <p className={classes.date}>{formatDate(review.createTime)}</p>
               </div>
             </li>
           ))}
@@ -167,6 +163,9 @@ const Reviews = () => {
           Показати більше
         </button>
       )}
+
+      {/* Добавляем JSON-LD скрипт */}
+      <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script>
     </div>
   );
 };
