@@ -96,11 +96,11 @@ const Reviews = () => {
             itemProp="aggregateRating"
           >
             <p className={`${classes.verageRating}`}>
-              Середній рейтинг:{' '}
+              Середній рейтинг:
               <span itemProp="ratingValue">{averageRating.toFixed(1)}</span>
             </p>
             <p className={`${classes.countRating}`}>
-              Кількість відгуків:{' '}
+              Кількість відгуків:
               <span itemProp="reviewCount">{totalReviewCount}</span>
             </p>
           </div>
