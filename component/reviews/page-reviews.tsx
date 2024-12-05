@@ -89,11 +89,11 @@ const Reviews = () => {
         review.comment?.split('(Original)')[1]?.trim() || 'Немає оригіналу',
       reviewRating: {
         '@type': 'Rating',
-        ratingValue: review.starRating,
+        ratingValue: parseFloat(review.starRating) || 0, // Убедимся, что ratingValue — это число
       },
       itemReviewed: {
-        '@type': 'Thing',
-        name: 'Mevaro',
+        '@type': 'Product', // Используем тип Product для оценки товара
+        name: 'Mevaro', // Название объекта
       },
     })),
     aggregateRating: {
