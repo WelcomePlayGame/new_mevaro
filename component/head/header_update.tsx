@@ -35,10 +35,8 @@ const HeadUpdate = () => {
             <Link href={`/blogs`}>
               <li className={`${classes.container_desctop_li}`}>блог</li>
             </Link>
-            <Link href={`/#map`}>
-              <li className={`${classes.container_desctop_li}`}>
-                ми знаходимось
-              </li>
+            <Link href={`/#reviews`}>
+              <li className={`${classes.container_desctop_li}`}>Відгуки</li>
             </Link>
             <Link href={`/#works`}>
               <li className={`${classes.container_desctop_li}`}>
