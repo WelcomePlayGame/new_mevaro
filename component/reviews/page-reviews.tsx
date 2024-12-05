@@ -15,7 +15,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/reviews');
+        const response = await fetch('/api/reviews');
         if (!response.ok) {
           throw new Error('Ошибка при загрузке отзывов');
         }

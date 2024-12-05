@@ -109,58 +109,6 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@graph': [
                 {
-                  '@type': 'LocalBusiness',
-                  '@id': 'https://mevaro.kiev.ua',
-                  name: 'Mevaro',
-                  url: 'https://mevaro.kiev.ua',
-                  address: {
-                    '@type': 'PostalAddress',
-                    addressLocality: 'Київ',
-                    addressCountry: 'UA',
-                  },
-                  aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '5',
-                    reviewCount: '5',
-                  },
-                  review: [
-                    {
-                      '@type': 'Review',
-                      reviewBody:
-                        'Робота сподобалася: якісно, професійно, відповідно до зазначеного терміну - рекомендую.',
-                      reviewRating: {
-                        '@type': 'Rating',
-                        ratingValue: '5',
-                        bestRating: '5',
-                      },
-                      author: {
-                        '@type': 'Person',
-                        name: 'Любов Петрович',
-                      },
-                      datePublished: '2024-11-24',
-                    },
-                    {
-                      '@type': 'Review',
-                      reviewBody:
-                        "Із великим задоволенням залишаю відгук про відмінну роботу майстрів Меваро🙌🏻 ✨ з мого старого і від початку не дуже доброго дивану вони зробили чудо! - новий, дуже гарний і зручний для відпочинку. Я мега задоволена! Фактично за пів ціни я отримала новий диван 👌🏻 повністю замінили наповнювач, підігнали всі нюанси по каркасу і замінили оббивку - він просто красень зараз 🤩 дуже кваліфіковані, чемні, професійні. Радять, пропонують великий вибір тканин. Вирішила, більш ніяких купівель меблів)) Дякую ще раз! За нагоди обов'язково буду звертатись 💙💛",
-
-                      reviewRating: {
-                        '@type': 'Rating',
-                        ratingValue: '5',
-                        bestRating: '5',
-                      },
-                      author: {
-                        '@type': 'Person',
-                        name: 'Ольга Ильчук',
-                      },
-                      datePublished: '2024-11-23',
-                    },
-                  ],
-                  description: metadata.description,
-                  image: metadata.openGraph.images[0]?.url,
-                },
-
-                {
                   '@type': 'WebSite',
                   '@id': 'https://mevaro.kiev.ua/#website',
                   url: 'https://mevaro.kiev.ua/',
