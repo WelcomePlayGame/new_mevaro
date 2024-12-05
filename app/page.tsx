@@ -7,6 +7,7 @@ import TypeWorks from '@/component/type_works/page-type-works';
 import FaqPage from '@/component/faq/page-faq';
 import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
+import Reviews from '@/component/reviews/page-reviews';
 export const generateMetadata = async () => {
   return {
     alternates: {
@@ -27,6 +28,7 @@ export default function Home() {
       <TypeWorks />
       <Tringle />
       <FaqPage />
+      <Reviews />
       <WorkLocation />
       <MapGoogle />
       <Footer />

@@ -99,7 +99,7 @@ const Reviews = () => {
               Середній рейтинг:{' '}
               <span itemProp="ratingValue">{averageRating.toFixed(1)}</span>
             </p>
-            <p>
+            <p className={`${classes.countRating}`}>
               Кількість відгуків:{' '}
               <span itemProp="reviewCount">{totalReviewCount}</span>
             </p>

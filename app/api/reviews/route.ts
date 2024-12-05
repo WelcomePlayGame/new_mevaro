@@ -47,7 +47,6 @@ export async function GET(req: NextRequest) {
 
     // Логирование полученных данных
     const data = await response.json();
-    console.log('Received Data:', data);
 
     return NextResponse.json(data);
   } catch (error) {
