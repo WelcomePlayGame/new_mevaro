@@ -152,6 +152,6 @@ bot.on(message('text'), async (ctx) => {
   });
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
-
+bot.launch();
 // Export the bot for use in your Next.js API routes
 export default bot;
