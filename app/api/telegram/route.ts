@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import bot from '../../../lib/telegram_bot';
+import bot from '@/lib/telegram_bot';
 
 export async function POST(req: Request) {
   const body = await req.json();
