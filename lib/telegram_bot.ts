@@ -9,12 +9,7 @@ export const mainMenuKeyboard = Markup.keyboard([
 ]).resize();
 
 const mainMenuInline = Markup.inlineKeyboard([
-  [
-    Markup.button.url(
-      '🎨 Каталог Тканин',
-      'https://www.mevaro.kiev.ua/fabrics'
-    ),
-  ],
+  [Markup.button.url('🎨 Каталог Тканин', 'https://mevaro.kiev.ua/fabrics')],
 ]);
 
 const returnMainMenuKeyboard = Markup.keyboard([
