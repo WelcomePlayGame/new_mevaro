@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
     images: [
       {
-        url: 'https://mevaro.kiev.ua/image/peretyajka_800_600.webp',
+        url: 'https://mevaro.kiev.ua/image/peretyajka_1200_630.webp',
         width: 800,
         height: 600,
       },
