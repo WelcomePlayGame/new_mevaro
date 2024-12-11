@@ -15,20 +15,19 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title:
-      'ᐈПеретяжка мебели|Mevaro【Бесплатная Доставка】⚡${new Date().getFullYear()',
+    title: 'ᐈПеретяжка мебели|Mevaro【Бесплатная Доставка',
     description:
       '⭐Перетяжка мебели✓ Цена|Киев✓【Широкий выбор тканей】✓Гарантия 12 месяцев✓Работаем за Договором.',
-    url: 'https://mevaro.kiev.ua/image/peretyajka.web',
+    url: 'https://mevaro.kiev.ua/image/peretyajka_600_600.jpg',
     siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
     images: [
       {
-        url: 'https://mevaro.kiev.ua/image/peretyajka.webp',
+        url: 'https://mevaro.kiev.ua/image/peretyajka_600_600.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: 'https://mevaro.kiev.ua/image/peretyajka.web',
+        url: 'https://mevaro.kiev.ua/image/peretyajka_600_600.jpg',
         width: 1800,
         height: 1600,
         alt: 'перетяжка меблів',
