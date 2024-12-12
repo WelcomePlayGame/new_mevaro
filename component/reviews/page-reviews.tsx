@@ -87,7 +87,7 @@ const Reviews = () => {
 
   // Создаем объект для JSON-LD
   const jsonLdData = {
-    '@context': 'http://schema.org',
+    '@context': 'https://schema.org',
     '@type': 'ItemList',
     itemListElement: reviews.slice(0, visibleReviews).map((review, index) => ({
       '@type': 'Review',
@@ -109,7 +109,7 @@ const Reviews = () => {
         telephone: '+380957162677',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'вул.Екскаваторна,37',
+          streetAddress: 'вул. Екскаваторна, 37',
           addressLocality: 'Київ',
           postalCode: '03126',
           addressCountry: 'UA',
@@ -120,8 +120,8 @@ const Reviews = () => {
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: averageRating?.toFixed(1) || '0',
-      reviewCount: totalReviewCount || '0',
+      ratingValue: averageRating ? Number(averageRating.toFixed(1)) : 0,
+      reviewCount: totalReviewCount || 0,
     },
   };
 
