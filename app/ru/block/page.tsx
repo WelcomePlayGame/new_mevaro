@@ -9,7 +9,7 @@ import WorkLocation from '@/component/work_location/page-work-location_block_ru'
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'ᐈЗамена пружинного блока-Киев|Mevaro【Бесплатная Доставка】',
+  title: 'ᐈЗамена пружинного блока|Mevaro【Бесплатная Доставка】',
   description:
     '✅ Замена пружинного блока.Цена|Киев.【Замена войлока та поролона в диване】.Гарантия 12 месяцев. Работаем за Договором.',
   keywords: [

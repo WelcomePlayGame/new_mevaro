@@ -5,12 +5,12 @@ import classes from './page-reviews.module.css';
 import Image from 'next/image';
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState<any[]>([]);
+  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
   const [visibleReviews, setVisibleReviews] = useState(6);
-  const [averageRating, setAverageRating] = useState<number | null>(null);
-  const [totalReviewCount, setTotalReviewCount] = useState<number | null>(null);
+  const [averageRating, setAverageRating] = useState(null);
+  const [totalReviewCount, setTotalReviewCount] = useState(null);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -23,7 +23,7 @@ const Reviews = () => {
         setReviews(data.reviews || []);
         setAverageRating(data.averageRating || null);
         setTotalReviewCount(data.totalReviewCount || null);
-      } catch (error) {
+      } catch (err) {
         setError('Не удалось получить отзывы');
       } finally {
         setLoading(false);
@@ -33,16 +33,15 @@ const Reviews = () => {
     fetchReviews();
   }, []);
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('uk-UA', {
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('uk-UA', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
   };
 
-  const renderStars = (rating: string) => {
+  const renderStars = (rating) => {
     const starCount = {
       ONE: 1,
       TWO: 2,
@@ -52,16 +51,15 @@ const Reviews = () => {
     };
 
     const count = starCount[rating.toUpperCase()] || 0;
-
     return (
       <>
         {[...Array(count)].map((_, index) => (
-          <span key={index} className={classes.starFilled}>
+          <span key={`filled-${index}`} className={classes.starFilled}>
             ★
           </span>
         ))}
         {[...Array(5 - count)].map((_, index) => (
-          <span key={index + count} className={classes.starEmpty}>
+          <span key={`empty-${index}`} className={classes.starEmpty}>
             ☆
           </span>
         ))}
@@ -70,22 +68,20 @@ const Reviews = () => {
   };
 
   const showMoreReviews = () => {
-    setVisibleReviews((prevVisible) => prevVisible + 6);
+    setVisibleReviews((prev) => prev + 6);
   };
 
-  // Маппинг строковых значений рейтинга в числа
-  const ratingToNumber = (rating: string) => {
-    const ratingMap: { [key: string]: number } = {
+  const ratingToNumber = (rating) => {
+    const ratingMap = {
       ONE: 1,
       TWO: 2,
       THREE: 3,
       FOUR: 4,
       FIVE: 5,
     };
-    return ratingMap[rating.toUpperCase()] || 0; // Если значение не найдено, возвращаем 0
+    return ratingMap[rating.toUpperCase()] || 0;
   };
 
-  // Создаем объект для JSON-LD
   const jsonLdData = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -129,30 +125,32 @@ const Reviews = () => {
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: averageRating.toFixed(1),
+      ratingValue: averageRating?.toFixed(1),
       reviewCount: totalReviewCount,
       bestRating: 5,
       worstRating: 1,
     },
   };
 
-  //конец объект для JSON-LD
   return (
     <div className={classes.container} id="reviews">
       <a
         href="https://g.page/r/CaVODvw2utWNEBM/review"
         target="_blank"
-        className={`${classes.addReviews}`}
+        rel="noopener noreferrer"
+        className={classes.addReviews}
       >
         Залишити Відгук
       </a>
+
       {averageRating !== null && totalReviewCount !== null && (
         <div className={classes.stats}>
-          <p className={`${classes.verageRating}`}>
+          <p className={classes.verageRating}>
             Середній рейтинг: <span>{averageRating.toFixed(1)}/5</span>
           </p>
         </div>
       )}
+
       {loading ? (
         <p className={classes.loading}>Загрузка відгуків...</p>
       ) : error ? (
@@ -199,7 +197,6 @@ const Reviews = () => {
         </button>
       )}
 
-      {/* Добавляем JSON-LD скрипт */}
       <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script>
     </div>
   );
