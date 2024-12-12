@@ -91,21 +91,31 @@ const Reviews = () => {
     '@type': 'ItemList',
     itemListElement: reviews.slice(0, visibleReviews).map((review, index) => ({
       '@type': 'Review',
+      reviewBody:
+        review.comment.split('(Original)')[1]?.trim() || review.comment,
+      datePublished: review.createTime,
       author: {
         '@type': 'Person',
         name: review.reviewer.displayName || 'Аноним',
-        image: review.reviewer.profilePhotoUrl || '/image/default-avatar.png',
+        image: review.reviewer.profilePhotoUrl,
       },
-      datePublished: review.createTime,
-      reviewBody:
-        review.comment?.split('(Original)')[1]?.trim() || 'Немає оригіналу',
       reviewRating: {
         '@type': 'Rating',
         ratingValue: ratingToNumber(review.starRating),
+        bestRating: 5,
+        worstRating: 1,
       },
+      reviewReply: review.reviewReply
+        ? {
+            '@type': 'Comment',
+            text: review.reviewReply.comment,
+            dateCreated: review.reviewReply.updateTime,
+          }
+        : undefined,
       itemReviewed: {
         '@type': 'LocalBusiness',
         name: 'Mevaro',
+        image: 'https://mevaro.kiev.ua/logo/logo.png',
         telephone: '+380957162677',
         address: {
           '@type': 'PostalAddress',
@@ -115,16 +125,18 @@ const Reviews = () => {
           addressCountry: 'UA',
         },
         url: 'https://mevaro.kiev.ua',
-        image: 'https://mevaro.kiev.ua/logo/logo.png',
       },
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: averageRating ? Number(averageRating.toFixed(1)) : 0,
-      reviewCount: totalReviewCount || 0,
+      ratingValue: averageRating.toFixed(1),
+      reviewCount: totalReviewCount,
+      bestRating: 5,
+      worstRating: 1,
     },
   };
 
+  //конец объект для JSON-LD
   return (
     <div className={classes.container} id="reviews">
       <a
