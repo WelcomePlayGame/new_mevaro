@@ -84,52 +84,18 @@ const Reviews = () => {
 
   const jsonLdData = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: reviews.slice(0, visibleReviews).map((review, index) => ({
-      '@type': 'Review',
-      reviewBody:
-        review.comment.split('(Original)')[1]?.trim() || review.comment,
-      datePublished: review.createTime,
-      author: {
-        '@type': 'Person',
-        name: review.reviewer.displayName || 'Аноним',
-        image: review.reviewer.profilePhotoUrl,
-      },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: ratingToNumber(review.starRating),
-        bestRating: 5,
-        worstRating: 1,
-      },
-      reviewReply: review.reviewReply
-        ? {
-            '@type': 'Comment',
-            text: review.reviewReply.comment,
-            dateCreated: review.reviewReply.updateTime,
-          }
-        : undefined,
-      itemReviewed: {
-        '@type': 'LocalBusiness',
-        name: 'Mevaro',
-        image: 'https://mevaro.kiev.ua/logo/logo.png',
-        telephone: '+380957162677',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'вул. Екскаваторна, 37',
-          addressLocality: 'Київ',
-          postalCode: '03126',
-          addressCountry: 'UA',
-        },
-        url: 'https://mevaro.kiev.ua',
-      },
-    })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: averageRating?.toFixed(1),
-      reviewCount: totalReviewCount,
+    '@type': 'Review',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: averageRating?.toFixed(1) || 0,
       bestRating: 5,
       worstRating: 1,
     },
+    author: {
+      '@type': 'Organization',
+      name: 'Mevaro',
+    },
+    reviewCount: totalReviewCount || 0,
   };
 
   return (
