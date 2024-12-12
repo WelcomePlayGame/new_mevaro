@@ -93,7 +93,7 @@ const Reviews = () => {
       '@type': 'Review',
       author: {
         '@type': 'Person',
-        name: review.reviewer.displayName,
+        name: review.reviewer.displayName || 'Аноним',
         image: review.reviewer.profilePhotoUrl || '/image/default-avatar.png',
       },
       datePublished: review.createTime,
@@ -101,17 +101,24 @@ const Reviews = () => {
         review.comment?.split('(Original)')[1]?.trim() || 'Немає оригіналу',
       reviewRating: {
         '@type': 'Rating',
-        ratingValue: ratingToNumber(review.starRating), // Используем маппинг для преобразования в число
+        ratingValue: ratingToNumber(review.starRating),
       },
       itemReviewed: {
-        '@type': 'Product', // Используем тип Product для оценки товара
-        name: 'Mevaro', // Название объекта
+        '@type': 'LocalBusiness',
+        name: 'Mevaro',
+        image: '/logo/logo.png',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'вул.Екскаваторна,37',
+          addressLocality: 'Київ',
+          addressCountry: 'UA',
+        },
       },
     })),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: averageRating?.toFixed(1),
-      reviewCount: totalReviewCount,
+      ratingValue: averageRating?.toFixed(1) || '0',
+      reviewCount: totalReviewCount || '0',
     },
   };
 
@@ -129,9 +136,6 @@ const Reviews = () => {
           <p className={`${classes.verageRating}`}>
             Середній рейтинг: <span>{averageRating.toFixed(1)}/5</span>
           </p>
-          {/* <p className={`${classes.countRating}`}>
-            Кількість відгуків: <span>{totalReviewCount}</span>
-          </p> */}
         </div>
       )}
       {loading ? (
