@@ -85,6 +85,10 @@ const Reviews = () => {
   const jsonLdData = {
     '@context': 'https://schema.org',
     '@type': 'Review',
+    itemReviewed: {
+      '@type': 'Organization',
+      name: 'Mevaro',
+    },
     reviewRating: {
       '@type': 'Rating',
       ratingValue: averageRating?.toFixed(1) || 0,
