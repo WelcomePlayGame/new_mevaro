@@ -5,6 +5,7 @@ import Image from 'next/image';
 import FaqSofa from '../faq/page-sofa-faq';
 import ReverseTringle from '../tringle/page-reverse-triangle';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 
 const Sofa = () => {
   const serviceData = {
@@ -107,6 +108,7 @@ const Sofa = () => {
           </div>
           <ReverseTringle />
           <FaqSofa />
+          <Reviews />
           <WorkLocation />
         </div>
       </section>

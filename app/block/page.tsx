@@ -5,6 +5,8 @@ import ReplaceBlock from '@/component/replace_block/page-raplace-block';
 import React from 'react';
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Reviews from '@/component/reviews/page-reviews';
+import WorkLocation from '@/component/work_location/page-work-location';
 export const metadata: Metadata = {
   title: 'ᐈЗаміна пружинного блока-Київ | Mevaro 【Безкоштовна Доставка】',
   description:
@@ -199,6 +201,8 @@ const Block = () => {
       <HeadUpdate />
       <SubHead />
       <ReplaceBlock />
+      <Reviews />
+      <WorkLocation />
       <Footer />
     </section>
   );

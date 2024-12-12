@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './page-replace-block.module.css';
 import Image from 'next/image';
+import Reviews from '../reviews/page-reviews';
+import WorkLocation from '../work_location/page-work-location';
 const ReplaceBlock = () => {
   return (
     <section id="block" className={`${classes.container_block} pt-[30px]`}>

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import classes from './page-reviews.module.css';
 import Image from 'next/image';
-
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -167,7 +166,9 @@ const Reviews = () => {
         </button>
       )}
 
-      <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script>
+      <script suppressHydrationWarning type="application/ld+json">
+        {JSON.stringify(jsonLdData)}
+      </script>
     </div>
   );
 };
