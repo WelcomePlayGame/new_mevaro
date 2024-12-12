@@ -106,13 +106,16 @@ const Reviews = () => {
       itemReviewed: {
         '@type': 'LocalBusiness',
         name: 'Mevaro',
-        image: '/logo/logo.png',
+        telephone: '+380957162677',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'вул.Екскаваторна,37',
           addressLocality: 'Київ',
+          postalCode: '03126',
           addressCountry: 'UA',
         },
+        url: 'https://mevaro.kiev.ua',
+        image: 'https://mevaro.kiev.ua/logo/logo.png',
       },
     })),
     aggregateRating: {
