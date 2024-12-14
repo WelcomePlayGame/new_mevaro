@@ -165,6 +165,7 @@ export default function RootLayout({
             }),
           }}
         />
+        <link rel="canonical" href="https://mevaro.kiev.ua/ru/remont_mebeli" />
       </head>
       <body>
         <noscript>
