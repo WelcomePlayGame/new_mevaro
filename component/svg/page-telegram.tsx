@@ -24,8 +24,8 @@ function TelegramSVG() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="48px"
-            height="48px"
+            width="36px"
+            height="36px"
             viewBox="0 0 32 32"
             style={{ fill: 'rgba(9, 118, 101, 0.8)' }}
             role="img"

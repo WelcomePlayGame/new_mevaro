@@ -17,6 +17,9 @@
   color: #fff;
   padding-top: 110px;
 }
+.container_head_sub_location {
+  font-size: calc(0.5rem + 0.5vw);
+}
 .container_head_sub h3 {
   font-size: calc(0.4rem + 0.8rem);
 }

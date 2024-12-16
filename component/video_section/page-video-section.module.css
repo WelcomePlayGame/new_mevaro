@@ -27,6 +27,9 @@
   .container_video_section {
     padding-top: 207px;
   }
+  .background_video {
+    margin-top: 14px;
+  }
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .container_video_section {

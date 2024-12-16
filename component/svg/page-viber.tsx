@@ -12,8 +12,8 @@ function ViberSVG() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 50 50"
-          width="48px"
-          height="48px"
+          width="36px"
+          height="36px"
           role="img"
           aria-labelledby="viber-icon"
         >
