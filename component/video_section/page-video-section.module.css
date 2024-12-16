@@ -5,6 +5,7 @@
   padding-top: 200px;
 }
 .background_video {
+  margin-top: 25px;
   width: 100%;
   height: 100%;
   object-fit: contain;
