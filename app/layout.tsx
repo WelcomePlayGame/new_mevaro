@@ -121,6 +121,15 @@ export default function RootLayout({
                     'query-input': 'required name=search_term_string',
                   },
                 },
+                {
+                  '@type': 'BreadcrumbList',
+                  itemListElement: breadcrumbItems.map((item) => ({
+                    '@type': 'ListItem',
+                    position: item.position,
+                    name: item.name,
+                    item: item.item,
+                  })),
+                },
               ],
             }),
           }}
