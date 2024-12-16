@@ -4,6 +4,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { ToastContainer } from 'react-toastify';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
@@ -151,11 +152,12 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=398949992559159&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
         <ToastContainer />
