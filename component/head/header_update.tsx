@@ -52,6 +52,11 @@ const HeadUpdate = () => {
                 095 71 62 677
               </a>
             </li>
+            <li className={`${classes.container_desctop_li}`}>
+              <a className={`${classes.container_desctop_li_adress}`}>
+                вул. Екскаваторна 37 м. Київ
+              </a>
+            </li>
           </ol>
           <li>
             <div

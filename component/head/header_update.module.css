@@ -134,6 +134,9 @@
   background: rgba(0, 0, 0, 0.7);
   padding: 20px;
 }
+.container_desctop_li_adress {
+  font-size: calc(0.8rem + 0.5vw);
+}
 /* Media request */
 @media (min-width: 991px) {
   .container_div_image {

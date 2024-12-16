@@ -54,7 +54,9 @@ const SubHead = () => {
             095 71 62 677
           </a>
         </h3>
-        <span className={`${classes.container_head_sub_location}`}>
+        <span
+          className={`${classes.container_head_sub_location} ${classes.container_mob_tel}`}
+        >
           вул. Екскаваторна 37 м. Київ
         </span>
       </div>
