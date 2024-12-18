@@ -3,6 +3,7 @@ import clasees from './page-pillows.module.css';
 import Tringle from '../tringle/page-tringle';
 import FaqPillow from '../faq/page-pillow-faq';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 
 const MakePillow = () => {
   return (
@@ -59,6 +60,7 @@ const MakePillow = () => {
       </div>
       <Tringle />
       <FaqPillow />
+      <Reviews />
       <WorkLocation />
     </section>
   );

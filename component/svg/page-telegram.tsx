@@ -27,7 +27,7 @@ function TelegramSVG() {
             width="36px"
             height="36px"
             viewBox="0 0 32 32"
-            style={{ fill: 'rgba(9, 118, 101, 0.8)' }}
+            style={{ fill: 'hsla(49, 85%, 74%, 0.9)' }}
             role="img"
             aria-labelledby="telegram-icon"
           >

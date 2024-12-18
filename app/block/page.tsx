@@ -1,5 +1,5 @@
 import Footer from '@/component/footer/page-footer';
-import HeadUpdate from '@/component/head/header_update_block';
+import HeadUpdate from '@/component/head/header_update';
 import SubHead from '@/component/head/page-sub-head';
 import ReplaceBlock from '@/component/replace_block/page-raplace-block';
 import React from 'react';

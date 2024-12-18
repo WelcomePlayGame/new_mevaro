@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation';
 import classes from './header_update.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import ViberSVG from '../svg/page-viber';
+import TelegramSVG from '../svg/page-telegram';
 
 const HeadUpdate = () => {
   const [isHamburger, setHamburger] = useState(false);
@@ -21,6 +23,9 @@ const HeadUpdate = () => {
     '/armchair': 'Перетяжка крісла',
     '/remont_mebeli': 'Ремонт Меблів',
     '/chair': 'Перетяжка Стільців',
+    '/block': 'Заміна Блока',
+    '/porolon': 'Заміна Поролона',
+    '/pillow': 'Виготовлення подушок',
   };
 
   const currentTitle = routeTitles[pathname] || 'Компанія Меваро';
@@ -72,10 +77,17 @@ const HeadUpdate = () => {
                 095 71 62 677
               </a>
             </li>
-            <li className={`${classes.container_desctop_li}`}>
+            <li className={`${classes.container_desctop_li} flex-col`}>
               <a className={`${classes.container_desctop_li_adress}`}>
                 вул. Екскаваторна 37 м. Київ
               </a>
+              <hr className="p-[7px]" />
+              <span
+                className={`${classes.container_desctop_li_adress_messenger}`}
+              >
+                <ViberSVG />
+                <TelegramSVG />
+              </span>
             </li>
           </ol>
           <li>

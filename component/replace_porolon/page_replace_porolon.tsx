@@ -3,6 +3,7 @@ import classes from './replace_porolon.module.css';
 import Image from 'next/image';
 import Tringle from '../tringle/page-tringle';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 
 const ReplacePorolon = () => {
   return (
@@ -71,6 +72,7 @@ const ReplacePorolon = () => {
         </p>
       </div>
       <Tringle />
+      <Reviews />
       <WorkLocation />
     </section>
   );

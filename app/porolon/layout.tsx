@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈЗаміна поролону- місто Київ Меваро | Безкоштовна Доставка',
+  title: 'ᐈЗаміна поролону Меваро | Безкоштовна Доставка',
   description:
     '✅Безкоштовна Доставка по місту Київ. Заміна  поролону в дивані.',
   keywords: ['заміна поролону', 'купити поролон', 'поролон'],
