@@ -27,9 +27,8 @@
   position: fixed;
   height: 110px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  box-shadow: 0px 3px 10px #000;
+  background: rgba(9, 118, 101, 1);
+
   z-index: 2;
 }
 .nav_menu {
@@ -192,5 +191,14 @@
   .container_head {
     padding: 20px;
     height: 135px;
+  }
+  .container_head {
+    position: fixed;
+
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    box-shadow: 0px 3px 10px #000;
+    z-index: 2;
   }
 }
