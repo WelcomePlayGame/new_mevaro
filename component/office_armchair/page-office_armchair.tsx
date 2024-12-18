@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Tringle from '../tringle/page-tringle';
 import WorkLocation from '../work_location/page-work-location';
 import FaqOfficeArmChair from '../faq/page-office-armchair';
+import Reviews from '../reviews/page-reviews';
 
 const OfficeArmChair = () => {
   return (
@@ -44,6 +45,7 @@ const OfficeArmChair = () => {
       </div>
       <Tringle />
       <FaqOfficeArmChair />
+      <Reviews />
       <WorkLocation />
     </section>
   );
