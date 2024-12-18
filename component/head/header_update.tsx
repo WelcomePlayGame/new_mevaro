@@ -1,17 +1,37 @@
 'use client';
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import classes from './header_update.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const HeadUpdate = () => {
   const [isHamburger, setHamburger] = useState(false);
+  const pathname = usePathname();
+
+  // Заголовки для маршрутов
+  const routeTitles = {
+    '/': 'Перетяжка меблів',
+    '/fabrics': 'Каталог тканин',
+    '/blogs': 'Наш блог',
+    '/sofa': 'Перетяжка дивану',
+    '/angular_sofa': 'Перетяжка кутового дивану',
+    '/lijko': 'Перетяжка ліжка',
+    '/office_armchair': 'Перетяжка офісного крісла',
+    '/armchair': 'Перетяжка крісла',
+    '/remont_mebeli': 'Ремонт Меблів',
+    '/chair': 'Перетяжка Стільців',
+  };
+
+  const currentTitle = routeTitles[pathname] || 'Компанія Меваро';
+
   const toggle = () => {
     setHamburger(!isHamburger);
   };
+
   return (
     <section className={`${classes.container_head}`}>
-      <nav aria-label=" Компанія Меваро" className={`${classes.nav_menu}`}>
+      <nav aria-label="Компанія Меваро" className={`${classes.nav_menu}`}>
         <ol className={`${classes.nav_menu_ol}`}>
           <li className={`${classes.container_li}`}>
             <div className={`${classes.container_div_image}`}>
@@ -23,7 +43,7 @@ const HeadUpdate = () => {
               />
             </div>
             <h1 className={`${classes.container_h1}`}>
-              <strong>Перетяжка меблів</strong>{' '}
+              <strong>{currentTitle}</strong>
             </h1>
           </li>
           <ol className={`${classes.container_desctop_ol}`}>

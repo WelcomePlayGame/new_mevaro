@@ -9,7 +9,7 @@ import SliderProduct from '@/component/slider_main_page/page-slide-product';
 import VideoPlayer from '@/component/video_player/page-video-player';
 import { getFabricBySlug as get } from '@/lib/fabric';
 import Link from 'next/link';
-import HeadUpdate from '@/component/head/header_update _tkani';
+import HeadUpdate from '@/component/head/header_update';
 
 export const generateMetadata = async ({ params }) => {
   // Получаем данные о ткани по slug

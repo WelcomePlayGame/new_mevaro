@@ -2,7 +2,7 @@ import Grid from '@/component/fabrics/page-fabrics-grid';
 import Footer from '@/component/footer/page-footer';
 
 import classes from '@/component/head/page-head.module.css';
-import HeadUpdate from '@/component/head/header_update _tkani';
+import HeadUpdate from '@/component/head/header_update';
 import { getAllFabrics as get } from '@/lib/fabric';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {

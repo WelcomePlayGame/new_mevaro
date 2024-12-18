@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Tringle from '@/component/tringle/page-tringle';
 import FaqArmChair from '../faq/page-armchair-faq';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 const ArmchairPage = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
@@ -47,6 +48,7 @@ const ArmchairPage = () => {
       </div>
       <Tringle />
       <FaqArmChair />
+      <Reviews />
       <WorkLocation />
     </section>
   );

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Tringle from '../tringle/page-tringle';
 import FaqChair from '../faq/page-chair-faq';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 
 const Chair = () => {
   return (
@@ -47,6 +48,7 @@ const Chair = () => {
       </div>
       <Tringle />
       <FaqChair />
+      <Reviews />
       <WorkLocation />
     </section>
   );

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import FaqLijko from '../faq/page-lijko-faq';
 import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 const Lijko = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
@@ -44,6 +45,7 @@ const Lijko = () => {
       </div>
       <Tringle />
       <FaqLijko />
+      <Reviews />
       <WorkLocation />
     </section>
   );

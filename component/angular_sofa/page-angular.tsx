@@ -4,6 +4,7 @@ import classes from '@/component/office_armchair/page-office-armchair.module.css
 import Tringle from '@/component/tringle/page-tringle';
 import FaqAngularSofa from '../faq/page-angular-sofa-faq';
 import WorkLocation from '../work_location/page-work-location';
+import Reviews from '../reviews/page-reviews';
 const AngularSofa = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
@@ -56,6 +57,7 @@ const AngularSofa = () => {
       </div>
       <Tringle />
       <FaqAngularSofa />
+      <Reviews />
       <WorkLocation />
     </section>
   );

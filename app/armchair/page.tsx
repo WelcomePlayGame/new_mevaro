@@ -1,4 +1,4 @@
-import Head from '@/component/head/header_update_armchair';
+import Head from '@/component/head/header_update';
 import Footer from '@/component/footer/page-footer';
 import SubHead from '@/component/head/page-sub-head';
 import classes from '@/component/head/page-head.module.css';
