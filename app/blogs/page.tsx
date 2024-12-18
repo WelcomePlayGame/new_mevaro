@@ -2,7 +2,7 @@ import Grid from '@/component/blogs/page-blogs-grid';
 import Footer from '@/component/footer/page-footer';
 
 import classes from '@/component/head/page-head.module.css';
-import HeadUpdate from '@/component/head/header_update _blog';
+import HeadUpdate from '@/component/head/header_update';
 import { getAllBlogs as get } from '@/lib/blog';
 import SubHead from '@/component/head/page-sub-head';
 import type { Metadata } from 'next';

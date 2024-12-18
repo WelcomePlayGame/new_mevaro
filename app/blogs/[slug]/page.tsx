@@ -1,7 +1,7 @@
 import { getBlogBySlug as get } from '@/lib/blog';
 
 import classes from '@/component/blogs/page-blogs.module.css';
-import HeadUpdate from '@/component/head/header_update _blog';
+import HeadUpdate from '@/component/head/header_update';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
 import SubHead from '@/component/head/page-sub-head';
