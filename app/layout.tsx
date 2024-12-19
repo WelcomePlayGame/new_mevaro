@@ -151,7 +151,7 @@ export default function RootLayout({
 
         <Script
           src="//fbstore.sendpulse.com/loader.js"
-          data-sp-widget-id="dd5439f9-5d82-4121-bc98-ca85f7fdf112"
+          data-sp-widget-id="3b84ba8e-b150-4ac4-8019-18d9a4b897e0"
           async
         ></Script>
         <Analytics />
