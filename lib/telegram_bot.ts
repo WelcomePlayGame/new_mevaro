@@ -3,7 +3,7 @@ import { message } from 'telegraf/filters';
 
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 
-// === Клавиатуры ===
+// === Константы клавиатур ===
 const mainMenuKeyboard = Markup.keyboard([
   ['🛠️ Перетяжка меблів', 'Заміна Пружинного Блоку'],
   ['📞 Контакти', 'Про нас'],
@@ -17,12 +17,18 @@ const returnMainMenuKeyboard = Markup.keyboard([
   ['🔙 Назад до головного меню'],
 ]).resize();
 
-const reupholsterySubmenuKeyboard = Markup.keyboard([
-  ['🛋️ Дивани', '🪑 Стільці'],
-  ['🛏️ Ліжка', '🔙 Назад до головного меню'],
-]).resize();
-
-const subMenuMap = {
+const submenuKeyboards = {
+  '🛠️ Перетяжка меблів': Markup.keyboard([
+    ['🛋️ Дивани', '🪑 Стільці'],
+    ['🛏️ Ліжка', '🔙 Назад до головного меню'],
+  ]).resize(),
+  'Заміна Пружинного Блоку': Markup.keyboard([
+    [
+      'Заміна Пружинного Блоку без поролону',
+      'Заміна Пружинного Блоку з поролоном',
+    ],
+    ['🔙 Назад до головного меню'],
+  ]).resize(),
   '🛋️ Дивани': Markup.keyboard([
     ['🛋️ Прямий Диван', '🛋️↪️ Кутовий Диван'],
     ['🔙 Назад до головного меню'],
@@ -35,13 +41,6 @@ const subMenuMap = {
     ["🛌 Узголів'я ліжка", '🛏️ Ліжко'],
     ['🔙 Назад до головного меню'],
   ]).resize(),
-  'Заміна Пружинного Блоку': Markup.keyboard([
-    [
-      'Заміна Пружинного Блоку без поролону',
-      'Заміна Пружинного Блоку з поролоном',
-    ],
-    ['🔙 Назад до головного меню'],
-  ]).resize(),
 };
 
 // === Команда /start ===
@@ -51,24 +50,19 @@ bot.command('start', async (ctx) => {
       caption: 'Ласкаво просимо до нашого бота компанії Mevaro!',
     });
     await ctx.reply('Що Вас цікавить?', mainMenuKeyboard);
-    await ctx.reply('Обрати тканину', mainMenuInline);
+    await ctx.reply('Обрати тканину:', mainMenuInline);
   } catch (error) {
     console.error('Error in start command:', error);
     await ctx.reply('Вибачте, сталася помилка. Спробуйте ще раз пізніше.');
   }
 });
 
-// === Обробка головного меню ===
-bot.hears('🛠️ Перетяжка меблів', async (ctx) => {
-  await ctx.reply(
-    'Оберіть тип меблів для перетяжки:',
-    reupholsterySubmenuKeyboard
-  );
-});
-
-bot.hears(Object.keys(subMenuMap), async (ctx) => {
-  const submenu = subMenuMap[ctx.message.text];
-  await ctx.reply('Оберіть потрібний варіант:', submenu);
+// === Обработчики команд меню ===
+bot.hears(Object.keys(submenuKeyboards), async (ctx) => {
+  const submenu = submenuKeyboards[ctx.message.text];
+  if (submenu) {
+    await ctx.reply('Оберіть потрібний варіант:', submenu);
+  }
 });
 
 bot.hears('📞 Контакти', async (ctx) => {
@@ -84,7 +78,6 @@ bot.hears('Про нас', async (ctx) => {
   await ctx.reply('Інформація про нашу компанію...');
 });
 
-// === Обробка підменю для "Заміна Пружинного Блоку" ===
 bot.hears('Заміна Пружинного Блоку без поролону', async (ctx) => {
   await ctx.reply('Вартість: 4800 грн', returnMainMenuKeyboard);
 });
@@ -103,12 +96,11 @@ bot.hears("🛌 Узголів'я ліжка", async (ctx) => {
   );
 });
 
-// === Повернення до головного меню ===
 bot.hears('🔙 Назад до головного меню', async (ctx) => {
   await ctx.reply('Ви повернулися до головного меню:', mainMenuKeyboard);
 });
 
-// === Обробка всіх текстових повідомлень ===
+// === Обработка других сообщений ===
 bot.on(message('text'), async (ctx) => {
   await ctx.replyWithVideo('https://www.mevaro.kiev.ua/video/mevaro.mp4', {
     caption: 'Ласкаво просимо до нашого бота компанії Mevaro!',
@@ -116,5 +108,6 @@ bot.on(message('text'), async (ctx) => {
   await ctx.reply('Будь ласка, скористайтеся меню:', mainMenuKeyboard);
 });
 
+// === Запуск бота ===
 bot.launch();
 export default bot;
