@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Tringle from '../tringle/page-tringle';
 import WorkLocation from '../work_location/page-work-location';
 import Reviews from '../reviews/page-reviews';
+import FaqPorolon from '../faq/page-porolon-faq';
 
 const ReplacePorolon = () => {
   return (
@@ -72,6 +73,7 @@ const ReplacePorolon = () => {
         </p>
       </div>
       <Tringle />
+      <FaqPorolon />
       <Reviews />
       <WorkLocation />
     </section>
