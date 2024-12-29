@@ -3,14 +3,14 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: `ᐈ【Перетяжка ліжка Київ】Mevaro|Безкоштовна Доставка⚡${new Date().getFullYear()}`,
+  title: `ᐈ【Перетяжка ліжка Київ】Mevaro|Безкоштовна Доставка`,
   description:
     '✅Перетяжка ліжка. Ціна|Київ✓【Заміна механізмів та ремонт ліжка】✓Гарантія 12 місяців✓Працюємо за Договором.',
   keywords: ['перетяжка ліжка', 'ремонт ліжка Київ', 'оббивка ліжка'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: `ᐈ【Перетяжка ліжка Київ】Mevaro|Безкоштовна Доставка⚡${new Date().getFullYear()}`,
+    title: `ᐈ【Перетяжка ліжка Київ】Mevaro|Безкоштовна Доставка`,
     description:
       '✅Перетяжка ліжка. Ціна|Київ✓【Заміна механізмів та ремонт ліжка】✓Гарантія 12 місяців✓Працюємо за Договором.',
     url: 'https://mevaro.kiev.ua/image/mebli/lijko.jpg',

@@ -2,18 +2,18 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈЗаміна поролону Меваро | Безкоштовна Доставка',
+  title: 'ᐈЗаміна поролону Mevaro|【Безкоштовна Доставка】',
   description:
-    '✅Безкоштовна Доставка по місту Київ. Заміна  поролону в дивані.',
+    '✅ Заміна поролона. Ціна|Київ.【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
   keywords: ['заміна поролону', 'купити поролон', 'поролон'],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈЗаміна поролону - місто Київ Меваро | Безкоштовна Доставка',
+    title: 'ᐈЗаміна поролону Mevaro|【Безкоштовна Доставка】',
     description:
-      '✅Безкоштовна Доставка по місту Київ. Заміна поролону в дивані.',
+      '✅ Заміна поролона. Ціна|Київ.【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
     url: 'https://www.mevaro.kiev.ua/image/porolon.webp',
-    siteName: '🛠 Заміна поролону - місто Київ Меваро | Безкоштовна Доставка',
+    siteName: 'Mevaro',
     images: [
       {
         url: 'https://www.mevaro.kiev.ua/image/porolon.webp',

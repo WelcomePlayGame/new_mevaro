@@ -8,9 +8,9 @@ import Script from 'next/script';
 import Reviews from '@/component/reviews/page-reviews';
 import WorkLocation from '@/component/work_location/page-work-location';
 export const metadata: Metadata = {
-  title: 'ᐈЗаміна пружинного блока-Київ | Mevaro 【Безкоштовна Доставка】',
+  title: 'ᐈЗаміна пружинного блока Mevaro|【Безкоштовна Доставка】',
   description:
-    '✅ Заміна пружинного блока. Ціна|Київ. 【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
+    '✅ Заміна пружинного блока. Ціна|Київ.【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
   keywords: [
     'заміна пружинного блока',
     'ремонт пружинного блока',
@@ -19,12 +19,11 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: 'ᐈЗаміна пружинного блока-Київ | Mevaro 【Безкоштовна Доставка】',
+    title: 'ᐈЗаміна пружинного блока Mevaro|【Безкоштовна Доставка】',
     description:
-      '✅ Заміна пружинного блока. Ціна|Київ. 【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
+      'Г✅ Заміна пружинного блока. Ціна|Київ.【Заміна войлока та поролона в дивані】. Гарантія 12 місяців. Працюємо за Договором.',
     url: 'https://www.mevaro.kiev.ua/image/block.jpg',
-    siteName:
-      '🛠 Заміна пружинного блока - місто Київ Меваро | Безкоштовна Доставка',
+    siteName: 'Mevaro',
     images: [
       {
         url: 'https://www.mevaro.kiev.ua/image/block.jpg',
