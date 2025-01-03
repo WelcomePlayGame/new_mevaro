@@ -37,9 +37,14 @@
 }
 .content_blog strong {
   font-size: calc(0.5rem + 0.5vw);
-
   margin: 5px;
   font-style: italic;
+}
+.content_blog h2 {
+  text-align: center;
+}
+.content_blog h3 {
+  text-align: center;
 }
 .container_grid {
   display: flex;
@@ -84,12 +89,7 @@
   padding: 10px;
   border-radius: 7px;
 }
-h2 {
-  text-align: center;
-}
-h3 {
-  text-align: center;
-}
+
 @media (min-width: 360px) and (max-width: 480px) {
   .content_blog {
     width: 100%;
@@ -167,7 +167,7 @@ h3 {
     padding: 70px;
   }
   .h1_blog {
-    font-size: calc(1.5rem + 0.5vw);
+    font-size: calc(1.3rem + 0.4vw);
   }
   .content_blog h2 {
     font-size: calc(1.3rem + 0.5vw);
