@@ -109,12 +109,12 @@ const PopCart = ({ isClosed, title, price, discount10, discount5, url }) => {
               {count > 10 && (
                 <span>
                   <span className="text-[25px] text-[red] font-bold">
-                    {beginSum - sum}
+                    {Number(beginSum - sum).toFixed(1)}
                   </span>{' '}
                   грн
                 </span>
               )}
-              <span className="text-[25px]">{sum} грн</span>
+              <span className="text-[25px]">{Number(sum).toFixed(1)} грн</span>
             </div>
           </div>
           <div className={`${classes.container_send_next_step}`}>
