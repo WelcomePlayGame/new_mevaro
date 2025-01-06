@@ -5,6 +5,7 @@ import HeadUpdate from '@/component/head/header_update';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
 import SubHead from '@/component/head/page-sub-head';
+import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
 
 export const generateMetadata = async ({
   params,
@@ -73,6 +74,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           className={`${classes.content_blog}`}
         />
       </div>
+      <SlideForFabric />
       <Footer />
       {/* JSON-LD script */}
       <script
