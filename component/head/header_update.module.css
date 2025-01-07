@@ -27,7 +27,7 @@
   position: fixed;
   height: 110px;
   width: 100%;
-  background: rgba(9, 118, 101, 1);
+  background: rgba(9, 118, 101, 0.5);
 
   z-index: 2;
 }

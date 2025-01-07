@@ -181,7 +181,7 @@ const Fabric = async ({ params }) => {
               </div>
             </div>
 
-            {/* <SaleBox /> */}
+            <SaleBox />
           </div>
         </section>
         <section className="p-[30px]">

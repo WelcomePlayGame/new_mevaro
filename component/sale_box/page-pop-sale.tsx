@@ -45,30 +45,7 @@ const PopSale: React.FC<TPopSale> = ({ isChecked, setIsChecked }) => {
           : `${classes.container_pop_hidden}`
       }
     >
-      <form
-        className={`${classes.container_form} flex justify-center items-center space-x-2`}
-        onSubmit={sendMail}
-      >
-        <input
-          type="email"
-          placeholder=" @gmail.com"
-          className={`${classes.container_input} py-2 px-4 border rounded`}
-          pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
-          title="Введіть коректну пошту, закінчення має бути @gmail.com"
-          name="email"
-          aria-label="Email Address"
-          ref={emailRef}
-        />
-
-        <button
-          type="submit"
-          className={`${classes.container_button} py-2 px-4 bg-blue-500 text-white rounded`}
-          aria-label="Send Email"
-          onClick={handleSetIsChecked}
-        >
-          Відправити
-        </button>
-      </form>
+      <a href="https://t.me/mevaro_bot">Підписатись</a>
       <button
         className={`${classes.container_closed}`}
         onClick={handleSetIsChecked}

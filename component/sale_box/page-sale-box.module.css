@@ -1,11 +1,11 @@
 .container_sale {
   position: fixed;
-  top: 40%;
+  top: 70%;
   right: 0;
   background-color: rgba(9, 118, 101, 0.9);
   transform: translate(40%, -50%) rotate(90deg);
-  padding: 10px;
-  border-radius: 7px;
+  padding: 7px;
+  border-radius: 6px;
   z-index: 1000;
 }
 .container_input {
@@ -15,7 +15,7 @@
 }
 .container_sale_span {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: calc(1rem + 0.3vw);
 }
 .container_pop {
   position: fixed;
@@ -64,6 +64,7 @@
 @media (min-width: 360px) and (max-width: 430px) {
   .container_sale {
     transform: translate(40%, 290%) rotate(90deg);
+    top: 50%;
   }
   .container_input {
     width: 200px;

@@ -8,6 +8,7 @@ import FaqPage from '@/component/faq/page-faq';
 import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
 import Reviews from '@/component/reviews/page-reviews';
+import SaleBox from '@/component/sale_box/page-sale-box';
 export const generateMetadata = async () => {
   return {
     alternates: {
@@ -31,6 +32,7 @@ export default function Home() {
       <Reviews />
       <WorkLocation />
       <MapGoogle />
+      <SaleBox />
       <Footer />
     </section>
   );
