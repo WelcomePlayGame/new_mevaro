@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       '⚡Перетяжка меблів.Ціна|Київ✓【Широкий вибір тканин】✓Гарантія 12 місяців✓Працюємо за Договором',
     url: 'https://mevaro.kiev.ua/image/mevaro.png',
-    siteName: '🛠 Перетяжка Меблів місто Київ Меваро',
+    siteName: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
     images: [
       {
         url: 'https://mevaro.kiev.ua/image/mevaro.png',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 
-  category: 'Перетяжка меблів Київ',
+  category: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
 };
 
 const inter = Inter({ subsets: ['latin'] });
