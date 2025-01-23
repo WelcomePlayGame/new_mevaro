@@ -4,12 +4,12 @@ import classes from './page-faq.module.css';
 const FaqAngularSofa = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>Питання та Відповіді!</h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка та ремонт кутового дивану?</span>
+              <span>Що таке перетяжка та ремонт кутового дивану?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка кутового дивану — це процес оновлення м&apos;якого
@@ -23,7 +23,7 @@ const FaqAngularSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки кутовго дивану?</span>
+              <span>Які переваги перетяжки кутовго дивану?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка кутовго дивану дозволяє заощадити кошти, адже це дешевше
@@ -37,7 +37,7 @@ const FaqAngularSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка кутовго дивану?</span>
+              <span>Як відбувается доставка кутовго дивану?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка кутовго дивану відбувається швидко та зручно. У нас
@@ -51,7 +51,7 @@ const FaqAngularSofa = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою
