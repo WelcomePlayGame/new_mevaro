@@ -78,22 +78,31 @@ const HeadUpdate = () => {
               </h1>
             </li>
             <ol className={`${classes.container_desctop_ol}`}>
-              <Link href={`/fabrics`}>
-                <li className={`${classes.container_desctop_li}`}>
-                  каталог тканин
-                </li>
-              </Link>
-              <Link href={`/blogs`}>
-                <li className={`${classes.container_desctop_li}`}>блог</li>
-              </Link>
-              <Link href={`/#reviews`}>
-                <li className={`${classes.container_desctop_li}`}>Відгуки</li>
-              </Link>
-              <Link href={`/#works`}>
-                <li className={`${classes.container_desctop_li}`}>
-                  наші послуги
-                </li>
-              </Link>
+              <li className={`${classes.container_desctop_li}`}>
+                <Link href={`/fabrics`}>
+                  {pathname.includes('ru')
+                    ? 'каталог тканей'
+                    : 'каталог тканин'}
+                </Link>
+              </li>
+
+              <li className={`${classes.container_desctop_li}`}>
+                <Link href={`/blogs`}>блог</Link>
+              </li>
+
+              <li className={`${classes.container_desctop_li}`}>
+                {' '}
+                <Link href={`/#reviews`}>
+                  {pathname.includes('ru') ? 'Отзывы' : 'Відгуки'}
+                </Link>
+              </li>
+
+              <li className={`${classes.container_desctop_li}`}>
+                <Link href={`/#works`}>
+                  {pathname.includes('ru') ? 'Наши Услуги' : 'Наші послуги'}
+                </Link>
+              </li>
+
               <li className={`${classes.container_desctop_li}`}>
                 <a
                   href="tel:+380957162677"
@@ -138,40 +147,27 @@ const HeadUpdate = () => {
               >
                 <li className={`${classes.container_fabrics}`}>
                   <Link href={`/fabrics`} aria-label="Каталог меблевих тканин">
-                    Каталог тканин
+                    {pathname.includes('ru')
+                      ? 'каталог тканей'
+                      : 'каталог тканин'}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/sofa`} aria-label="Перетяжка дивану">
-                    Перетяжка дивану
+                  <Link href={`/blogs`} aria-label="blogs">
+                    Блог
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href={`/angular_sofa`}
-                    aria-label="Перетяжка кутового дивану"
-                  >
-                    Перетяжка кутового дивану
+                  <Link href={`/ru/#reviews`} aria-label="Reviews">
+                    {pathname.includes('ru') ? 'Отзывы' : 'Відгуки'}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/lijko`} aria-label="Перетяжка ліжка">
-                    Перетяжка ліжка
+                  <Link href={`/ru/#works`} aria-label="Service">
+                    {pathname.includes('ru') ? 'Наши Услуги' : 'Наші послуги'}
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href={`/office_armchair`}
-                    aria-label="Перетяжка Офісного крісла"
-                  >
-                    Перетяжка Офісного крісла
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/armchair`} aria-label="Перетяжка крісла">
-                    Перетяжка крісла
-                  </Link>
-                </li>
+
                 <li className={`${classes.container_container_liner}`}></li>
               </ol>
             </li>
