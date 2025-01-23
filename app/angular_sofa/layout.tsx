@@ -73,7 +73,7 @@ export default function RootLayout({
                   '@type': 'WebPage',
                   '@id': 'https://mevaro.kiev.ua',
                   url: 'https://mevaro.kiev.ua/angular_sofa',
-                  name: 'ᐈ Перетяжка та Ремонт Кутового Дивану місто Київ Меваро | Безкоштовна Доставка',
+                  name: 'ᐈ Перетяжка Кутового Дивану Mevaro| Безкоштовна Доставка',
                   isPartOf: {
                     '@id': 'https://mevaro.kiev.ua/',
                   },
