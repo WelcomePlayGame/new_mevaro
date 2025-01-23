@@ -43,6 +43,18 @@ export default async function sitemap() {
       priority: 1,
     },
     {
+      url: `${process.env.BASE_URL}/ru/angular_sofa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${process.env.BASE_URL}/angular_sofa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${process.env.BASE_URL}/remont_mebeli`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
