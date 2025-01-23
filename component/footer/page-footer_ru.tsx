@@ -57,7 +57,7 @@ const Footer = () => {
         <ol className={`${classes.container_mini_menu_ol}`}>
           <li>
             <a href="karta_map" aria-label="Карта Сайта">
-              Карта Сайту
+              Карта Сайта
             </a>
           </li>
           <li>
@@ -65,7 +65,7 @@ const Footer = () => {
               href="https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews"
               target="_blank"
             >
-              Отзывы в Google
+              Отзывы Google
             </a>
           </li>
           <li>

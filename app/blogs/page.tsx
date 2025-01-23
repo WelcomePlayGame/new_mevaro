@@ -1,11 +1,11 @@
 import Grid from '@/component/blogs/page-blogs-grid';
 import Footer from '@/component/footer/page-footer';
-
 import classes from '@/component/head/page-head.module.css';
 import HeadUpdate from '@/component/head/header_update';
 import { getAllBlogs as get } from '@/lib/blog';
 import SubHead from '@/component/head/page-sub-head';
 import type { Metadata } from 'next';
+import SaleBox from '@/component/sale_box/page-sale-box';
 export const metadata: Metadata = {
   title:
     'ᐈІнформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
@@ -70,6 +70,7 @@ const Blogs = () => {
       <div className=" pt-[190px] lg:pt-[185px] mb-[50px] p-[10px]">
         <FabricsFetch />
       </div>
+      <SaleBox />
       <Footer />
     </section>
   );

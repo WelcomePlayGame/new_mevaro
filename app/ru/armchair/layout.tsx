@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: 'ᐈПеретяжка кресла цена-Киев|Mevaro【Бесплатная Консультация】',
+  title: 'ᐈПеретяжка кресла цена|Mevaro【Бесплатная Консультация】',
   description:
     '✅Перетяжка кресла. Цена|Киев. 【Замена войлока та поролона в кресле】. Гарантия 12 месяцев. Работаем за Договором.',
   keywords: ['перетяжка крісла', 'ремонт крісла Київ', 'оббивка крісла'],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         alt: 'перетяжка крісла',
       },
     ],
-    locale: 'ua_UA',
+    locale: 'ru_RU',
     type: 'website',
   },
   robots: {

@@ -1,11 +1,11 @@
 import { getBlogBySlug as get } from '@/lib/blog';
-
 import classes from '@/component/blogs/page-blogs.module.css';
 import HeadUpdate from '@/component/head/header_update';
 import Footer from '@/component/footer/page-footer';
 import Image from 'next/image';
 import SubHead from '@/component/head/page-sub-head';
 import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
+import SaleBox from '@/component/sale_box/page-sale-box';
 
 export const generateMetadata = async ({
   params,
@@ -75,6 +75,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         />
       </div>
       <SlideForFabric />
+      <SaleBox />
       <Footer />
       {/* JSON-LD script */}
       <script
