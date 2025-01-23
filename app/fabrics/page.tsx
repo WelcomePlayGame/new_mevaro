@@ -5,6 +5,7 @@ import classes from '@/component/head/page-head.module.css';
 import HeadUpdate from '@/component/head/header_update';
 import { getAllFabrics as get } from '@/lib/fabric';
 import type { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'ᐈКаталог меблевої тканини✓Великий вибір в Україні',
   description:
@@ -59,10 +60,41 @@ export const metadata: Metadata = {
   },
   category: 'Меваро - Каталог Тканин',
 };
+
 const FabricsFetch = async () => {
   const fabrics = await get();
-  return <Grid fabrics={fabrics} />;
+
+  // Генеруємо JSON-LD offers на основі fabrics
+  const offers = fabrics.map((fabric: { slug: string; price: number }) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    url: `${process.env.BASE_URL}/fabrics/${fabric.slug}`,
+    priceCurrency: 'UAH',
+    price: fabric.price.toFixed(2),
+    itemCondition: 'https://schema.org/NewCondition',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: 'Mevaro',
+    },
+  }));
+
+  return (
+    <>
+      <Grid fabrics={fabrics} />
+      {offers.map((offer, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(offer),
+          }}
+        />
+      ))}
+    </>
+  );
 };
+
 const Fabrics = () => {
   return (
     <main>
@@ -99,4 +131,5 @@ const Fabrics = () => {
     </main>
   );
 };
+
 export default Fabrics;

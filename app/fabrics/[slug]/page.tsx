@@ -73,9 +73,9 @@ const Fabric = async ({ params }) => {
               <div>
                 <Crumbs
                   crumbs={[
-                    { label: 'Головна', url: '/' },
-                    { label: 'Список меблевих тканин', url: '/fabrics' },
-                    { label: `тканина ${fabric.title}` },
+                    { label: 'Перетяжка меблів', url: '/' },
+                    { label: 'Каталог тканин', url: '/fabrics' },
+                    { label: `${fabric.category} ${fabric.title}` },
                   ]}
                 />
               </div>
