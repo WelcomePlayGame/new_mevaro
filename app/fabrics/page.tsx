@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 import Crumbs from '@/component/breadcrumbs/page-crumbs';
 
 export const metadata: Metadata = {
-  title: 'ᐈКаталог меблевої тканини✓Великий вибір в Україні',
+  title: '🛠 Каталог меблевої тканини|Mevaro【Широкий вибір】',
   description:
     '【Каталог меблевих тканин: широкий асортимент, різноманітні кольори та фактури.】Замовляйте якісні тканини для перетяжки меблів з доставкою по Україні!',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {
-    title: '🛠 Каталог меблевої тканини – великий вибір в Україні',
+    title: '🛠 Каталог меблевої тканини|Mevaro【Широкий вибір】',
     description:
       'Ознайомтесь із каталогом меблевих тканин: широкий асортимент, різноманітні кольори та фактури. Замовляйте якісні тканини для перетяжки меблів з доставкою по Україні!',
     url: 'https://www.mevaro.kiev.ua/image/pere_2.jpg',
