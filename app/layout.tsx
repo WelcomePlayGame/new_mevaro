@@ -150,6 +150,7 @@ export default function RootLayout({
         </Script>
 
         <Analytics />
+        <link rel="canonical" href="https://mevaro.kiev.ua" />
       </head>
       <body className={inter.className}>
         <noscript>

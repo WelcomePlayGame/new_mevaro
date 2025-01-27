@@ -6,6 +6,7 @@ import { getAllBlogs as get } from '@/lib/blog';
 import SubHead from '@/component/head/page-sub-head';
 import type { Metadata } from 'next';
 import SaleBox from '@/component/sale_box/page-sale-box';
+import Crumbs from '@/component/breadcrumbs/page-crumbs';
 export const metadata: Metadata = {
   title:
     'ᐈІнформаційний Блог від Mevaro - місто Київ. Корисна інформація про меблі',
@@ -67,7 +68,16 @@ const Blogs = () => {
         <HeadUpdate />
         <SubHead />
       </div>
-      <div className=" pt-[190px] lg:pt-[185px] mb-[50px] p-[10px]">
+      <div className="pt-[240px] lg:pt-[150px]  lg:pl-[50px]">
+        <Crumbs
+          crumbs={[
+            { label: 'Перетяжка меблів', url: '/' },
+            { label: 'Каталог Тканин', url: '/fabrics' },
+            { label: 'Блог Mevaro' },
+          ]}
+        />
+      </div>
+      <div className=" pt-[1px] lg:pt-[1px] mb-[10px] p-[10px]">
         <FabricsFetch />
       </div>
       <SaleBox />

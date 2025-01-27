@@ -1,10 +1,10 @@
 import Grid from '@/component/fabrics/page-fabrics-grid';
 import Footer from '@/component/footer/page-footer';
-
 import classes from '@/component/head/page-head.module.css';
 import HeadUpdate from '@/component/head/header_update';
 import { getAllFabrics as get } from '@/lib/fabric';
 import type { Metadata } from 'next';
+import Crumbs from '@/component/breadcrumbs/page-crumbs';
 
 export const metadata: Metadata = {
   title: 'ᐈКаталог меблевої тканини✓Великий вибір в Україні',
@@ -101,7 +101,15 @@ const Fabrics = () => {
       <div className={`${classes.container_head_block}`}>
         <HeadUpdate />
       </div>
-      <div className=" pt-[190px] lg:pt-[185px] mb-[50px] p-[10px]">
+      <div className="pt-[150px] lg:pt-[150px] lg:pl-[50px]">
+        <Crumbs
+          crumbs={[
+            { label: 'Перетяжка меблів', url: '/' },
+            { label: 'Каталог тканин' },
+          ]}
+        />
+      </div>
+      <div className=" pt-[10px] lg:pt-[10px] mb-[30px] p-[10px]">
         <FabricsFetch />
       </div>
       <div className={`${classes.container_describe_fabrics}`}>
