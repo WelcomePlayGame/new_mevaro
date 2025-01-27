@@ -6,6 +6,7 @@ import Image from 'next/image';
 import SubHead from '@/component/head/page-sub-head';
 import SlideForFabric from '@/component/slide_for_fabric/page-slide-for-fabric';
 import SaleBox from '@/component/sale_box/page-sale-box';
+import Crumbs from '@/component/breadcrumbs/page-crumbs';
 
 export const generateMetadata = async ({
   params,
@@ -55,7 +56,16 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         <HeadUpdate />
         <SubHead />
       </div>
-      <div className="flex flex-col pt-[150px]">
+      <div className="pt-[240px] lg:pt-[150px]  lg:pl-[50px]">
+        <Crumbs
+          crumbs={[
+            { label: 'Перетяжка меблів', url: '/' },
+            { label: 'Каталог Тканин', url: '/fabrics' },
+            { label: 'Блог Mevaro', url: '/blogs' },
+          ]}
+        />
+      </div>
+      <div className="flex flex-col pt-[10px]">
         <div className="flex flex-col items-center">
           <div className={`${classes.container_div_blog_img}`}>
             <Image
