@@ -10,7 +10,7 @@ const Chair = () => {
   return (
     <section className={`${classes.container_office_armchair}`}>
       <h2 className={`${classes.container_office_armchair_h2}`}>
-        Перетяжка стільчиків
+        Перетяжка стільців Київ
       </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image

@@ -9,12 +9,12 @@ const AngularSofaRU = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h2 className={`${classes.container_office_armchair_h2}`}>
-        Перетяжка углового дивана
+        Перетяжка углового дивана Киев
       </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/angular_sofa.jpg"
-          alt="Перетяжка кутового дивану"
+          alt="Перетяжка углового дивана"
           width={600}
           height={300}
         />

@@ -9,12 +9,12 @@ const Sofa = () => {
   return (
     <section className={`${classes.container_office_armchair} pt-[30px]`}>
       <h2 className={`${classes.container_office_armchair_h2}`}>
-        Перетяжка дивана - Какая цена?
+        Перетяжка дивана Киев
       </h2>
       <div className={`${classes.container_office_armchair_des}`}>
         <Image
           src="/image/mebli/sofa.jpg"
-          alt="Перетяжка диванів"
+          alt="перетяжка дивана"
           width={600}
           height={300}
           objectFit="contain"

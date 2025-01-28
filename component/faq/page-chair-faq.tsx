@@ -4,12 +4,12 @@ import classes from './page-faq.module.css';
 const FaqChair = () => {
   return (
     <section className={`${classes.container_faq}`}>
-      <h3 className={`${classes.container_h3}`}>питання та відповіді!</h3>
+      <h3 className={`${classes.container_h3}`}>Питання та Відповіді!</h3>
       <ol className={`${classes.container_ol}`}>
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>що таке перетяжка стільчиків?</span>
+              <span>Що таке перетяжка стільчиків?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка стільчиків — це процес оновлення стільчиків, який
@@ -23,7 +23,7 @@ const FaqChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>які переваги перетяжки стільчиків?</span>
+              <span>Які переваги перетяжки стільчиків?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Перетяжка стільчиків дозволяє заощадити кошти, адже це дешевше за
@@ -37,7 +37,7 @@ const FaqChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>як відбувается доставка стільчиків?</span>
+              <span>Як відбувается доставка стільчиків?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               Доставка стільчиків відбувається швидко та зручно. У нас
@@ -51,7 +51,7 @@ const FaqChair = () => {
         <li className={`${classes.container_li}`}>
           <details>
             <summary>
-              <span>у вас є безкоштовна консультація?</span>
+              <span>У вас є безкоштовна консультація?</span>
             </summary>
             <p className={`${classes.container_p}`}>
               У нас є безкоштовна консультація зі зразками тканини за Вашою
