@@ -4,7 +4,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/'],
+        disallow: ['/admin/', '/order'],
       },
       {
         userAgent: 'Yahoo',
