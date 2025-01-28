@@ -28,6 +28,7 @@ const HeadUpdate = () => {
     '/porolon': 'Заміна Поролона',
     '/pillow': 'Виготовлення подушок',
     '/ru/angular_sofa': 'Перетяжка углового дивана',
+    '/ru/chair': 'Перетяжка стульев',
   };
 
   const currentTitle = routeTitles[pathname] || 'Компанія Меваро';
