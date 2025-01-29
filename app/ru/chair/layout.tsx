@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
-  title: `ᐈ【Перетяжка стульев Киев】Mevaro|Бесплатная Доставка`,
+  title: `ᐈ【Перетяжка стульев】Mevaro|Бесплатная Доставка`,
   description:
     '✅Перетяжка стульев. Цена|Киев✓【Замена поролона и ремонт стульев】✓Гарантия 12 месяцев✓Работаем за Договором',
   keywords: ['перетяжка стульев', 'ремонт стульев Киев', 'оббивка стульев'],
