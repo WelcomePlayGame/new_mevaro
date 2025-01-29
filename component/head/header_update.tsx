@@ -57,7 +57,7 @@ const HeadUpdate = () => {
                 postalCode: '02000',
               },
               telephone: '+380957162677',
-              url: 'https://example.com',
+              url: 'https://mevaro.kiev.ua',
             }),
           }}
         />

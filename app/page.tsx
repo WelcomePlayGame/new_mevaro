@@ -9,8 +9,12 @@ import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
 import Reviews from '@/component/reviews/page-reviews';
 import SaleBox from '@/component/sale_box/page-sale-box';
+
 export const generateMetadata = async () => {
   return {
+    title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
+    description:
+      '⭐Перетяжка меблів.Ціна|Київ✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Працюємо за Договором',
     alternates: {
       canonical: `${process.env.BASE_URL}`,
       languages: {

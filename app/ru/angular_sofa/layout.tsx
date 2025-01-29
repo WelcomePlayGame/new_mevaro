@@ -1,12 +1,15 @@
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'ᐈПеретяжка углового дивана|Mevaro【Бесплатная Консультация】',
   description:
     '✅Перетяжка углового дивана. Цена|Киев. 【Замена войлока та поролона в диване】. Гарантия 12 месяцев. Работаем за Договором.',
-  keywords: ['перетяжка крісла', 'ремонт крісла Київ', 'оббивка крісла'],
+  keywords: [
+    'перетяжка углового дивана',
+    'ремонт углового дивана',
+    'оббивка углового дивана',
+  ],
   creator: 'Mevaro',
   publisher: 'Mevaro',
   openGraph: {

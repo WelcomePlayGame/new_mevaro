@@ -49,6 +49,12 @@ export default async function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${process.env.BASE_URL}/ru/chair`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${process.env.BASE_URL}/angular_sofa`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
