@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'ᐈПеретяжка кутового дивану Mevaro|Безкоштовна Доставка',
   description:
-    '✅Перетяжка кутового дивану. Ціна|Київ.【Заміна войлока та поролона в кріслі】.Гарантія 12 місяців. Працюємо за Договором.',
+    '✅Перетяжка кутового дивану. Ціна|Київ.【Заміна войлока та поролона в кутовому дивані】.Гарантія 12 місяців. Працюємо за Договором.',
   keywords: [
     'перетяжка кутового дивана',
     'ремонт кутового дивана Київ',
@@ -18,16 +18,16 @@ export const metadata: Metadata = {
       'ᐈПеретяжка кутового дивану місто Київ Меваро | Безкоштовна Доставка',
     description:
       '✅Безкоштовна Консультація по місту Київ|Широкий вибір тканин',
-    url: 'https://mevaro.kiev.ua/image/mebli/sofa.jpg',
+    url: 'https://mevaro.kiev.ua/image/mebli/ugl_sofa.jpg',
     siteName: 'ᐈПеретяжка Меблів місто Київ Меваро',
     images: [
       {
-        url: 'https://mevaro.kiev.ua/image/mebli/sofa.jpg',
+        url: 'https://mevaro.kiev.ua/image/mebli/ugl_sofa.jpg',
         width: 800,
         height: 600,
       },
       {
-        url: `https://mevaro.kiev.ua/image/mebli/sofa.jpg`,
+        url: `https://mevaro.kiev.ua/image/mebli/ugl_sofa.jpg`,
         width: 1800,
         height: 1600,
         alt: 'перетяжка кутового дивану',
