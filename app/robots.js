@@ -28,6 +28,5 @@ export default function robots() {
       },
     ],
     sitemap: 'https://mevaro.kiev.ua/sitemap.xml',
-    host: 'https://mevaro.kiev.ua',
   };
 }
