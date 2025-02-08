@@ -41,6 +41,12 @@ const nextConfig = {
         destination: '/block',
         permanent: false,
       },
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.mevaro.kiev.ua' }],
+        destination: 'https://mevaro.kiev.ua/:path*',
+        permanent: true,
+      },
     ];
   },
 };
