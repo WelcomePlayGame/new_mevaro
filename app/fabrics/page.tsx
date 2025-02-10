@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: `${process.env.BASE_URL}/fabrics/`,
+    canonical: `${process.env.BASE_URL}/fabrics`,
   },
   category: 'Меваро - Каталог Тканин',
 };

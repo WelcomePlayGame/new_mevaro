@@ -1,3 +1,15 @@
+.h1_blog {
+  font-size: clamp(1.3rem, calc(7vw + 1rem), 3rem);
+  text-align: center;
+}
+.content_blog h2 {
+  font-size: clamp(1rem, calc(7vw + 1rem), 1.8rem);
+}
+.content_blog {
+  width: 100%;
+  font-size: clamp(0.8rem, calc(7vw + 1rem), 1.3rem);
+  padding: min(5rem, 8%);
+}
 .container_div_blog_img {
   position: relative;
   width: 100%;
@@ -13,11 +25,7 @@
   border-radius: 7px;
   object-fit: cover;
 }
-.h1_blog {
-  font-size: calc(1.5rem + 0.5vw);
-  font-weight: bold;
-  text-align: center;
-}
+
 .content_blog ul {
   list-style: square;
 }
@@ -90,20 +98,20 @@
 }
 
 @media (min-width: 360px) and (max-width: 480px) {
-  .content_blog {
+  /* .content_blog {
     width: 100%;
     font-size: calc(1rem + 0.3vw);
     padding: 10px;
-  }
+  } */
   .content_blog strong {
     font-size: calc(0.9rem + 0.3vw);
   }
-  .h1_blog {
+  /* .h1_blog {
     font-size: calc(1.5 + 0.5vw);
   }
   .content_blog h2 {
     font-size: calc(0.9 + 0.5vw);
-  }
+  } */
   .image_style {
     object-fit: cover;
   }
@@ -116,7 +124,7 @@
   }
 }
 @media (min-width: 767px) and (max-width: 991px) {
-  .content_blog {
+  /* .content_blog {
     width: 100%;
     font-size: calc(1.1rem + 0.3vw);
     padding: 35px;
@@ -126,7 +134,7 @@
   }
   .content_blog h2 {
     font-size: calc(1.1 + 0.5vw);
-  }
+  } */
   .image_style {
     object-fit: cover;
   }
@@ -138,7 +146,7 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-  .content_blog {
+  /* .content_blog {
     width: 100%;
     font-size: calc(1.1rem + 0.3vw);
     padding: 35px;
@@ -148,7 +156,7 @@
   }
   .content_blog h2 {
     font-size: calc(1.1 + 0.5vw);
-  }
+  } */
   .image_style {
     object-fit: cover;
   }
@@ -160,17 +168,17 @@
   }
 }
 @media (min-width: 1201px) {
-  .content_blog {
-    width: 100%;
-    font-size: calc(0.9rem + 0.3vw);
-    padding: 70px;
-  }
-  .h1_blog {
-    font-size: calc(1.3rem + 0.4vw);
+  /* .h1_blog {
+    font-size: clamp(1.3rem, calc(7vw + 1rem), 3rem);
   }
   .content_blog h2 {
-    font-size: calc(1.1rem + 0.5vw);
+    font-size: clamp(1rem, calc(7vw + 1rem), 1.8rem);
   }
+  .content_blog {
+    width: 100%;
+    font-size: clamp(0.8rem, calc(7vw + 1rem), 1.3rem);
+    padding: 70px;
+  } */
   .container_div_blog_img {
     margin-top: 90px;
   }
