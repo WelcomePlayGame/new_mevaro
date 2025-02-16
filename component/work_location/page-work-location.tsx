@@ -43,14 +43,14 @@ const WorkLocation = () => {
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Лівобережка</span>
+            <span itemProp="name">Лівобережний</span>
           </li>
           <li
             className={`${classes.container_li}`}
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Русановка</span>
+            <span itemProp="name">Русанівка</span>
           </li>
           <li
             className={`${classes.container_li}`}
@@ -71,7 +71,7 @@ const WorkLocation = () => {
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Південна Борщагівка</span>
+            <span itemProp="name">Борщагівка</span>
           </li>
           <li
             className={`${classes.container_li}`}
@@ -86,6 +86,13 @@ const WorkLocation = () => {
             itemType="http://schema.org/Place"
           >
             <span itemProp="name">Крюковщина</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Харківський массив</span>
           </li>
         </ol>
       </section>
