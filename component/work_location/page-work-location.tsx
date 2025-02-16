@@ -94,6 +94,20 @@ const WorkLocation = () => {
           >
             <span itemProp="name">Харківський массив</span>
           </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Позняки</span>
+          </li>
+          <li
+            className={`${classes.container_li}`}
+            itemScope
+            itemType="http://schema.org/Place"
+          >
+            <span itemProp="name">Осокорки</span>
+          </li>
         </ol>
       </section>
     </section>
