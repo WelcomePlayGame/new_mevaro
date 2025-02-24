@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       '⭐Перетяжка офісного крісла.Ціна|Київ✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Працюємо за Договором',
     url: 'https://mevaro.kiev.ua/image/office_armchair.webp',
-    siteName: 'ᐈПеретяжка офісного крісла місто Київ Меваро',
+    siteName: 'Перетяжка офісного крісла Mevaro|【Безкоштовна Доставка】',
     images: [
       {
         url: 'https://mevaro.kiev.ua/image/office_armchair.webp',
