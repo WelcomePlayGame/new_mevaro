@@ -36,7 +36,7 @@ export default function Home() {
       <Reviews />
       <WorkLocation />
       <MapGoogle />
-      <SaleBox />
+      {/* <SaleBox /> */}
       <Footer />
     </section>
   );
