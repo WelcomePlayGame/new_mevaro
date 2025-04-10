@@ -1,0 +1,121 @@
+.container_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 210px;
+  margin-bottom: 30px;
+}
+.container_div {
+  position: relative;
+}
+
+.container_block h2 {
+  font-size: calc(1rem + 0.7vw);
+  font-weight: bolder;
+  margin-bottom: 30px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+}
+.container_price_block {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.container_one_block {
+  min-height: 200px;
+  background: rgba(0, 0, 0, 0.3);
+
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.container_one_block_main {
+  background: rgba(0, 0, 0, 0.3);
+
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.container_one_block_main h3 {
+  text-decoration: underline;
+  color: #fff;
+  font-size: calc(0.9rem + 0.5vw);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container_one_block h3 {
+  text-decoration: underline;
+  color: #fff;
+  font-size: calc(0.9rem + 0.5vw);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container_one_block_main span {
+  color: red;
+  font-weight: bolder;
+  font-size: calc(1.5rem + 0.5vw);
+}
+.container_one_block span {
+  color: red;
+  font-weight: bolder;
+  font-size: calc(1.1rem + 0.5vw);
+}
+.container_ul_block {
+  color: #fff;
+}
+.container_ul_block ul {
+  list-style: square;
+  padding: 25px;
+  font-size: calc(0.9rem + 0.5vw);
+}
+/* with more 1201 px */
+@media (min-width: 1201px) {
+  .container_one_block {
+    width: 350px;
+  }
+  .container_one_block_main {
+    width: 350px;
+  }
+  .container_one_block h3 {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+  .container_one_block_main h3 {
+    font-size: calc(1.5rem + 0.5vw);
+    font-weight: bolder;
+  }
+  .container_ul_block ul {
+    font-size: calc(0.6rem + 0.5vw);
+  }
+  .container_block h2 {
+    font-size: calc(1.5rem + 0.5rem);
+  }
+  .container_block img {
+    transform: translateY(50px);
+  }
+  .container_price_block {
+    z-index: 100;
+  }
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  .container_block h2 {
+    width: 100%;
+  }
+  .container_price_block {
+    flex-direction: column;
+  }
+  .container_one_block_main {
+    margin-top: 0px;
+  }
+}
