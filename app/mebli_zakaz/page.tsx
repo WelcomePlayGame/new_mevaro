@@ -6,7 +6,8 @@ import SecondSection from '@/component/mebli_zakaz/second_section';
 import Third_section from '@/component/mebli_zakaz/third_section';
 import SliderTkani from '@/component/mebli_zakaz/slider-tkani';
 import HeadUpdate from '@/component/head/header_update_zakaz';
-
+import MapGoogle from '@/component/map_google/page-map-google';
+import Reviews from '@/component/reviews/page-reviews';
 const MebliZakaz = () => {
   return (
     <section>
@@ -22,6 +23,8 @@ const MebliZakaz = () => {
       <hr className="bg-[#000] mt-[30px] h-[5px] mb-[30px]" />
       <Third_section />
       <SliderTkani />
+      <Reviews />
+      <MapGoogle />
       <Footer />
     </section>
   );

@@ -23,7 +23,7 @@ const HeadUpdate = () => {
               />
             </div>
             <h1 className={`${classes.container_h1}`}>
-              <strong>Меблі під замовлення</strong>{' '}
+              <strong>Меблі на замовлення</strong>{' '}
             </h1>
           </li>
           <ol className={`${classes.container_desctop_ol}`}>

@@ -8,9 +8,7 @@ const FaqPage = () => {
       itemScope
       itemType="http://schema.org/FAQPage"
     >
-      <h2 className={`${classes.container_h3}`}>
-        Питання та відповіді по перетяжці
-      </h2>
+      <h2 className={`${classes.container_h3}`}>Перетяжка меблів Київ</h2>
       <ol className={`${classes.container_ol}`}>
         {/* Вопрос 1 */}
         <li
