@@ -30,7 +30,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href={'https://www.youtube.com/@WelcometoMeVARO'}
+            href={'https://www.youtube.com/@MevaroKiev'}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Ознайомитись з нашими роботами в  Youtube"
