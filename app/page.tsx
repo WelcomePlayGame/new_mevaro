@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { usePathname } from 'next/navigation';
-
 import SubHead from '@/component/head/page-sub-head';
 import Footer from '@/component/footer/page-footer';
 import MapGoogle from '@/component/map_google/page-map-google';
@@ -56,7 +55,7 @@ export const generateMetadata = async () => {
 };
 
 export default function Home() {
-  const pathname = usePathname();
+  const pathname = '';
   const baseUrl = 'https://mevaro.kiev.ua';
   const currentTitle = 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】';
   const description =
