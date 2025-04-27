@@ -11,9 +11,9 @@ import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
 import Reviews from '@/component/reviews/page-reviews';
 export const metadata = {
-  title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
+  title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】Київ',
   description:
-    '⭐Перетяжка меблів у Києві. Доступні ціни✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Офіційний договір✓Якісне виконання в термін.',
+    '⭐Замов Консультацію Київ|Перетяжка меблів. Доступні ціни✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Офіційний договір✓Якісне виконання в термін.',
   alternates: {
     canonical: 'https://mevaro.kiev.ua',
     languages: {
