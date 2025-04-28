@@ -1,85 +1,45 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
 import classes from './page-reviews.module.css';
 import Image from 'next/image';
-const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [visibleReviews, setVisibleReviews] = useState(6);
-  const [averageRating, setAverageRating] = useState(null);
-  const [totalReviewCount, setTotalReviewCount] = useState(null);
+import { fetchReviewsData } from '@/lib/fetchReviews';
 
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch('/api/reviews');
-        if (!response.ok) {
-          throw new Error('Ошибка при загрузке отзывов');
-        }
-        const data = await response.json();
-        setReviews(data.reviews || []);
-        setAverageRating(data.averageRating || null);
-        setTotalReviewCount(data.totalReviewCount || null);
-      } catch (err) {
-        setError('Не удалось получить отзывы');
-      } finally {
-        setLoading(false);
-      }
-    };
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('uk-UA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
 
-    fetchReviews();
-  }, []);
-
-  const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('uk-UA', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
+const renderStars = (rating: string) => {
+  const starCount = {
+    ONE: 1,
+    TWO: 2,
+    THREE: 3,
+    FOUR: 4,
+    FIVE: 5,
   };
 
-  const renderStars = (rating) => {
-    const starCount = {
-      ONE: 1,
-      TWO: 2,
-      THREE: 3,
-      FOUR: 4,
-      FIVE: 5,
-    };
+  const count = starCount[rating.toUpperCase() as keyof typeof starCount] || 0;
+  return (
+    <>
+      {[...Array(count)].map((_, index) => (
+        <span key={`filled-${index}`} className={classes.starFilled}>
+          ★
+        </span>
+      ))}
+      {[...Array(5 - count)].map((_, index) => (
+        <span key={`empty-${index}`} className={classes.starEmpty}>
+          ☆
+        </span>
+      ))}
+    </>
+  );
+};
 
-    const count = starCount[rating.toUpperCase()] || 0;
-    return (
-      <>
-        {[...Array(count)].map((_, index) => (
-          <span key={`filled-${index}`} className={classes.starFilled}>
-            ★
-          </span>
-        ))}
-        {[...Array(5 - count)].map((_, index) => (
-          <span key={`empty-${index}`} className={classes.starEmpty}>
-            ☆
-          </span>
-        ))}
-      </>
-    );
-  };
-
-  const showMoreReviews = () => {
-    setVisibleReviews((prev) => prev + 6);
-  };
-
-  const ratingToNumber = (rating) => {
-    const ratingMap = {
-      ONE: 1,
-      TWO: 2,
-      THREE: 3,
-      FOUR: 4,
-      FIVE: 5,
-    };
-    return ratingMap[rating.toUpperCase()] || 0;
-  };
+export default async function Reviews() {
+  const { reviews, averageRating, totalReviewCount, error } =
+    await fetchReviewsData();
+  const visibleReviews = 6;
 
   const jsonLdData = {
     '@context': 'https://schema.org',
@@ -120,9 +80,7 @@ const Reviews = () => {
         </div>
       )}
 
-      {loading ? (
-        <p className={classes.loading}>Загрузка відгуків...</p>
-      ) : error ? (
+      {error ? (
         <p className={classes.error}>{error}</p>
       ) : reviews.length > 0 ? (
         <ul className={classes.list}>
@@ -160,17 +118,9 @@ const Reviews = () => {
         <p className={classes.error}>Немає відгуків</p>
       )}
 
-      {reviews.length > visibleReviews && (
-        <button className={classes.showMoreButton} onClick={showMoreReviews}>
-          Показати більше
-        </button>
-      )}
-
       <script suppressHydrationWarning type="application/ld+json">
         {JSON.stringify(jsonLdData)}
       </script>
     </div>
   );
-};
-
-export default Reviews;
+}

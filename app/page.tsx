@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { usePathname } from 'next/navigation';
+
 import SubHead from '@/component/head/page-sub-head';
 import Footer from '@/component/footer/page-footer';
 import MapGoogle from '@/component/map_google/page-map-google';
@@ -23,7 +23,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
+    title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】Київ',
     description:
       '⭐Перетяжка меблів у Києві. Доступні ціни✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Офіційний договір✓Якісне виконання в термін.',
     url: 'https://mevaro.kiev.ua',
@@ -39,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】',
+    title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】Київ',
     description:
       '⭐Перетяжка меблів у Києві. Доступні ціни✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Офіційний договір✓Якісне виконання в термін.',
     images: ['https://mevaro.kiev.ua/logo/logo.png'],
@@ -49,7 +49,7 @@ export const metadata = {
 export default function Home() {
   const pathname = '';
   const baseUrl = 'https://mevaro.kiev.ua';
-  const currentTitle = 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】';
+  const currentTitle = 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】Київ';
   const description =
     '⭐Перетяжка меблів у Києві. Доступні ціни✓【ШИРОКИЙ ВИБІР ТКАНИН】✓Гарантія 12 місяців✓Офіційний договір✓Якісне виконання в термін.';
 
