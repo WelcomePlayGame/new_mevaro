@@ -51,7 +51,7 @@ const HeadUpdate = () => {
               image: 'https://mevaro.kiev.ua/logo/logo.png',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: `${process.env.STREET_UA}`,
+                streetAddress: `${process.env.NEXT_PUBLIC_STREET_UA}`,
                 addressLocality: 'Київ',
                 addressCountry: 'UA',
                 postalCode: '02000',

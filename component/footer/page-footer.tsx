@@ -3,7 +3,6 @@ import FacebookSVG from '../svg/page-facebook';
 import InstagramSVG from '../svg/page-instagram';
 import classes from './page-footer.module.css';
 import YoutubeSVG from '../svg/page-yuotube';
-import MapGoogle from '@/component/map_google/page-map-google';
 import Blog from '../svg/page-blog';
 
 const Footer = () => {
