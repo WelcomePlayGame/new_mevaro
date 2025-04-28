@@ -112,9 +112,10 @@ export default async function Reviews() {
         <p className={classes.error}>Немає відгуків</p>
       )}
 
-      <script suppressHydrationWarning type="application/ld+json">
-        {JSON.stringify(jsonLdData)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+      />
     </div>
   );
 }
