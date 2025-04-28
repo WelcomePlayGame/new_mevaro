@@ -17,17 +17,18 @@ const renderStars = (rating: string) => {
     THREE: 3,
     FOUR: 4,
     FIVE: 5,
-  };
+  } as const;
 
   const count = starCount[rating.toUpperCase() as keyof typeof starCount] || 0;
+
   return (
     <>
-      {[...Array(count)].map((_, index) => (
+      {Array.from({ length: count }, (_, index) => (
         <span key={`filled-${index}`} className={classes.starFilled}>
           ★
         </span>
       ))}
-      {[...Array(5 - count)].map((_, index) => (
+      {Array.from({ length: 7 - count }, (_, index) => (
         <span key={`empty-${index}`} className={classes.starEmpty}>
           ☆
         </span>
@@ -43,22 +44,15 @@ export default async function Reviews() {
 
   const jsonLdData = {
     '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'Organization',
-      name: 'Mevaro',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: averageRating?.toFixed(1) || 0,
+    '@type': 'Organization',
+    name: 'Mevaro',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: averageRating ? Number(averageRating.toFixed(1)) : 0,
+      reviewCount: totalReviewCount || 0,
       bestRating: 5,
       worstRating: 1,
     },
-    author: {
-      '@type': 'Organization',
-      name: 'Mevaro',
-    },
-    reviewCount: totalReviewCount || 0,
   };
 
   return (
