@@ -8,7 +8,7 @@ const FaqPage = () => {
       itemScope
       itemType="http://schema.org/FAQPage"
     >
-      <h2 className={`${classes.container_h3}`}>Перетяжка меблів Київ</h2>
+      <h3 className={`${classes.container_h3}`}>Перетяжка меблів Київ</h3>
       <ol className={`${classes.container_ol}`}>
         {/* Вопрос 1 */}
         <li
@@ -19,7 +19,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <span itemProp="name">Що таке перетяжка меблів?</span>
+              <h4 itemProp="name">Що таке перетяжка меблів?</h4>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -48,7 +48,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <span itemProp="name">Які переваги перетяжки меблів?</span>
+              <h4 itemProp="name">Які переваги перетяжки меблів?</h4>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -76,9 +76,9 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <span itemProp="name">
+              <h4 itemProp="name">
                 Як відбувается доставка м&apos;яких меблів?
-              </span>
+              </h4>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -106,7 +106,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <span itemProp="name">У вас є безкоштовна консультація?</span>
+              <h4 itemProp="name" className={`${classes.container_h4}`}>У вас є безкоштовна консультація?</h4>
             </summary>
             <p
               className={`${classes.container_p}`}

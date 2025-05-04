@@ -1,3 +1,6 @@
+.container_h4 {
+  font-size: calc(1rem0.9vw);
+}
 .container_faq {
   display: block;
   margin: auto;
@@ -9,7 +12,6 @@
 
 .container_h3 {
   text-align: center;
-
   font-size: calc(1.2rem + 0.6vw);
   font-weight: bold;
 }

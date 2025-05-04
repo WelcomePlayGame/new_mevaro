@@ -56,7 +56,7 @@ const Footer = () => {
         <ol className={`${classes.container_mini_menu_ol}`}>
           <li>
             <a href="karta_map" aria-label="Карта Сайта">
-              Карта Сайту
+             Мапа Сайту
             </a>
           </li>
           <li>

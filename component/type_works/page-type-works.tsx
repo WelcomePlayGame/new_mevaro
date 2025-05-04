@@ -36,9 +36,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Перетяжка дивану
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/sofa" />
           <meta
@@ -63,9 +63,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Перетяжка кутового дивану
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/angular_sofa" />
           <meta
@@ -90,9 +90,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Перетяжка ліжка
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/lijko" />
           <meta
@@ -117,9 +117,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Перетяжка панелей
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/paneli" />
           <meta
@@ -144,9 +144,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Заміна пружинного блока
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/block" />
           <meta
@@ -171,9 +171,9 @@ const TypeWorks = () => {
                 itemProp="image"
               />
             </div>
-            <h3 className={`${classes.container_works_h3}`} itemProp="name">
+            <h2 className={`${classes.container_works_h3}`} itemProp="name">
               Пошити подушки
-            </h3>
+            </h2>
           </Link>
           <meta itemProp="url" content="/pillow" />
           <meta

@@ -1,6 +1,6 @@
 export const sendOrderToTelegram = (orderData) => {
-  const botToken = '6223153005:AAELW8PsEdCcfYCz4l2uHw6KHVaj1EIKjN4';
-  const chatId = `-1001941018057`;
+  const botToken = `${process.env.BOT_TOKEN}`
+  const chatId = `${process.env.BOT_CHAT_ID}`;
 
   const message = `Новый заказ:\n\n
     Ткань: ${orderData.title}\n

@@ -22,15 +22,9 @@ const WorkLocation = () => {
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Троещина</span>
+            <span itemProp="name">Троєщина</span>
           </li>
-          <li
-            className={`${classes.container_li}`}
-            itemScope
-            itemType="http://schema.org/Place"
-          >
-            <span itemProp="name">Лісова</span>
-          </li>
+         
           <li
             className={`${classes.container_li}`}
             itemScope
@@ -43,14 +37,14 @@ const WorkLocation = () => {
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Лівобережний</span>
+            <span itemProp="name">Лівобережний Київ</span>
           </li>
           <li
             className={`${classes.container_li}`}
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Русанівка</span>
+            <span itemProp="name">Русанівські сади</span>
           </li>
           <li
             className={`${classes.container_li}`}
@@ -71,7 +65,7 @@ const WorkLocation = () => {
             itemScope
             itemType="http://schema.org/Place"
           >
-            <span itemProp="name">Борщагівка</span>
+            <span itemProp="name">Південна Борщагівка</span>
           </li>
           <li
             className={`${classes.container_li}`}

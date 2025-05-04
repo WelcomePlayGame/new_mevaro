@@ -17,7 +17,7 @@
 .container_adress {
   display: flex;
   flex-direction: column;
-  font-size: calc(0.4rem + 0.6vw);
+  font-size: calc(0.3rem + 0.8vw);
 }
 .container_mini_menu {
   display: flex;
@@ -41,6 +41,6 @@
     padding: 30px;
   }
   .container_adress {
-    font-size: calc(0.7rem + 0.9vw);
+    font-size: calc(1rem + 0.9vw);
   }
 }
