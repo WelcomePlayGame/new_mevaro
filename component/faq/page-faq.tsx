@@ -19,7 +19,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <h4 itemProp="name">Що таке перетяжка меблів?</h4>
+              <span itemProp="name">Що таке перетяжка меблів?</span>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -48,7 +48,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <h4 itemProp="name">Які переваги перетяжки меблів?</h4>
+              <span itemProp="name">Які переваги перетяжки меблів?</span>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -76,9 +76,9 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <h4 itemProp="name">
+              <span itemProp="name">
                 Як відбувается доставка м&apos;яких меблів?
-              </h4>
+              </span>
             </summary>
             <p
               className={`${classes.container_p}`}
@@ -106,7 +106,7 @@ const FaqPage = () => {
         >
           <details>
             <summary>
-              <h4 itemProp="name" className={`${classes.container_h4}`}>У вас є безкоштовна консультація?</h4>
+              <span itemProp="name" className={`${classes.container_h4}`}>У вас є безкоштовна консультація?</span>
             </summary>
             <p
               className={`${classes.container_p}`}
