@@ -14,14 +14,33 @@ export const generateMetadata = async ({
   params: { slug: string };
 }) => {
   const blog = await get(params?.slug);
+  const url = `${process.env.BASE_URL}/blogs/${blog.slug}`;
+  const imageUrl = `${process.env.URL_AWS}${blog.image}`;
+
   return {
     title: blog?.seo_title,
     description: blog?.seo_des,
     alternates: {
-      canonical: `${process.env.BASE_URL}/blogs/${blog.slug}`,
+      canonical: url,
+    },
+    openGraph: {
+      title: blog?.seo_title,
+      description: blog?.seo_des,
+      url,
+      type: 'article',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: blog?.title,
+        },
+      ],
+      siteName: 'Mevaro',
     },
   };
 };
+
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog = await get(params.slug);
