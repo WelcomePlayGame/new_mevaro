@@ -14,7 +14,7 @@ export const generateMetadata = async ({
 };
 const FabricItem = async ({ params }: { params: { slug: string } }) => {
   const fabric = await get(params?.slug);
-  return <main className={`${classes.container_div}`}>{fabric?.title}</main>;
+  return <div className={`${classes.container_div}`}>{fabric?.title}</div>;
 };
 
 export default FabricItem;

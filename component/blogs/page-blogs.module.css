@@ -62,7 +62,7 @@
 }
 .image_style {
   border-radius: 7px;
-  object-fit: none;
+  object-fit: scale-down;
 }
 .title_container {
   width: 100%;

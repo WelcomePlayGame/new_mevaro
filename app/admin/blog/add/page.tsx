@@ -79,13 +79,16 @@ const AddBlog = () => {
                 placeholder="seo назва"
                 className="w-[250px] text-center border  rounded"
                 required
+                minLength={50}
+                maxLength={60}
                 name="seo_title"
               />
               <input
                 type="text"
                 placeholder="seo опис"
                 className="w-[250px] text-center border  rounded"
-                maxLength={70}
+                minLength={110}
+                maxLength={150}
                 name="seo_des"
                 required
               />

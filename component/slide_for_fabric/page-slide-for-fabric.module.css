@@ -10,6 +10,7 @@
 .container_h4_for_slide {
   font-size: 1.3rem;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .container_link {
   display: flex;

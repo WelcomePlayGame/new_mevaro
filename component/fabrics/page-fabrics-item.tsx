@@ -14,7 +14,7 @@ const Item = ({
 }) => {
   const randomInt = Math.floor(Math.random() * images.length);
   return (
-    <main className={`${classes.container_item} mt-[30px]`}>
+    <div className={`${classes.container_item} mt-[30px]`}>
       <div className={`${classes.container_div}`}>
         <Image
           src={`${process.env.URL_AWS}${images[randomInt]}`}
@@ -29,7 +29,7 @@ const Item = ({
       <Link href={`/fabrics/${slug}`} className={`${classes.container_dtn}`}>
         Детальніше
       </Link>
-    </main>
+    </div>
   );
 };
 export default Item;
