@@ -23,7 +23,7 @@
 }
 .image_style_blogs {
   border-radius: 7px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .content_blog ul {
@@ -73,7 +73,7 @@
   padding-bottom: 10px;
 }
 .h2_style {
-  font-size: calc(0.5rem + 0.3vw);
+  font-size: calc(0.9rem + 0.3vw);
 }
 .h3_style {
   font-size: 1.1rem;
