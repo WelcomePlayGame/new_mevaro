@@ -18,7 +18,7 @@ const priceData = [
   },
   {
     name: 'Офісне Крісло',
-    fabric: '2-3 м',
+    fabric: '2–3 м',
     price: '4200',
   },
   {
@@ -46,32 +46,33 @@ const priceData = [
 const TablePrices = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Table',
-    'name': 'Ціни на перетяжку меблів',
-    'description':
-      'Орієнтовна вартість перетяжки меблів та витрати тканини для кожного виробу.',
-    'mainEntity': priceData.map((item) => ({
-      '@type': 'Offer',
-      'itemOffered': {
-        '@type': 'Product',
-        'name': item.name,
+    '@graph': priceData.map((item) => ({
+      '@type': 'Product',
+      'name': item.name,
+      'description': 'Послуга з перетяжки меблів',
+      'offers': {
+        '@type': 'Offer',
+        'price': item.price,
+        'priceCurrency': 'UAH',
+        'availability': 'https://schema.org/InStock'
       },
-      'price': item.price,
-      'priceCurrency': 'UAH',
       'additionalProperty': {
         '@type': 'PropertyValue',
         'name': 'Витрата тканини',
-        'value': item.fabric,
-      },
+        'value': item.fabric
+      }
     })),
   };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <div className={classes.table_container}>
-        <h3 className={`${classes.h3_container}`}>Орієнтовна Вартість перетяжки меблів</h3>
+        <h3 className={classes.h3_container}>Орієнтовна Вартість перетяжки меблів</h3>
         <table className={classes.price_table}>
           <thead>
             <tr>
