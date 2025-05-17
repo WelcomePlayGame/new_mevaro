@@ -44,25 +44,31 @@ const priceData = [
 ];
 
 const TablePrices = () => {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': priceData.map((item) => ({
-      '@type': 'Product',
-      'name': item.name,
-      'description': 'Послуга з перетяжки меблів',
-      'offers': {
-        '@type': 'Offer',
-        'price': item.price,
-        'priceCurrency': 'UAH',
-        'availability': 'https://schema.org/InStock'
-      },
-      'additionalProperty': {
-        '@type': 'PropertyValue',
-        'name': 'Витрата тканини',
-        'value': item.fabric
-      }
-    })),
-  };
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@graph": priceData.map((item) => ({
+          "@type": "Service",
+          "name": `Перетяжка: ${item.name}`,
+          "description": `Орієнтовна витрата тканини: ${item.fabric}`,
+          "areaServed": {
+            "@type": "Place",
+            "name": "Київ"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Прайс",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "price": item.price,
+                "priceCurrency": "UAH",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          }
+        }))
+      };
+      
 
   return (
     <>
