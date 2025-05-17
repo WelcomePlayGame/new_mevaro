@@ -85,7 +85,7 @@ const AddBlog = ({ params }: { params: { slug: string } }) => {
                 type="text"
                 placeholder="seo опис"
                 className="w-[250px] text-center border  rounded"
-                maxLength={150}
+                maxLength={160}
                 minLength={120}
                 name="seo_des"
                 required
