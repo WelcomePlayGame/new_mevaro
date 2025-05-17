@@ -11,6 +11,7 @@ import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location';
 import Reviews from '@/component/reviews/page-reviews';
 import Mevaro_Company from '@/component/describe_mevaro/mevaro_company';
+import TablePrices from '@/component/table_prices/page-table-prices';
 export const metadata = {
   title: 'ᐈПеретяжка меблів|Mevaro【Безкоштовна Доставка】Київ',
   description:
@@ -95,6 +96,7 @@ export default function Home() {
         <VideoSection />
         <Mevaro_Company/>
         <TypeWorks />
+        <TablePrices/>
         <Tringle />
         <FaqPage />
         <Reviews />

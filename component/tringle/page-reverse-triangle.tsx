@@ -1,5 +1,5 @@
 import classes from '../head/page-head.module.css';
 const ReverseTringle = () => {
-  return <main className={`${classes.reverse_triangle}`}></main>;
+  return <section className={`${classes.reverse_triangle}`}></section>;
 };
 export default ReverseTringle;

@@ -1,0 +1,29 @@
+.table_container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 10px;
+}
+.price_table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+} 
+
+.price_table td {
+  border: 1px solid #afaeae;
+  padding: 12px 16px;
+  text-align: left;
+  font-size: calc(0.5rem + 0.5vw);
+}
+.price_table th {
+    align-items: center;
+    border: 1px solid #afaeae;
+    padding: 12px 16px;
+    font-size: calc(0.6rem + 0.5vw);
+}
+.h3_container {
+    text-align: center;
+    font-size: calc(0.8rem + 0.7vw);
+    padding: 10px;
+    margin: 10px;
+}
