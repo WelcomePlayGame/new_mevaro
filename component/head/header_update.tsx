@@ -109,12 +109,14 @@ const HeadUpdate = () => {
                   href="tel:+380957162677"
                   className={`${classes.container_desctop_li_tel}`}
                   title="Зателефонувати - 09 71 62 677 Роман"
+                  rel='nofollow'
                 >
                   095 71 62 677
                 </a>
               </li>
               <li className={`${classes.container_desctop_li} flex-col`}>
                 <a
+                rel='nofollow'
                   className={`${classes.container_desctop_li_adress}`}
                   suppressHydrationWarning
                 >
