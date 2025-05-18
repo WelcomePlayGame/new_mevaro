@@ -5,7 +5,7 @@ import PopSale from './page-pop-sale';
 
 const SaleBox = () => {
   return (
-    <main>
+    <div>
       <div>
         <div className={`${classes.container_sale}`}>
           <span className={`${classes.container_sale_span}`}>
@@ -15,7 +15,7 @@ const SaleBox = () => {
           </span>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 export default SaleBox;
