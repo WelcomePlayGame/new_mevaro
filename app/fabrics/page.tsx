@@ -97,7 +97,7 @@ const FabricsFetch = async () => {
 
 const Fabrics = () => {
   return (
-    <main>
+    <div>
       <div className={`${classes.container_head_block}`}>
         <HeadUpdate />
       </div>
@@ -136,7 +136,7 @@ const Fabrics = () => {
         </p>
       </div>
       <Footer />
-    </main>
+    </div>
   );
 };
 
