@@ -13,6 +13,7 @@ const Footer = () => {
           <Link
             href={'https://www.facebook.com/www.mevaro.kiev.ua'}
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             <FacebookSVG />
           </Link>
@@ -21,7 +22,7 @@ const Footer = () => {
           <a
             href={'https://www.instagram.com/mevaro_peretyajka/'}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             aria-label="Ознайомитись з нашими роботами в  Instagram"
           >
             <InstagramSVG />
@@ -31,7 +32,7 @@ const Footer = () => {
           <a
             href={'https://www.youtube.com/@MevaroKiev'}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             aria-label="Ознайомитись з нашими роботами в  Youtube"
           >
             <YoutubeSVG />
@@ -47,6 +48,7 @@ const Footer = () => {
             href="https://www.pinterest.com/mevaro_kiev"
             aria-label="Ознайомитись з Pinterest"
             target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             Pinterest
           </a>
@@ -63,6 +65,7 @@ const Footer = () => {
             <a
               href="https://www.google.com/search?sca_esv=4f7c836df226b895&authuser=0&hl=ru&gl=ua&output=search&q=Mevaro&ludocid=10220279674707005093&lsig=AB86z5X22yA71rdTu7odcHkLMWEd&ved=1i%3A4%2Ct%3A109124%2Ce%3A3%2Cp%3AQkdDZ-u0DP-TwPAPr5LqyQk%3A64#mpd=~4100839171516405367/customers/reviews"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               Відгуки на Google
             </a>
