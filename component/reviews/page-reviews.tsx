@@ -28,7 +28,7 @@ const renderStars = (rating: string) => {
           ★
         </span>
       ))}
-      {Array.from({ length: 7 - count }, (_, index) => (
+      {Array.from({ length: 5 - count }, (_, index) => (
         <span key={`empty-${index}`} className={classes.starEmpty}>
           ☆
         </span>
