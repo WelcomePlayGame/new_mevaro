@@ -6,7 +6,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Tringle from '@/component/tringle/page-tringle';
 import WorkLocation from '@/component/work_location/page-work-location_block_ru';
-import Script from 'next/script';
+
+import Reviews from '@/component/reviews/page-reviews';
 
 export const metadata: Metadata = {
   title: 'ᐈЗамена пружинного блока|Mevaro【Бесплатная Доставка】',
@@ -69,6 +70,7 @@ const Block = () => {
       <SubHead />
       <ReplaceBlock />
       <Tringle />
+      <Reviews/>
       <WorkLocation />
       <Footer />
     </section>
