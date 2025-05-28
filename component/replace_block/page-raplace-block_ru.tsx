@@ -4,13 +4,13 @@ import Image from 'next/image';
 const ReplaceBlock = () => {
   return (
     <section id="block" className={`${classes.container_block} pt-[30px]`}>
-      <h2>Замена пружинного блока</h2>
+      <h2>Замена пружинного блока Киев</h2>
       <div className={`${classes.container_div} `}>
         <Image
           src={'/image/block.jpg'}
           width={600}
           height={600}
-          alt="Заміна пружинного блоку"
+          alt="Замена пружинного блока Киев"
         />
       </div>
 
