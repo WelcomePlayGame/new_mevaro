@@ -42,12 +42,12 @@ const priceData = [
     price: '1500',
   },
   {
-    name: 'пуф',
+    name: 'Пуф',
     fabric: '1–2 м',
     price: '1200',
   },
   {
-    name: 'масажний стіл',
+    name: 'Масажний стіл',
     fabric: '2–3 м',
     price: '4200',
   },
