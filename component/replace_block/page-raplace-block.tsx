@@ -19,7 +19,7 @@ const ReplaceBlock = () => {
       <div className={`${classes.container_price_block}`}>
         <div className={`${classes.container_one_block}`}>
           <h3>Бюджет</h3>
-          <span>4800 грн</span>
+          <span>5000 грн</span>
           <div className={`${classes.container_ul_block}`}>
             <ul>
               <li>Заміна Пружинного Блока</li>
