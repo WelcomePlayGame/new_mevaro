@@ -80,6 +80,18 @@
   padding: 25px;
   font-size: calc(0.9rem + 0.5vw);
 }
+.describe_block {
+  padding: 20px;
+  margin: 20px;
+}
+.describe_block li {
+  list-style-type: disc;
+}
+.describe_block h3 {
+  padding: 20px;
+  text-align: center;
+  font-size: calc(0.8rem + 0.4vw);
+}
 /* with more 1201 px */
 @media (min-width: 1201px) {
   .container_one_block {
